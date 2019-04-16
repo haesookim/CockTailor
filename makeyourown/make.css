@@ -1,0 +1,77 @@
+html, body {
+    height: 100%;
+}
+
+body{
+    background-color: gray;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.nav-right{
+    display:flex;
+}
+
+.nav-item{
+    margin: 15px;
+}
+
+.maker-container{
+    display: flex;
+    border-radius: 20px;
+    border: 2px solid white;
+    margin: 10px 30px;
+    height: 85%;
+    background-color: lightyellow;
+}
+
+#select-wrapper{
+    display: flex;
+    align-items: center;
+    width: 450px;
+}
+
+#select-pane{
+    align-items: flex-start;
+    height: 100%;
+    overflow: scroll;
+    border-radius: 20px 0 0 20px;
+    background-color: rgb(71, 44, 36);
+}
+
+#fold-select{
+    background-color: orange;
+    height: 60px;
+    width: 30px;
+    border-radius: 0 10px 10px 0;
+}
+.choice-name{
+    padding: 15px 20px;
+}
+
+.choice-items{
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.choice-item{
+    height: fit-content;
+    width: 80px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.choice-item.selected{
+    background-color: rgba(139, 139, 139, 0.43);
+}
+
+.preview{
+
+}

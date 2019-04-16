@@ -15,25 +15,28 @@ nav{
 
 .nav-right{
     display:flex;
+    margin-right: 40px;
 }
 
 .nav-item{
-    margin: 15px;
+    margin-left: 25px;
 }
 
 .maker-container{
     display: flex;
     border-radius: 20px;
     border: 2px solid white;
-    margin: 10px 30px;
-    height: 85%;
-    background-color: lightyellow;
+    margin: 30px 80px;
+    height: 80%;
+    background-image: url("images/woodbackground.jpg");
+    background-color: rgba(26, 26, 26, 0.856);
+    background-blend-mode: overlay;
 }
 
 #select-wrapper{
     display: flex;
     align-items: center;
-    width: 450px;
+    width: 350px;
 }
 
 #select-pane{
@@ -47,7 +50,7 @@ nav{
 #fold-select{
     background-color: orange;
     height: 60px;
-    width: 30px;
+    width: 40px;
     border-radius: 0 10px 10px 0;
 }
 .choice-name{
@@ -73,5 +76,8 @@ nav{
 }
 
 .preview{
-
+    width: 40%;
+    height: 70%;
+    margin: auto auto;
+    background-color: lightyellow;
 }

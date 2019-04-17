@@ -6,6 +6,7 @@
     <title>Make your own</title>
     <meta charset="utf-8">
     <link href="make.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900" rel="stylesheet">
 </head>
 
 <body>
@@ -16,14 +17,16 @@
             <div class="nav-item">recommendation</div>
         </div>
     </nav>
+
     <div class="maker-container">
         <div id="select-wrapper">
+            <div id="fold-select" onclick="foldPane(this)"></div>
             <div id="select-pane">
                 <div class="choice-wrapper">
                     <div class="choice" id="glass">
                         <div class="choice-name">Glass</div>
                         <div class="choice-items">
-                            <div class="choice-item selected">Shot</div>
+                            <div class="choice-item">Shot</div>
                             <div class="choice-item">Whiskey</div>
                             <div class="choice-item">Liqeur</div>
                             <div class="choice-item">Martini</div>
@@ -34,7 +37,7 @@
                     </div>
                 </div>
             </div>
-            <div id="fold-select"></div>
+
         </div>
         <div class="preview">
             <div class="glasstype" id="shot">
@@ -58,8 +61,15 @@
             <div class="glasstype" id="collins">
 
             </div>
+
+        </div>
+        <div class="button" id="finished">
+            <div class="button-text">Finished!</div>
+
         </div>
     </div>
+
+    <script src="make.js"></script>
 </body>
 
 </html>

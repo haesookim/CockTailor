@@ -1,5 +1,7 @@
 html, body {
     height: 100%;
+    color: white;
+    font-family: 'Roboto';
 }
 
 body{
@@ -36,12 +38,13 @@ nav{
 #select-wrapper{
     display: flex;
     align-items: center;
-    width: 350px;
+    flex-direction: row-reverse;
 }
 
 #select-pane{
     align-items: flex-start;
     height: 100%;
+    width: 300px;
     overflow: scroll;
     border-radius: 20px 0 0 20px;
     background-color: rgb(71, 44, 36);
@@ -55,6 +58,7 @@ nav{
 }
 .choice-name{
     padding: 15px 20px;
+    margin:15px;
 }
 
 .choice-items{
@@ -80,4 +84,20 @@ nav{
     height: 70%;
     margin: auto auto;
     background-color: lightyellow;
+}
+
+#finished{
+    height: 45px;
+    width: fit-content;
+    padding: 0 20px;
+    border-radius: 25px;
+    position: absolute;
+    left: 84%;
+    top: 80%;
+    background-color: blueviolet;
+    text-align: center;
+}
+
+#finished .button-text{
+    margin-top: 10px;
 }

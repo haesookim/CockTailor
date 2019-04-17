@@ -2,10 +2,10 @@ function foldPane(button) {
     let pane = button.nextElementSibling;
 
     pane.classList.toggle("visible");
-    if (pane.style.display === "block") {
-        pane.style.display = "none";
+    if (pane.style.width !== "20px" ) {
+        pane.style.width = "20px" ;
     } else {
-        pane.style.display = "block";
+        pane.style.width = "320px" ;
     }
 }
 
@@ -24,6 +24,7 @@ for (i = 0; i < selectors.length; i++) {
 }
 
 var choiceItems = document.getElementsByClassName('choice-item');
+var glassItems = choiceItems.getElementsByClassName('glass');
 var j;
 for (j = 0; j<choiceItems.length; i++){
     choiceItems[i].addEventListener("click", function(){

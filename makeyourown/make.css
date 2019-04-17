@@ -2,17 +2,22 @@ html, body {
     height: 100%;
     color: white;
     font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
 }
 
 body{
-    background-color: gray;
+    background-image: url("images/barbackground.jpg");
+    background-color: rgba(26, 26, 26, 0.5);
+    background-blend-mode: overlay;
 }
 
 nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 20px 0;
+    padding: 20px 0;
+    font-size: 20px;
 }
 
 .nav-right{
@@ -24,11 +29,17 @@ nav{
     margin-left: 25px;
 }
 
+.nav-item a{
+    text-decoration: none;
+    color: white;
+}
+
 .maker-container{
     display: flex;
     border-radius: 20px;
     border: 2px solid white;
     margin: 30px 80px;
+    margin-bottom: 0px;
     height: 80%;
     background-image: url("images/woodbackground.jpg");
     background-color: rgba(26, 26, 26, 0.856);
@@ -44,10 +55,18 @@ nav{
 #select-pane{
     align-items: flex-start;
     height: 100%;
-    width: 300px;
-    overflow: scroll;
+    width: 320px;
+    overflow-y: scroll;
+    overflow-x: hidden;
     border-radius: 20px 0 0 20px;
     background-color: rgb(71, 44, 36);
+    transition: 0.3s ease-in-out;
+}
+
+#select-desc{
+    margin: 20px 20px 10px;
+    overflow-x: hidden;
+    height: 20px;
 }
 
 #fold-select{
@@ -56,15 +75,27 @@ nav{
     width: 40px;
     border-radius: 0 10px 10px 0;
 }
+
+#fold-select:hover{
+    background-color: rgb(185, 121, 1);
+}
+
 .choice-name{
-    padding: 15px 20px;
-    margin:15px;
+    padding: 10px 20px;
+    margin:15px 10px 0px;
+    border-radius: 5px;
+}
+
+.choice-name.active{
+    background-color: rgba(255,255,255,0.3)
 }
 
 .choice-items{
-    margin-left: 20px;
-    display: flex;
+    margin: 0px 15px;
     flex-wrap: wrap;
+    display: none;
+    width: 290px;
+    overflow-x: hidden;
 }
 
 .choice-item{

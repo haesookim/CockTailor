@@ -98,7 +98,7 @@ nav{
     overflow-x: hidden;
 }
 
-.choice-item{
+.choice-item, .glass{
     height: fit-content;
     width: 70px;
     padding: 5px;
@@ -108,7 +108,7 @@ nav{
     font-size: 12px;
 }
 
-.choice-item.selected{
+.choice-item.selected, .glass.selected{
     background-color: rgba(139, 139, 139, 0.43);
 }
 

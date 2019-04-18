@@ -2,10 +2,10 @@ function foldPane(button) {
     let pane = button.nextElementSibling;
 
     pane.classList.toggle("visible");
-    if (pane.style.width !== "20px" ) {
-        pane.style.width = "20px" ;
+    if (pane.style.width !== "20px") {
+        pane.style.width = "20px";
     } else {
-        pane.style.width = "320px" ;
+        pane.style.width = "320px";
     }
 }
 
@@ -26,30 +26,55 @@ for (i = 0; i < selectors.length; i++) {
 var choiceItems = document.getElementsByClassName('choice-item');
 var glassItems = document.getElementsByClassName('glass');
 var j;
-for (j = 0; j<choiceItems.length; j++){
-    choiceItems[j].addEventListener("click", function(){
+for (j = 0; j < choiceItems.length; j++) {
+    choiceItems[j].addEventListener("click", function () {
         this.classList.toggle("selected");
-        if (this.classList.contains('glass')){
+    })
+}
+
+var glassChosen = false;
+for (j = 0; j < glassItems.length; j++) {
+    glassItems[j].addEventListener("click", function () {
+        if (!glassChosen) {
+            glassChosen = true;
+            this.classList.toggle('selected');
+            showGlass(this.innerHTML.toLowerCase());
+        }
+        else {
             let k;
-            for (k = 0; k<glassItems.length; k++){
-                if (glassItems[k] !== this && glassItems[k].classList.contains('selected')){
-                    glassItems[k].classList.toggle('selected');
+            for (k = 0; k < glassItems.length; k++) {
+                if (glassItems[k].classList.contains('selected')) {
+                    if (confirm("If you change your glass, you will lose all progress. continue?")) {
+                        if (glassItems[k] === this) {
+                            glassChosen = false;
+                        } else{
+                            glassItems[k].classList.toggle('selected');
+                        }
+                    }
                 }
             }
+            this.classList.toggle('selected')
             showGlass(this.innerHTML.toLowerCase());
         }
     })
 }
 
-function showGlass(string){
+function showGlass(string) {
     let k;
     let glass = document.getElementById(string);
     let glassArray = document.getElementsByClassName('glasstype')
     glass.style.display = "block";
-    for (k = 0; k<glassItems.length; k++){
-        if (!glassItems[k].classList.contains('selected')){
+    for (k = 0; k < glassItems.length; k++) {
+        if (!glassItems[k].classList.contains('selected')) {
             glassArray[k].style.display = "none";
-            console.log("nullified")
         }
     }
+}
+
+function switchGlass() {
+    if (this.classList.contains('glass')) {
+        let k;
+        switchGlass();
+    }
+    //either re-implement all of my customizations into a new glass or put a pop-up warning that this will reset all progress
 }

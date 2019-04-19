@@ -124,7 +124,7 @@ nav{
     color: black;
 }
 
-#finished{
+#finish-button{
     height: 45px;
     width: fit-content;
     padding: 0 20px;
@@ -136,6 +136,6 @@ nav{
     text-align: center;
 }
 
-#finished .button-text{
+#finish-button .button-text{
     margin-top: 10px;
 }

@@ -71,10 +71,12 @@ function showGlass(string) {
     }
 }
 
-function switchGlass() {
-    if (this.classList.contains('glass')) {
-        let k;
-        switchGlass();
-    }
-    //either re-implement all of my customizations into a new glass or put a pop-up warning that this will reset all progress
+function showFinishScreen(){
+    let maker = document.getElementById('select-wrapper');
+    let button = document.getElementById('finish-button');
+    let finished = document.getElementById('finished');
+
+    maker.style.display = "none";
+    finished.style.display = "block";
+    button.style.display = "none";
 }

@@ -34,7 +34,7 @@ nav{
     color: white;
 }
 
-.maker-container{
+#maker-container{
     display: flex;
     border-radius: 20px;
     border: 2px solid white;
@@ -42,6 +42,8 @@ nav{
     margin-bottom: 0px;
     height: 80%;
     background-image: url("images/woodbackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: rgba(26, 26, 26, 0.856);
     background-blend-mode: overlay;
 }
@@ -50,6 +52,7 @@ nav{
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
+    transition: all 0.3s ease-in-out;
 }
 
 #select-pane{
@@ -112,11 +115,12 @@ nav{
     background-color: rgba(139, 139, 139, 0.43);
 }
 
-.preview{
+#preview{
     width: 40%;
     height: 70%;
-    margin: auto auto;
+    margin: 11% auto 0px;
     background-color: lightyellow;
+    transition: 0.5s ease-in-out;
 }
 
 .glasstype{
@@ -124,12 +128,18 @@ nav{
     color: black;
 }
 
-#finish-button{
+.button{
     height: 45px;
-    width: fit-content;
+    width: 70px;
     padding: 0 20px;
     border-radius: 25px;
+    background-color: yellow;
+    margin: 15px;
+}
+
+#finish-button{
     position: absolute;
+    width: fit-content;
     left: 84%;
     top: 80%;
     background-color: blueviolet;
@@ -138,4 +148,13 @@ nav{
 
 #finish-button .button-text{
     margin-top: 10px;
+}
+
+#finished{
+    display: none;
+    margin: 20px auto;
+    width: 500px;
+    justify-content: space-evenly;
+    text-align: center;
+    transition-delay: 0.5s;
 }

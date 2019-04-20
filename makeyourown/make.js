@@ -72,11 +72,15 @@ function showGlass(string) {
 }
 
 function showFinishScreen(){
-    let maker = document.getElementById('select-wrapper');
+    let maker = document.getElementById('maker-container');
+    let select = document.getElementById('select-wrapper');
     let button = document.getElementById('finish-button');
+    let preview = document.getElementById('preview');
     let finished = document.getElementById('finished');
 
-    maker.style.display = "none";
-    finished.style.display = "block";
+    select.style.display = "none";
+    finished.style.display = "flex";
     button.style.display = "none";
+    maker.style.display = "block";
+    preview.style.marginTop = "5%";
 }

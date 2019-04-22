@@ -54,14 +54,16 @@ for (j = 0; j < glassItems.length; j++) {
                 }
             }
             this.classList.toggle('selected')
-            showGlass(this.innerHTML.toLowerCase());
+            showGlass(this.innerHTML.toLowerCase().split(">")[1]);
         }
     })
 }
 
 function showGlass(string) {
+    console.log(string);
     let k;
     let glass = document.getElementById(string);
+    console.log(glass)
     let glassArray = document.getElementsByClassName('glasstype')
     glass.style.display = "block";
     for (k = 0; k < glassItems.length; k++) {

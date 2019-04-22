@@ -66,6 +66,10 @@ nav{
     transition: 0.3s ease-in-out;
 }
 
+#select-pane::-webkit-scrollbar, #select-desc::-webkit-scrollbar { 
+    display: none; 
+}
+
 #select-desc{
     margin: 20px 20px 10px;
     overflow-x: hidden;
@@ -111,6 +115,11 @@ nav{
     font-size: 12px;
 }
 
+.glass img{
+    height: 70px;
+    width: 70px;
+}
+
 .choice-item.selected, .glass.selected{
     background-color: rgba(139, 139, 139, 0.43);
 }
@@ -124,7 +133,7 @@ nav{
 }
 
 .glasstype{
-    display:none;
+    display: none;
     color: black;
 }
 

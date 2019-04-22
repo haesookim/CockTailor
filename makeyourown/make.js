@@ -13,7 +13,7 @@ var selectors = document.getElementsByClassName('choice-name');
 var i;
 for (i = 0; i < selectors.length; i++) {
     selectors[i].addEventListener("click", function () {
-        this.classList.toggle("active");
+        this.parentElement.classList.toggle("active");
         let content = this.nextElementSibling;
         if (content.style.display === "flex") {
             content.style.display = "none";

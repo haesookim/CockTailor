@@ -16,8 +16,10 @@ nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 20px 0;
-    font-size: 20px;
+    padding: 15px 0;
+    font-size: 17px;
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, 0.5)
 }
 
 .nav-right{
@@ -38,7 +40,7 @@ nav{
     display: flex;
     border-radius: 20px;
     border: 2px solid white;
-    margin: 30px 80px;
+    margin: 50px 80px;
     margin-bottom: 0px;
     height: 80%;
     background-image: url("images/woodbackground.jpg");
@@ -73,7 +75,9 @@ nav{
 #select-desc{
     margin: 20px 20px 10px;
     overflow-x: hidden;
-    height: 20px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 #fold-select{
@@ -89,12 +93,25 @@ nav{
 
 .choice-name{
     padding: 10px 20px;
-    margin:15px 10px 0px;
     border-radius: 5px;
+    transition: all 0.3s ease-in-out;
 }
 
-.choice-name.active{
-    background-color: rgba(255,255,255,0.3)
+.choice-name:hover{
+    background-color: rgba(30,30,30, 0.6);
+    transition: all 0.3s ease-in-out;
+}
+
+.choice{
+    margin: 0px 10px 0px;
+    border-radius: 5px;
+    padding-bottom: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.choice.active{
+    background-color: rgba(255, 255, 255, 0.11);
+    transition: all 0.3s ease-in-out;
 }
 
 .choice-items{
@@ -103,6 +120,7 @@ nav{
     width: 290px;
     display: none;
     overflow-x: hidden;
+    transition: all 0.3s ease-in-out;
 }
 
 .choice-item, .glass{
@@ -143,8 +161,14 @@ nav{
     width: 70px;
     padding: 0px 20px 0px;
     border-radius: 25px;
-    background-color: yellow;
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+    color: white;
     margin: 15px;
+}
+
+.button-text{
+    margin-top: 10px;
+    font-weight: 700;
 }
 
 #finish-button{
@@ -152,7 +176,7 @@ nav{
     width: fit-content;
     left: 84%;
     top: 80%;
-    background-color: blueviolet;
+    background-image: linear-gradient(45deg, #a6c0fe 0%, #f68084 100%);
     text-align: center;
     padding-top:0;
 }

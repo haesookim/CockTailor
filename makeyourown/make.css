@@ -98,7 +98,7 @@ nav{
 }
 
 .choice-items{
-    margin: 0px 15px;
+    margin: 15px;
     flex-wrap: wrap;
     width: 290px;
     display: none;
@@ -125,11 +125,12 @@ nav{
 }
 
 #preview{
-    width: 40%;
-    height: 70%;
+    width: 30%;
+    height: 60%;
     margin: 11% auto 0px;
-    background-color: lightyellow;
     transition: 0.5s ease-in-out;
+    justify-content: end;
+
 }
 
 .glasstype{
@@ -140,7 +141,7 @@ nav{
 .button{
     height: 45px;
     width: 70px;
-    padding: 0 20px;
+    padding: 0px 20px 0px;
     border-radius: 25px;
     background-color: yellow;
     margin: 15px;
@@ -153,6 +154,7 @@ nav{
     top: 80%;
     background-color: blueviolet;
     text-align: center;
+    padding-top:0;
 }
 
 #finish-button .button-text{

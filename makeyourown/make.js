@@ -38,7 +38,7 @@ for (j = 0; j < glassItems.length; j++) {
         if (!glassChosen) {
             glassChosen = true;
             this.classList.toggle('selected');
-            showGlass(this.innerHTML.toLowerCase());
+            showGlass(this.innerHTML.toLowerCase().split(">")[1].trim());
         }
         else {
             let k;
@@ -54,12 +54,13 @@ for (j = 0; j < glassItems.length; j++) {
                 }
             }
             this.classList.toggle('selected')
-            showGlass(this.innerHTML.toLowerCase());
+            showGlass(this.innerHTML.toLowerCase().split(">")[1].trim());
         }
     })
 }
 
 function showGlass(string) {
+    console.log(string);
     let k;
     let glass = document.getElementById(string);
     let glassArray = document.getElementsByClassName('glasstype')

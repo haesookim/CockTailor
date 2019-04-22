@@ -66,6 +66,10 @@ nav{
     transition: 0.3s ease-in-out;
 }
 
+#select-pane::-webkit-scrollbar, #select-desc::-webkit-scrollbar { 
+    display: none; 
+}
+
 #select-desc{
     margin: 20px 20px 10px;
     overflow-x: hidden;
@@ -94,7 +98,7 @@ nav{
 }
 
 .choice-items{
-    margin: 0px 15px;
+    margin: 15px;
     flex-wrap: wrap;
     width: 290px;
     display: none;
@@ -111,27 +115,33 @@ nav{
     font-size: 12px;
 }
 
+.glass img{
+    height: 70px;
+    width: 70px;
+}
+
 .choice-item.selected, .glass.selected{
     background-color: rgba(139, 139, 139, 0.43);
 }
 
 #preview{
-    width: 40%;
-    height: 70%;
+    width: 30%;
+    height: 60%;
     margin: 11% auto 0px;
-    background-color: lightyellow;
     transition: 0.5s ease-in-out;
+    justify-content: end;
+
 }
 
 .glasstype{
-    display:none;
+    display: none;
     color: black;
 }
 
 .button{
     height: 45px;
     width: 70px;
-    padding: 0 20px;
+    padding: 0px 20px 0px;
     border-radius: 25px;
     background-color: yellow;
     margin: 15px;
@@ -144,6 +154,7 @@ nav{
     top: 80%;
     background-color: blueviolet;
     text-align: center;
+    padding-top:0;
 }
 
 #finish-button .button-text{

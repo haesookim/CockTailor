@@ -1,0 +1,64 @@
+@font-face{
+    font-family: 'Romantic Beach';
+    src: url(fonts/Romantic\ Beach.ttf);
+}
+
+body{
+    background-image: url("makeyourown/images/barbackground.jpg");
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: overlay;
+}
+
+#site-title{
+    width: fit-content;
+    margin: 130px auto 50px;
+}
+
+#title-text{
+    font-family: 'Romantic Beach', cursive;
+    font-size: 70px;
+    color: black;
+    text-align: center;
+}
+
+#title-wrapper{
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    background-color: white;
+    margin: 20px auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-15deg);
+}
+
+#title-desc{
+    font-size: 25px;
+}
+
+#navigate{
+    display:flex;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.goto{
+    margin: 20px;
+    padding: 15px;
+    font-size: 17px;
+    width: 170px;
+    border-radius: 35px;
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    font-weight: 700;
+}
+.goto:hover{
+    background-color: rgba(0,0,0, 0.1);
+    background-blend-mode: overlay;
+}
+
+a{
+    text-decoration: none;
+}

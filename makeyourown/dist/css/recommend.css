@@ -1,15 +1,15 @@
 html, body {
     height: 100%;
     color: white;
-    font-family: 'Roboto';
+    font-family: 'Roboto', SansSerif;
     margin: 0;
     padding: 0;
 }
 
-body{
+body:not(.outercontainer){
+    /*background-image: url("../../images/back.jpeg");*/
 
     background-color: rgba(26, 26, 26, 0.5);
-
 }
 
 nav{
@@ -205,7 +205,7 @@ header, footer {
 a {
     color: white; }
 a:visited {
-    color: #5099b8; }
+    color: white; }
 a:hover{
     color :black;
 }
@@ -238,24 +238,28 @@ code {
 /*    box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.1); }*/
 
 h1:after, h2:after, h3:after, h4:after, h5:after, h6:after {
-    background-color: #27AAE1; }
+    background-color: white; }
 
 footer {
     border-top: 1px solid #f2f2f2; }
 .L{
     float: left;
+    margin-top: -100px;
+    margin-left:10%;
+    background-color: rgba(26, 26, 26, 0.5);
+
 }
 
 .R{
     float: right;
+    margin-top: -100px;
+    margin-right:10%;
 }
 .questioncontainer  {
 
-   padding-top: 90px;
-    background-image: url("../../images/drinks.svg") ;
+   padding-top: 90px;  background-image: url("../../images/drinks.svg");
     background-origin : content-box;
     background-repeat: no-repeat;
-
 
 }
 .outercontainer{
@@ -266,7 +270,17 @@ footer {
     margin-right : 10%;
    width: 80%;
     height:60%;
+    /*background-color: white;*/
 
+
+
+
+
+
+}
+.question{
+
+vertical-align:center;
 
 
 }

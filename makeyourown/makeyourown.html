@@ -11,14 +11,14 @@
 
 <body>
     <nav class="navbar">
-        <div class="nav-item"><a href = "#">Main</a></div>
+        <div class="nav-item"><a href="#">Main</a></div>
         <div class="nav-right">
-            <div class="nav-item"><a href = "#">Make your own</a></div>
-            <div class="nav-item"><a href = "#">recommendation</a></div>
+            <div class="nav-item"><a href="#">Make your own</a></div>
+            <div class="nav-item"><a href="#">recommendation</a></div>
         </div>
     </nav>
 
-    <div class="maker-container">
+    <div id="maker-container">
         <div id="select-wrapper">
             <div id="fold-select" onclick="foldPane(this)"></div>
             <div id="select-pane">
@@ -64,9 +64,9 @@
                     </div>
                 </div>
             </div>
-
         </div>
-        <div class="preview">
+
+        <div id="preview">
             <div class="glasstype" id="shot">
                 shot
             </div>
@@ -90,15 +90,23 @@
             </div>
 
         </div>
-        <div class="button" id="finished">
-            <div class="button-text">Finished!</div>
-
+        <div class="button" id="finish-button">
+            <div class="button-text" onclick="showFinishScreen()">Finished!</div>
         </div>
 
-        <div id="resetwarning">
-            <button onclick="switchGlass('true')">Yes</button>
-            <button onclick="switchGlass('false')">Yes</button>
+        <div id="finished">
+            <div class="button" id="share-button">
+                <div class="button-text">Share</div>
+            </div>
+            <div class="button" id="save-button">
+                <div class="button-text">Save Image</div>
+            </div>
+            <div class="button" id="share-button">
+                <div class="button-text">Share</div>
+            </div>
+            <!---공유버튼, 갤러리, 등등--->
         </div>
+
     </div>
 
     <script src="make.js"></script>

@@ -71,10 +71,16 @@ function showGlass(string) {
     }
 }
 
-function switchGlass() {
-    if (this.classList.contains('glass')) {
-        let k;
-        switchGlass();
-    }
-    //either re-implement all of my customizations into a new glass or put a pop-up warning that this will reset all progress
+function showFinishScreen(){
+    let maker = document.getElementById('maker-container');
+    let select = document.getElementById('select-wrapper');
+    let button = document.getElementById('finish-button');
+    let preview = document.getElementById('preview');
+    let finished = document.getElementById('finished');
+
+    select.style.display = "none";
+    finished.style.display = "flex";
+    button.style.display = "none";
+    maker.style.display = "block";
+    preview.style.marginTop = "5%";
 }

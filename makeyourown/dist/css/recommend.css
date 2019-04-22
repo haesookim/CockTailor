@@ -7,9 +7,9 @@ html, body {
 }
 
 body{
-    background-image: url("../../images/barbackground.jpg");
+
     background-color: rgba(26, 26, 26, 0.5);
-    background-blend-mode: overlay;
+
 }
 
 nav{
@@ -34,7 +34,7 @@ nav{
     color: white;
 }
 
-.maker-container{
+#maker-container{
     display: flex;
     border-radius: 20px;
     border: 2px solid white;
@@ -201,14 +201,14 @@ header, footer {
     background-color: #27AAE1;
     color: #eee; }
 
-body {
-    background-color: #ffffff;
-    color: #111; }
 
 a {
-    color: #EE3769; }
+    color: white; }
 a:visited {
     color: #5099b8; }
+a:hover{
+    color :black;
+}
 
 .btn-primary {
     background-color: #27AAE1;
@@ -231,11 +231,11 @@ code {
     color: #111;
     border: 1px solid #e6e5e5; }
 
-.swipe div{
-    background-color: #EE3769;
-    color: #eee;
-    border-radius: 3px;
-    box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.1); }
+/*.swipe div{*/
+
+/*    color: #eee;*/
+/*    border-radius: 3px;*/
+/*    box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.1); }*/
 
 h1:after, h2:after, h3:after, h4:after, h5:after, h6:after {
     background-color: #27AAE1; }
@@ -249,3 +249,34 @@ footer {
 .R{
     float: right;
 }
+.questioncontainer  {
+
+   padding-top: 90px;
+    background-image: url("../../images/drinks.svg") ;
+    background-origin : content-box;
+    background-repeat: no-repeat;
+
+
+}
+.outercontainer{
+    border-radius: 20px;
+    border: 2px solid white;
+    margin-top: 50px;
+    margin-left : 10%;
+    margin-right : 10%;
+   width: 80%;
+    height:60%;
+
+
+
+}
+/*.answercontainer{*/
+
+/*    width: 80%;*/
+/*    height: 48%;*/
+
+/*    background-image: url("../../images/sunrise.png");*/
+
+/*    background-repeat: no-repeat;*/
+
+/*}*/

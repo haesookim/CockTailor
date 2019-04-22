@@ -5,22 +5,104 @@
 <head>
     <title>Make your own</title>
     <meta charset="utf-8">
-    <link href="make.css" rel="stylesheet">
+    <link href="dist/css/recommend.css" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200" rel="stylesheet" type="text/css"/>
+
+
 </head>
+<style>
+
+</style>
+
 
 <body>
+
+
 <nav class="navbar">
-    <div class="nav-item"><a href = "#">Main</a></div>
+    <div class="nav-item"><a href="#">Main</a></div>
     <div class="nav-right">
-        <div class="nav-item"><a href = "#">Make your own</a></div>
-        <div class="nav-item"><a href = "#">recommendation</a></div>
+        <div class="nav-item"><a href="#">Make your own</a></div>
+        <div class="nav-item"><a href="#">recommendation</a></div>
     </div>
 </nav>
-<div class="maker-container">
-    <div id="select-wrapper">
-    </div>
+
+
+
+        <div id="mySwipe" class="swipe">
+            <div class="swipe-wrap">
+                <div><b class="question"> Q1. 당신의 음주 스타일은 어떤가요?</b>
+                <a href="#" onclick="mySwipe.next()" class="L">한 잔을 마셔도 짧고 굵게!</a>
+                <a href="#" onclick="mySwipe.next()" class="R">여유를 가지고 천천히 길-게!</a>
+                </div>
+
+                <div><b class="question"> Q2. 숲속의 님프들은 노래와 출을 즐기며 술을 즐겨마셨다고 하죠!<br> 당신은 님프로 따지면 어떤 님프인가요?</b>
+                    <a href="#" onclick="mySwipe.next()" class="L">쾌청한 숲속에서 달큰한 과일과 함께 인생을 즐기는 숲의 님프!</a>
+                    <a href="#" onclick="mySwipe.next()" class="R">시원한 강가에서 첨벙첨벙 물놀이하며 물맛과 술맛을 즐기는 강의 님프!</a>
+                </div>
+                <div><b class="question"> Q3. 당신은 어떤 종류의 재료를 더 좋아하시나요?</b>
+                    <a href="#" onclick="mySwipe.next()" class="L">상큼하게 톡톡! 입안을 터뜨리는 맛!</a>
+                    <a href="#" onclick="mySwipe.next()" class="R">은은한듯 시크한듯 묵직한 듯 내 혀를 돌돌 감싸는 맛</a>
+                </div>
+                <div>
+                    <img src="images/sunrise.png">
+                    <button onclick="mySwipe.next()">replay</button>
+                </div>
+
 
 </div>
+
+            </div>
+
+
+<!--    </div>-->
+<!--</div>-->
+<!--        <div class="demo-controls">-->
+
+<!--            <a class="btn btn-primary" id="prev"> <span class="glyphicon glyphicon-chevron-left">Prev</span></a>-->
+
+<!--            <a class="btn btn-primary" id="next"> <span class="glyphicon glyphicon-chevron-right">Next</span></a>-->
+<!--        </div>-->
+
 </body>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/lyfeyaj/swipe/swipe.js"></script>
+<script>
+    // pure JS
+
+
+    var element = document.getElementById('mySwipe'),
+        prevBtn = document.getElementById('prev'),
+        nextBtn = document.getElementById('next');
+
+    window.mySwipe = new Swipe(element, {
+        startSlide: 0,
+        draggable: true,
+        autoRestart: false,
+        continuous: true,
+        disableScroll: true,
+        stopPropagation: true,
+        callback: function (index, element) {
+        },
+        transitionEnd: function (index, element) {
+        }
+    });
+
+    // using jQuery
+    // window.mySwipe = $('#mySwipe').Swipe().data('Swipe');
+    prevBtn.onclick = mySwipe.prev;
+    nextBtn.onclick = mySwipe.next;
+
+</script>
+<!--<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>-->
+<script>hljs.initHighlightingOnLoad();</script>
+
 </html>
+<!--<script src='dist/js/swipe.js'></script>-->

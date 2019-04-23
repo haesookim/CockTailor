@@ -5,6 +5,8 @@
 
 body{
     background-image: url("makeyourown/images/barbackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: rgba(0, 0, 0, 0.8);
     background-blend-mode: overlay;
 }

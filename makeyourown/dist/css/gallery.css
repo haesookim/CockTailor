@@ -26,6 +26,8 @@ img{
 
 body{
     background-image: url("../../images/barbackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: rgba(26, 26, 26, 0.5);
     background-blend-mode: overlay;
 }

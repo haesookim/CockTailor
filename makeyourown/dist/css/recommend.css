@@ -210,19 +210,6 @@ footer {
 
 /*}*/
 
-.replay{
-    width: 20%;
-    height:20%;
-    position: absolute;
-    left: 80%;
-    top:70%;
-    -webkit-filter: invert(100%) !important;
-}
-.replay:hover {
-    -webkit-filter: invert(0%) !important;
-
-}
-
 .answercontainer{
     height:inherit;
 }

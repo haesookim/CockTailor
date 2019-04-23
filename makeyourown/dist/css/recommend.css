@@ -53,6 +53,7 @@ nav{
 .swipe-wrap {
     overflow: hidden;
     position: relative;
+    height: 100%;
 }
 .swipe-wrap > div {
     float: left;
@@ -199,13 +200,6 @@ footer {
 .choice-text{
     margin: 0px 12px;
 }
-.answercontainer .answer{
-
-    width: 100%;
-    height: 100%;
-
-
-}
 /*       */
 /*.answercontainer .btn{*/
 /*position : absolute;*/
@@ -227,4 +221,70 @@ footer {
 .replay:hover {
     -webkit-filter: invert(0%) !important;
 
+}
+
+.answercontainer{
+    height:inherit;
+}
+
+.answer{
+    display:flex;
+    width: 100%;
+    height: 85%;
+}
+
+.answer-image{
+    height: 450px;
+    width: 450px;
+    margin-top: 100px;
+}
+
+.answer-desc{
+    margin-top: 70px;
+    width: 70%;
+    height: 70%;
+}
+
+.answer-title{
+    font-size: 30px;
+    text-align: center;
+}
+
+.title-eng{
+    font-family: 'Romantic Beach';
+}
+
+.answer-text{
+    width: 80%;
+    margin: 30px auto 0;
+    font-size: 16px;
+}
+
+.button{
+    height: 45px;
+    width: fit-content;
+    padding: 0px 20px;
+    border-radius: 25px;
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+    color: white;
+    margin: 15px;
+    font-weight: 700;
+    text-align: center;
+    transition: all 0.3s ease-out;
+}
+
+#replay-button{
+    width: 90px;
+    align-self: flex-end;
+    margin: 0 50px 100px 85%;
+}
+
+#replay-button .button-text{
+    padding-top: 10px;
+}
+
+.button:hover{
+    background-color: rgba(0,0,0, 0.3);
+    background-blend-mode: overlay;
+    transition: all 0.3s ease-out;
 }

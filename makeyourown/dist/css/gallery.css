@@ -1,0 +1,136 @@
+html, body {
+    height: 100%;
+    color: white;
+    font-family: 'Roboto', SansSerif;
+    margin: 0;
+    padding: 0;
+}
+
+.section-title h2{
+   color:#f2f2f2;
+}
+.section-title p{
+    color:lightgray;
+}
+
+img{
+    margin-left: 30px;
+    width:300px;
+    height:200px;
+}
+
+body{
+    background-image: url("../../images/barbackground.jpg");
+    background-color: rgba(26, 26, 26, 0.5);
+    background-blend-mode: overlay;
+}
+
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 0;
+    font-size: 17px;
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+.nav-right{
+    display:flex;
+    margin-right: 40px;
+}
+
+.nav-item{
+    margin-left: 25px;
+}
+
+a{
+    text-decoration: none!important;
+    color: white!important;
+
+}
+
+
+
+
+footer {
+    border-top: 1px solid #f2f2f2;
+}
+
+
+
+
+figure {
+    position: relative;
+    overflow: hidden;
+
+    height:15%;
+    margin: 10px 1%;
+
+    text-align: center;
+    cursor: pointer;
+}
+
+figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.fig {
+    background: #000;
+    margin-bottom: 40px;
+}
+
+.fig img {
+    opacity: 0.9;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+    -webkit-transform: scale(1.2);
+    transform : scale(1.2);
+    height:200px;
+}
+
+.fig:hover img {
+    opacity: 0.5;
+    -webkit-transform: scale(1);
+    transform : scale(1);
+}
+
+
+.figure-title {
+    color: #fff;
+    font-size: 24px;
+
+    padding-top: 25%;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    -webkit-transform: translate3d(0,-10px,0);
+    transform: translate3d(0,-10px,0);
+}
+
+.description {
+    line-height:10px;
+    opacity: 0;
+    font-size:12px;
+    padding : 20px;
+    border: 1px solid #fff;
+
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    color: rgba(255,255,255,0.95);
+
+    -webkit-transform: translate3d(0,100%,0);
+    transform: translate3d(0,100%,0);
+}
+
+
+
+.fig:hover .figure-title,
+.fig:hover .description {
+    opacity:0.9;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}

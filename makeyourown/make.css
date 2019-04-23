@@ -1,3 +1,8 @@
+@font-face{
+    font-family: 'Romantic Beach';
+    src: url(fonts/Romantic\ Beach.ttf);
+}
+
 html, body {
     height: 100%;
     color: white;

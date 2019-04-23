@@ -19,10 +19,11 @@ nav{
     padding: 15px 0;
     font-size: 17px;
     font-weight: 700;
-    background-color: rgba(0, 0, 0, 0.5)
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .nav-right{
+    float:right;
     display:flex;
     margin-right: 40px;
 }

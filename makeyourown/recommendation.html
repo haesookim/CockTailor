@@ -9,9 +9,9 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 <style>
@@ -20,67 +20,88 @@
 
 
 <body>
+    <nav class="navbar">
+        <div class="nav-item"><a href="../index.html"
+                style="font-family:'Romantic Beach', Cursive; font-size: 23px; font-weight: 300;">CockTailor</a></div>
+        <div class="nav-right">
+            <div class="nav-item"><a href="makeyourown.html">칵테일 만들기</a></div>
+            <div class="nav-item"><a href="recommendation.html">칵테일 추천</a></div>
+        </div>
+    </nav>
 
 
-<nav class="navbar">
-    <div class="nav-item"><a href="#">Main</a></div>
-    <div class="nav-right">
-        <div class="nav-item"><a href="#">Make your own</a></div>
-        <div class="nav-item"><a href="#">recommendation</a></div>
-    </div>
-</nav>
+    <div class="outercontainer">
+        <div id="mySwipe" class="swipe">
+            <div class="swipe-wrap">
 
-
-<div class="outercontainer">
-    <div id="mySwipe" class="swipe">
-        <div class="swipe-wrap">
-
-            <div class="questioncontainer">
-                <div><b class="question"> Q1. 당신의 음주 스타일은 어떤가요?</b>
+                <div class="questioncontainer">
+                    <div><b class="question"> Q1. 당신의 음주 스타일은 어떤가요?</b>
+                    </div>
+                    <div class="choicecontainer">
+                        <a href="#" onclick="mySwipe.next()" class="L">
+                            <img>
+                            한 잔을 마셔도 짧고 굵게!
+                        </a>
+                        <a href="#" onclick="mySwipe.next()" class="R">
+                            <img>
+                            여유를 가지고 천천히 길-게!
+                        </a>
+                    </div>
                 </div>
 
-                <a href="#" onclick="mySwipe.next()" class="L">한 잔을 마셔도 짧고 굵게!</a>
-                <a href="#" onclick="mySwipe.next()" class="R">여유를 가지고 천천히 길-게!</a>
+                <div class="questioncontainer">
+                    <div><b class="question"> Q2. 숲속의 님프들은 노래와 출을 즐기며 술을 즐겨마셨다고 하죠! 당신은 님프로 따지면 어떤 님프인가요?</b>
+                    </div>
+                    <div class="choicecontainer">
+                        <a href="#" onclick="mySwipe.next()" class="L">
+                            <img>
+                            쾌청한 숲속에서 달큰한 과일과 함께 인생을 즐기는 숲의 님프!
+                        </a>
+                        <a href="#" onclick="mySwipe.next()" class="R">
+                            <img>
+                            시원한 강가에서 첨벙첨벙 물놀이하며 물맛과 술맛을 즐기는 강의 님프!
+                        </a>
+                    </div>
+                </div>
+                <div class="questioncontainer">
+                    <div><b class="question"> Q3. 당신은 어떤 종류의 재료를 더 좋아하시나요?</b>
+                    </div>
+                    <div class="choicecontainer">
+                        <a href="#" onclick="mySwipe.next()" class="L">
+                            <img>상큼하게 톡톡! 입안을 터뜨리는 맛!
+                        </a>
+                        <a href="#" onclick="mySwipe.next()" class="R">
+                            <img>은은한듯 시크한듯 묵직한 듯 내 혀를 돌돌 감싸는 맛
+                        </a>
+                    </div>
+                </div>
             </div>
 
-            <div class="questioncontainer">
-                <div><b class="question"> Q2. 숲속의 님프들은 노래와 출을 즐기며 술을 즐겨마셨다고 하죠! 당신은 님프로 따지면 어떤 님프인가요?</b>
-                </div>
-                    <a href="#" onclick="mySwipe.next()" class="L">쾌청한 숲속에서 달큰한 과일과 함께 인생을 즐기는 숲의 님프!</a>
-                    <a href="#" onclick="mySwipe.next()" class="R">시원한 강가에서 첨벙첨벙 물놀이하며 물맛과 술맛을 즐기는 강의 님프!</a>
-                </div>
-                    <div class="questioncontainer">
-                        <div><b class="question"> Q3. 당신은 어떤 종류의 재료를 더 좋아하시나요?</b>
-                        </div>
-                            <a href="#" onclick="mySwipe.next()" class="L">상큼하게 톡톡! 입안을 터뜨리는 맛!</a>
-                            <a href="#" onclick="mySwipe.next()" class="R">은은한듯 시크한듯 묵직한 듯 내 혀를 돌돌 감싸는 맛</a>
-                        </div>
+            <div>
+                <div class="answercontainer">
 
-                        <div>
-                                <div class="answercontainer">
+                    <div id="piechart" style="width: 900px; height: 500px;"></div>
 
-                                    <div id="piechart" style="width: 900px; height: 500px;"></div>
-
-                                    <img src="images/sunrise.png">
-                                <button onclick="mySwipe.next()">replay</button>
-                                </div>
-                        </div>
-                    </div>
+                    <img src="images/sunrise.png">
+                    <button onclick="mySwipe.next()">replay</button>
                 </div>
             </div>
         </div>
     </div>
+    </div>
+    </div>
+    </div>
 
-</div>
+    </div>
 
-<!--    </div>-->
-<!--</div>-->
-<!--        <div class="demo-controls">-->
+    <!--    </div>-->
+    <!--</div>-->
+    <!--        <div class="demo-controls">-->
 
-<!--            <a class="btn btn-primary" id="prev"> <span class="glyphicon glyphicon-chevron-left">Prev</span></a>-->
+    <!--            <a class="btn btn-primary" id="prev"> <span class="glyphicon glyphicon-chevron-left">Prev</span></a>-->
 
-<!--            <a class="btn btn-primary" id="next"> <span class="glyphicon glyphicon-chevron-right">Next</span></a>-->
-<!--        </div>-->
+    <!--            <a class="btn btn-primary" id="next"> <span class="glyphicon glyphicon-chevron-right">Next</span></a>-->
+    <!--        </div>-->
 
 </body>
 
@@ -112,18 +133,18 @@
     prevBtn.onclick = mySwipe.prev;
     nextBtn.onclick = mySwipe.next;
 
-    google.charts.load('current', {'packages':['corechart']});
+    google.charts.load('current', { 'packages': ['corechart'] });
     google.charts.setOnLoadCallback(drawChart);
 
     function drawChart() {
 
         var data = google.visualization.arrayToDataTable([
             ['Task', 'Hours per Day'],
-            ['Work',     11],
-            ['Eat',      2],
-            ['Commute',  2],
+            ['Work', 11],
+            ['Eat', 2],
+            ['Commute', 2],
             ['Watch TV', 2],
-            ['Sleep',    7]
+            ['Sleep', 7]
         ]);
 
         var options = {
@@ -141,7 +162,7 @@
         // initial value
         var percent = 0;
         // start the animation loop
-        var handler = setInterval(function(){
+        var handler = setInterval(function () {
             // values increment
             percent += 1;
             // apply new values
@@ -151,7 +172,7 @@
             chart.draw(data, options);
             // check if we have reached the desired value
             if (percent > 74)
-            // stop the loop
+                // stop the loop
                 clearInterval(handler);
         }, 30);
     }
@@ -161,4 +182,3 @@
 <script>hljs.initHighlightingOnLoad();</script>
 
 </html>
-

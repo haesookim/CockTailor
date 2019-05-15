@@ -44,7 +44,10 @@ nav{
 }
 
 #maker-container{
-    display: flex;
+    display: grid;
+    grid-template-columns: [selector]320px auto [pane]30% [button]auto;
+    grid-template-rows: 20% [pane]60% [button]20%;
+
     border-radius: 20px;
     border: 2px solid white;
     margin: 50px 80px;
@@ -58,10 +61,32 @@ nav{
 }
 
 #select-wrapper{
+    grid-column: selector; 
+    grid-row-start: 1;
+    grid-row-end: 4;
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
     transition: all 0.3s ease-in-out;
+}
+
+.choice-item.selected, .glass.selected{
+    background-color: rgba(139, 139, 139, 0.43);
+}
+
+#preview{
+    grid-column: pane;
+
+    grid-row: pane;
+
+    transition: 0.5s ease-in-out;
+    justify-content: end;
+
+}
+
+.glasstype{
+    display: none;
+    color: black;
 }
 
 #select-pane{
@@ -101,18 +126,12 @@ nav{
 .choice-name{
     padding: 10px 20px;
     border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-}
-
-.choice-name:hover{
-    background-color: rgba(30,30,30, 0.6);
-    transition: all 0.3s ease-in-out;
 }
 
 .choice{
-    margin: 0px 10px 0px;
     border-radius: 5px;
     padding-bottom: 15px;
+    margin: 0 2px 15px 2px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -122,8 +141,9 @@ nav{
 }
 
 .choice-items{
-    margin: 15px;
+    margin: 0 auto;
     flex-wrap: wrap;
+    justify-content: center;
     width: 290px;
     display: none;
     overflow-x: hidden;
@@ -145,24 +165,6 @@ nav{
     width: 70px;
 }
 
-.choice-item.selected, .glass.selected{
-    background-color: rgba(139, 139, 139, 0.43);
-}
-
-#preview{
-    width: 30%;
-    height: 60%;
-    margin: 11% auto 0px;
-    transition: 0.5s ease-in-out;
-    justify-content: end;
-
-}
-
-.glasstype{
-    display: none;
-    color: black;
-}
-
 .button{
     height: 45px;
     width: 70px;
@@ -179,10 +181,10 @@ nav{
 }
 
 #finish-button{
-    position: absolute;
+    grid-column: button;
+    grid-row: button;
+    justify-self: center;
     width: fit-content;
-    left: 84%;
-    top: 80%;
     background-image: linear-gradient(45deg, #a6c0fe 0%, #f68084 100%);
     text-align: center;
     padding-top:0;

@@ -23,15 +23,19 @@ for (i = 0; i < selectors.length; i++) {
     });
 }
 
+// make the choices selectable
 var choiceItems = document.getElementsByClassName('choice-item');
-var glassItems = document.getElementsByClassName('glass');
 var j;
 for (j = 0; j < choiceItems.length; j++) {
     choiceItems[j].addEventListener("click", function () {
         this.classList.toggle("selected");
+
+        //paint each section
     })
 }
 
+// make the glasses selectable
+var glassItems = document.getElementsByClassName('glass');
 var glassChosen = false;
 for (j = 0; j < glassItems.length; j++) {
     glassItems[j].addEventListener("click", function () {
@@ -51,6 +55,7 @@ for (j = 0; j < glassItems.length; j++) {
                             glassItems[k].classList.toggle('selected');
                         }
                     }
+                    //adjust for cancel condition : we get both cups if we say cancel
                 }
             }
             this.classList.toggle('selected')
@@ -72,6 +77,7 @@ function showGlass(string) {
     }
 }
 
+
 function showFinishScreen(){
     let maker = document.getElementById('maker-container');
     let select = document.getElementById('select-wrapper');
@@ -80,8 +86,12 @@ function showFinishScreen(){
     let finished = document.getElementById('finished');
 
     select.style.display = "none";
+
     finished.style.display = "flex";
+    finished.style.gridColumn = "pane"
+    finished.style.gridRow = "finished"
     button.style.display = "none";
-    maker.style.display = "block";
-    preview.style.marginTop = "5%";
+    maker.style.gridTemplateColumns = "35% [pane]30% 35%";
+    maker.style.gridTemplateRows = "10% [pane]60% [finished]30%"
+    //preview.style.marginTop = "5%";
 }

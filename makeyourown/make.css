@@ -172,7 +172,7 @@ nav{
     border-radius: 25px;
     background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
     color: white;
-    margin: 15px;
+    margin: 5px;
 }
 
 .button-text{
@@ -197,8 +197,10 @@ nav{
 #finished{
     display: none;
     margin: 20px auto;
-    width: 500px;
+    place-self: stretch;
+    align-self: center;
     justify-content: space-evenly;
+    justify-self: center;
     text-align: center;
     transition-delay: 0.5s;
 }

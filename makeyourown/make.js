@@ -51,7 +51,7 @@ for (j = 0; j < glassItems.length; j++) {
                     if (confirm("If you change your glass, you will lose all progress. continue?")) {
                         if (glassItems[k] === this) {
                             glassChosen = false;
-                        } else{
+                        } else {
                             glassItems[k].classList.toggle('selected');
                         }
                     }
@@ -77,8 +77,58 @@ function showGlass(string) {
     }
 }
 
+//glass filling functions
+var transparent = "rgba(0,0,0,0)"; //basic fill of the svg
+var unit_4 = [0, 0, 0, 0]
 
-function showFinishScreen(){
+//use classes for glass
+class Glass {
+    constructor(name, units) {
+        this.name = name;
+        this.image = document.getElementById(name);
+        this.slots_color = Array(units).fill(""); //everything starts as transparent
+        this.slots_space = image.getElementById("Layer-4").getElementsByClassName("cls-2"); //allocate the svg spaces here
+        this.slots_text = Array(units).fill("");
+        this.currentSlot = 0;
+    }
+
+    addIngredient(ingredient) {
+        if (currentSlot < units){
+            slots_color[currentSlot] = ingredient.color;
+            slots_text[currentSlot] = ingredient.name;
+
+            if (ingredient.name === slots_text[currentSlot-1]){
+                slots_text[currentSlot-1] = "";
+                //show only 1 name of ingredient if two or more of same are stacked
+            }
+
+            currentSlot++;
+        } else{
+            //cannot add more, glass is full
+        }
+    }
+
+    color() {
+        var space;
+        for (space = 0; space < units; space++) {
+            if (slots_color[space] === "") {
+                slots_space[space].style.fill = transparent;
+            } else {
+                slots_space[space].style.fill = slots_color[space];
+            }
+        }
+    }
+}
+
+class ingredient {
+    constructor(name, color) {
+        this.name = name;
+        this.color = color;
+    }
+}
+
+
+function showFinishScreen() {
     let maker = document.getElementById('maker-container');
     let select = document.getElementById('select-wrapper');
     let button = document.getElementById('finish-button');

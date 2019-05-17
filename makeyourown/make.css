@@ -67,7 +67,7 @@ nav{
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
-    transition: all 0.3s ease-in-out;
+    /*transition: all 0.3s ease-in-out;*/
 }
 
 .choice-item.selected, .glass.selected{
@@ -76,9 +76,7 @@ nav{
 
 #preview{
     grid-column: pane;
-
     grid-row: pane;
-
     transition: 0.5s ease-in-out;
     justify-content: end;
 
@@ -97,7 +95,7 @@ nav{
     overflow-x: hidden;
     border-radius: 20px 0 0 20px;
     background-color: rgb(71, 44, 36);
-    transition: 0.3s ease-in-out;
+    /*transition: 0.3s ease-in-out;*/
 }
 
 #select-pane::-webkit-scrollbar, #select-desc::-webkit-scrollbar { 

@@ -1,11 +1,16 @@
+var maker = document.getElementById('maker-container');
+
 function foldPane(button) {
     let pane = button.nextElementSibling;
 
     pane.classList.toggle("visible");
     if (pane.style.width !== "20px") {
         pane.style.width = "20px";
+        maker.style.gridTemplateColumns = "[selector]50px auto [pane]30% [button]auto"
+
     } else {
         pane.style.width = "320px";
+        maker.style.gridTemplateColumns = "[selector]320px auto [pane]30% [button]auto"
     }
 }
 
@@ -80,7 +85,6 @@ function showGlass(string) {
 
 
 function showFinishScreen() {
-    let maker = document.getElementById('maker-container');
     let select = document.getElementById('select-wrapper');
     let button = document.getElementById('finish-button');
     let preview = document.getElementById('preview');

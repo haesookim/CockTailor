@@ -116,25 +116,24 @@ class Glass {
         this.currentSlot = 0;
     }
 
-    onload(){
+    onload() {
         let image = document.getElementById(this.name); //each glass class
         this.slots_space = image.querySelector("g#Layer_4").getElementsByClassName("cls-2"); //allocate the svg spaces here
     }
 
     addIngredient(ingredient) {
         console.log(ingredient);
-        if (this.currentSlot < this.units){
+        if (this.currentSlot < this.units) {
             this.slots_color[this.currentSlot] = ingredient.color;
             this.slots_text[this.currentSlot] = ingredient.name;
 
-
-            if (ingredient.name === this.slots_text[this.currentSlot-1]){
-                this.slots_text[this.currentSlot-1] = "";
+            if (ingredient.name === this.slots_text[this.currentSlot - 1]) {
+                this.slots_text[this.currentSlot - 1] = "";
                 //show only 1 name of ingredient if two or more of same are stacked
             }
 
             this.currentSlot++;
-        } else{
+        } else {
             //cannot add more, glass is full
         }
         this.color();
@@ -142,10 +141,18 @@ class Glass {
 
     color() {
         for (let space = 0; space < this.units; space++) {
-            if (this.slots_color[space] === "") {
-                this.slots_space[space].style.fill = transparent;
+            let slot = this.slots_space[space]; //each slot svg path element
+            if (slot === "") {
+                slot.style.fill = transparent;
             } else {
-                this.slots_space[space].style.fill = this.slots_color[space];
+                slot.style.fill = this.slots_color[space];
+                // slot.append() = this.slots_text[space];
+                let element = document.createElement('text');
+                element.setAttribute('x', 5);
+                element.setAttribute('y', 15);
+                let txt = document.createTextNode("Hello World");
+                element.append(txt)
+                slot.append(element);
             }
         }
     }

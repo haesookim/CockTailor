@@ -75,11 +75,32 @@ function showGlass(string) {
             glassArray[k].style.display = "none";
         }
     }
+
 }
+
+
+function showFinishScreen() {
+    let maker = document.getElementById('maker-container');
+    let select = document.getElementById('select-wrapper');
+    let button = document.getElementById('finish-button');
+    let preview = document.getElementById('preview');
+    let finished = document.getElementById('finished');
+
+    select.style.display = "none";
+
+    finished.style.display = "flex";
+    finished.style.gridColumn = "pane"
+    finished.style.gridRow = "finished"
+    button.style.display = "none";
+    maker.style.gridTemplateColumns = "35% [pane]30% 35%";
+    maker.style.gridTemplateRows = "10% [pane]60% [finished]30%"
+    //preview.style.marginTop = "5%";
+}
+
+/* Glass operaton with classes section */
 
 //glass filling functions
 var transparent = "rgba(0,0,0,0)"; //basic fill of the svg
-var unit_4 = [0, 0, 0, 0]
 
 //use classes for glass
 class Glass {
@@ -127,21 +148,32 @@ class ingredient {
     }
 }
 
+var currentGlass;
+function showGlassOOP(string) {
+    console.log(string); //name of class
+    let k;
+    let glass = document.getElementById(string);
+    currentGlass = glass;
+    let glassArray = document.getElementsByClassName('glasstype')
+    glass.style.display = "block";
+    for (k = 0; k < glassItems.length; k++) {
+        if (glassItems[k] !== currentGlass) {
+            glassArray[k].style.display = "none";
+        }
+    }
 
-function showFinishScreen() {
-    let maker = document.getElementById('maker-container');
-    let select = document.getElementById('select-wrapper');
-    let button = document.getElementById('finish-button');
-    let preview = document.getElementById('preview');
-    let finished = document.getElementById('finished');
-
-    select.style.display = "none";
-
-    finished.style.display = "flex";
-    finished.style.gridColumn = "pane"
-    finished.style.gridRow = "finished"
-    button.style.display = "none";
-    maker.style.gridTemplateColumns = "35% [pane]30% 35%";
-    maker.style.gridTemplateRows = "10% [pane]60% [finished]30%"
-    //preview.style.marginTop = "5%";
 }
+
+
+var ingredients = new Array();
+var j;
+for (j = 0; j < choiceItems.length; j++) {
+    ingredients[j] = new ingredient(choiceItems[j].innerHTML, "blue");
+    choiceItems[j].addEventListener("click", function () {
+        this.classList.toggle("selected");
+
+        //make everything blue for now
+        currentGlass.addIngredient();
+    })
+}
+

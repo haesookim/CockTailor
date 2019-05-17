@@ -42,7 +42,7 @@ for (j = 0; j < glassItems.length; j++) {
         if (!glassChosen) {
             glassChosen = true;
             this.classList.toggle('selected');
-            showGlass(this.innerHTML.toLowerCase().split(">")[1].trim());
+            showGlassOOP(this.innerHTML.toLowerCase().split(">")[1].trim());
         }
         else {
             let k;
@@ -59,7 +59,7 @@ for (j = 0; j < glassItems.length; j++) {
                 }
             }
             this.classList.toggle('selected')
-            showGlass(this.innerHTML.toLowerCase().split(">")[1].trim());
+            showGlassOOP(this.innerHTML.toLowerCase().split(">")[1].trim());
         }
     })
 }
@@ -106,36 +106,42 @@ var transparent = "rgba(0,0,0,0)"; //basic fill of the svg
 class Glass {
     constructor(name, units) {
         this.name = name;
-        this.image = document.getElementById(name);
+        this.units = units;
         this.slots_color = Array(units).fill(""); //everything starts as transparent
-        this.slots_space = image.getElementById("Layer-4").getElementsByClassName("cls-2"); //allocate the svg spaces here
         this.slots_text = Array(units).fill("");
         this.currentSlot = 0;
     }
 
-    addIngredient(ingredient) {
-        if (currentSlot < units){
-            slots_color[currentSlot] = ingredient.color;
-            slots_text[currentSlot] = ingredient.name;
+    onload(){
+        let image = document.getElementById(this.name); //each glass class
+        this.slots_space = image.querySelector("g#Layer_4").getElementsByClassName("cls-2"); //allocate the svg spaces here
+    }
 
-            if (ingredient.name === slots_text[currentSlot-1]){
-                slots_text[currentSlot-1] = "";
+    addIngredient(ingredient) {
+        console.log(ingredient);
+        if (this.currentSlot < this.units){
+            this.slots_color[this.currentSlot] = ingredient.color;
+            this.slots_text[this.currentSlot] = ingredient.name;
+
+
+            if (ingredient.name === this.slots_text[this.currentSlot-1]){
+                this.slots_text[this.currentSlot-1] = "";
                 //show only 1 name of ingredient if two or more of same are stacked
             }
 
-            currentSlot++;
+            this.currentSlot++;
         } else{
             //cannot add more, glass is full
         }
+        this.color();
     }
 
     color() {
-        var space;
-        for (space = 0; space < units; space++) {
-            if (slots_color[space] === "") {
-                slots_space[space].style.fill = transparent;
+        for (let space = 0; space < this.units; space++) {
+            if (this.slots_color[space] === "") {
+                this.slots_space[space].style.fill = transparent;
             } else {
-                slots_space[space].style.fill = slots_color[space];
+                this.slots_space[space].style.fill = this.slots_color[space];
             }
         }
     }
@@ -148,32 +154,38 @@ class ingredient {
     }
 }
 
+// initialize glasses
+var glassMap = {};
+glassMap['martini'] = new Glass('martini', 4);
+glassMap['margherita'] = new Glass('margherita', 4);
+glassMap['liqueur'] = new Glass('liqueur', 6);
+glassMap['whiskey'] = new Glass('whiskey', 6);
+glassMap['high-ball'] = new Glass('high-ball', 8);
+glassMap['collins'] = new Glass('collins', 8);
+
 var currentGlass;
 function showGlassOOP(string) {
-    console.log(string); //name of class
-    let k;
     let glass = document.getElementById(string);
-    currentGlass = glass;
-    let glassArray = document.getElementsByClassName('glasstype')
     glass.style.display = "block";
-    for (k = 0; k < glassItems.length; k++) {
-        if (glassItems[k] !== currentGlass) {
+    currentGlass = glassMap[string];
+    currentGlass.onload();
+
+    let glassArray = document.getElementsByClassName('glasstype')
+    for (let k = 0; k < glassItems.length; k++) {
+        if (!glassItems[k].classList.contains('selected')) {
             glassArray[k].style.display = "none";
         }
     }
-
 }
 
 
 var ingredients = new Array();
-var j;
-for (j = 0; j < choiceItems.length; j++) {
+for (let j = 0; j < choiceItems.length; j++) {
     ingredients[j] = new ingredient(choiceItems[j].innerHTML, "blue");
     choiceItems[j].addEventListener("click", function () {
         this.classList.toggle("selected");
 
-        //make everything blue for now
-        currentGlass.addIngredient();
+        currentGlass.addIngredient(ingredients[j]);
     })
 }
 

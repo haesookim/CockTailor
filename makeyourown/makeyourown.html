@@ -316,18 +316,26 @@
 
         </div>
         <div class="button" id="finish-button">
-            <div class="button-text" onclick="showFinishScreen()">FINISHED</div>
+            <div class="button-text" onclick="showNameInput()">FINISHED</div>
+        </div>
+
+        <div id="enter-name">
+            <input type="text" id="cocktail-name" placeholder="나만의 칵테일 이름을 지어주세요">
+            <input type="text" id="cocktail-desc" placeholder="나만의 칵테일에 대한 설명을 해 주세요">
+            <div class="button" onclick="getName()">
+                <div class="button-text">Submit</div>
+            </div>
         </div>
 
         <div id="finished">
-            <div class="button" id="share-button">
-                <div class="button-text">SHARE</div>
+            <div class="button" id="share-button" onclick="share()">
+                <div class="button-text">Share</div>
             </div>
-            <div class="button" id="save-button">
-                <div class="button-text">SAVE</div>
+            <div class="button" id="save-button" onclick="saveImage()">
+                <div class="button-text">Save</div>
             </div>
-            <div class="button" id="gallery-button">
-                <div class="button-text">GALLERY</div>
+            <div class="button" id="gallery-button" onclick="toGallery()">
+                <div class="button-text">To Gallery</div>
             </div>
             <!---공유버튼, 갤러리, 등등--->
         </div>

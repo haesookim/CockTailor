@@ -83,22 +83,46 @@ function showGlass(string) {
 
 }
 
-
-function showFinishScreen() {
+function showNameInput() {
     let select = document.getElementById('select-wrapper');
     let button = document.getElementById('finish-button');
     let preview = document.getElementById('preview');
-    let finished = document.getElementById('finished');
+    let enter = document.getElementById('enter-name');
 
     select.style.display = "none";
 
-    finished.style.display = "flex";
-    finished.style.gridColumn = "pane"
-    finished.style.gridRow = "finished"
+    enter.style.display = "block";
     button.style.display = "none";
     maker.style.gridTemplateColumns = "35% [pane]30% 35%";
     maker.style.gridTemplateRows = "10% [pane]60% [finished]30%"
-    //preview.style.marginTop = "5%";
+    preview.style.marginTop = "5%";
+}
+
+function showFinishScreen() {
+    let finished = document.getElementById('finished');
+    let enter = document.getElementById('enter-name');
+
+    enter.style.display = "none";
+    finished.style.display = "flex";
+    finished.style.gridColumn = "pane"
+    finished.style.gridRow = "finished"
+}
+
+function getName(){
+    showFinishScreen();
+    //get the contents from #cocktail-name and #cocktail-desc
+}
+
+function share(){
+    // share to SNS (facebook, instagram)
+}
+
+function saveImage(){
+    // save image to local
+}
+
+function toGallery(){
+    //is this necessary if the results are automatically uploaded to gallery
 }
 
 /* Glass operaton with classes section */
@@ -188,7 +212,6 @@ function showGlassOOP(string) {
         }
     }
 }
-
 
 var ingredients = new Array();
 for (let j = 0; j < choiceItems.length; j++) {

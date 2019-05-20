@@ -80,7 +80,6 @@ function showGlass(string) {
             glassArray[k].style.display = "none";
         }
     }
-
 }
 
 function showNameInput() {
@@ -98,18 +97,22 @@ function showNameInput() {
     preview.style.marginTop = "5%";
 }
 
-function showFinishScreen() {
-    let finished = document.getElementById('finished');
+function showFinishScreen(name, desc) {
+    let finished = document.querySelector('#final-result');
     let enter = document.getElementById('enter-name');
 
+    finished.querySelector('#name-output').innerHTML = name;
+    finished.querySelector('#desc-output').innerHTML = desc;
     enter.style.display = "none";
-    finished.style.display = "flex";
+    finished.style.display = "block";
     finished.style.gridColumn = "pane"
     finished.style.gridRow = "finished"
 }
 
 function getName(){
-    showFinishScreen();
+    let name = document.getElementById('cocktail-name').value;
+    let desc= document.getElementById('cocktail-desc').value;
+    showFinishScreen(name, desc);
     //get the contents from #cocktail-name and #cocktail-desc
 }
 

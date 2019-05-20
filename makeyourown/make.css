@@ -179,10 +179,15 @@ nav{
     margin: 0 auto;
 }
 
+#enter-name .button{
+    margin: 0 auto;
+}
+
 input{
-    margin: 0 auto 15px;
-    width: 100%;
+    margin: 0 10% 15px;
+    width: 80%;
     height: 30px;
+    font-size: 17px;
 }
 
 .button-text{
@@ -204,8 +209,12 @@ input{
     margin-top: 10px;
 }
 
-#finished{
+#final-result{
     display: none;
+}
+
+#finished{
+    display:flex;
     margin: 20px auto;
     place-self: stretch;
     align-self: center;

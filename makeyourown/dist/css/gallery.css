@@ -6,22 +6,9 @@
 html, body {
     height: 100%;
     color: white;
-    font-family: 'Roboto', SansSerif;
+    font-family: 'Roboto', 'Noto Sans KR';
     margin: 0;
     padding: 0;
-}
-
-.section-title h2{
-   color:#f2f2f2;
-}
-.section-title p{
-    color:lightgray;
-}
-
-img{
-    margin-left: 30px;
-    width:300px;
-    height:200px;
 }
 
 body{
@@ -33,7 +20,7 @@ body{
     background-attachment: fixed;
 }
 
-.nav-bar{
+nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -52,21 +39,22 @@ body{
     margin-left: 25px;
 }
 
-a{
-    text-decoration: none!important;
-    color: white!important;
-
+.nav-item a{
+    text-decoration: none;
+    color: white;
+}
+.section-title h2{
+   color:#f2f2f2;
+}
+.section-title p{
+    color:lightgray;
 }
 
-
-
-
-footer {
-    border-top: 1px solid #f2f2f2;
+img{
+    margin-left: 30px;
+    width:300px;
+    height:200px;
 }
-
-
-
 
 figure {
     position: relative;

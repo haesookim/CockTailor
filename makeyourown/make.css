@@ -169,6 +169,7 @@ nav{
     background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
     color: white;
     margin: 5px;
+    cursor: pointer;
 }
 
 #enter-name{

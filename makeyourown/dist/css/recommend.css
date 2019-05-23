@@ -49,6 +49,7 @@ nav{
     overflow: hidden;
     visibility: hidden;
     position: relative;
+    height:100%;
 }
 .swipe-wrap {
     overflow: hidden;
@@ -141,11 +142,7 @@ footer {
     border-top: 1px solid #f2f2f2; 
 }
 
-.questioncontainer  {
-    padding-top: 50px;
-}
 .outercontainer{
-    display: flex;
     border-radius: 20px;
     border: 2px solid white;
     margin: 50px 80px;
@@ -159,15 +156,22 @@ footer {
     background-blend-mode: overlay;
 }
 
-.choicecontainer{
-    display:flex;
-    width: 600px;
-    margin: 0 auto;
+.questioncontainer  {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 12.5% 12.5% [choice-1]25% [choice-2]25% 12.5% 12.5%;
+    grid-template-rows: [question]50% [choices]50%;
+}
+
+.question{
+    grid-row: question;
+    grid-column-start: 2;
+    grid-column-end: 6;
 }
 
 .L, .R{
-    width: 300px;
-    height: 400px;
+    width: 320px;
+    height: 500px;
     background-color: white;
     text-align: center;
     color: black;
@@ -176,6 +180,7 @@ footer {
     display: block;
     margin-top: 10px;
     transition: all 0.3s ease-out;
+    grid-row: choices;
 }
 
 .L:hover, .R:hover{
@@ -191,10 +196,12 @@ footer {
 }
 .L{
     border-right: solid 1px black;
+    grid-column: choice-1;
 }
 
 .R{
     border-left: solid 1px black;
+    grid-column: choice-2;
 }
 
 .choice-text{

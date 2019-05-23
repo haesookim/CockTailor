@@ -13,7 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200" rel="stylesheet" type="text/css" />
-    <!--    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>-->
 </head>
 <style>
 
@@ -36,11 +35,9 @@
     <div class="outercontainer">
         <div id="mySwipe" class="swipe">
             <div class="swipe-wrap">
-
                 <div class="questioncontainer">
-                    <div><b class="question"> Q1. 당신의 음주 스타일은 어떤가요?</b>
+                    <div class="question"><b> Q1. 당신의 음주 스타일은 어떤가요?</b>
                     </div>
-                    <div class="choicecontainer">
                         <a href="#" onclick="mySwipe.next()" class="L">
                             <img src="images/choices/1-shot.svg">
                             <div class="choice-text">한 잔을 마셔도 짧고 굵게!</div>
@@ -49,13 +46,11 @@
                             <img src="images/choices/1-long.svg">
                             <div class="choice-text">여유를 가지고 천천히 길-게!</div>
                         </a>
-                    </div>
                 </div>
 
                 <div class="questioncontainer">
-                    <div><b class="question"> Q2. 숲속의 님프들은 노래와 출을 즐기며 술을 즐겨마셨다고 하죠! 당신은 님프로 따지면 어떤 님프인가요?</b>
+                    <div class="question"><b> Q2. 숲속의 님프들은 노래와 출을 즐기며 술을 즐겨마셨다고 하죠! 당신은 님프로 따지면 어떤 님프인가요?</b>
                     </div>
-                    <div class="choicecontainer">
                         <a href="#" onclick="mySwipe.next()" class="L">
                             <img src="images/choices/2-forest.svg">
                             <div class="choice-text">쾌청한 숲속에서 달큰한 과일과 함께 </br>인생을 즐기는 숲의 님프!</div>
@@ -64,12 +59,10 @@
                             <img src="images/choices/2-river.svg">
                             <div class="choice-text">시원한 강가에서 첨벙첨벙 물놀이하며 물맛과 술맛을 즐기는 강의 님프!</div>
                         </a>
-                    </div>
                 </div>
                 <div class="questioncontainer">
-                    <div><b class="question"> Q3. 당신은 어떤 종류의 재료를 더 좋아하시나요?</b>
+                    <div class="question"><b> Q3. 당신은 어떤 종류의 재료를 더 좋아하시나요?</b>
                     </div>
-                    <div class="choicecontainer">
                         <a href="#" onclick="mySwipe.next()" class="L">
                             <img src="images/choices/3-sour.svg">
                             <div class="choice-text">상큼하게 톡톡! 입안을 터뜨리는 맛!</div>
@@ -78,8 +71,6 @@
                             <img src="images/choices/3-bitter.svg">
                             <div class="choice-text">은은한듯 시크한듯 묵직한 듯 내 혀를 돌돌 감싸는 맛</div>
                         </a>
-
-                    </div>
                 </div>
                 <div class="answercontainer">
                     <div class="answer" id="tequila-sunrise">
@@ -124,24 +115,10 @@
                         <div class="button-text" onclick="mySwipe.next()">다시 하기</div>
                     </div>
                 </div>
+
             </div>
-
-
         </div>
-
     </div>
-
-
-
-    <!--    </div>-->
-    <!--</div>-->
-    <!--        <div class="demo-controls">-->
-
-    <!--            <a class="btn btn-primary" id="prev"> <span class="glyphicon glyphicon-chevron-left">Prev</span></a>-->
-
-    <!--            <a class="btn btn-primary" id="next"> <span class="glyphicon glyphicon-chevron-right">Next</span></a>-->
-    <!--        </div>-->
-
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -150,9 +127,7 @@
     // pure JS
 
 
-    var element = document.getElementById('mySwipe'),
-        prevBtn = document.getElementById('prev'),
-        nextBtn = document.getElementById('next');
+    var element = document.getElementById('mySwipe');
 
     window.mySwipe = new Swipe(element, {
         startSlide: 0,
@@ -167,57 +142,6 @@
         }
     });
 
-    // using jQuery
-    // window.mySwipe = $('#mySwipe').Swipe().data('Swipe');
-    prevBtn.onclick = mySwipe.prev;
-    nextBtn.onclick = mySwipe.next;
-
-    google.charts.load('current', { 'packages': ['corechart'] });
-    google.charts.setOnLoadCallback(drawChart);
-
-    function drawChart() {
-
-        var data = google.visualization.arrayToDataTable([
-            ['Task', 'Hours per Day'],
-            ['Work', 11],
-            ['Eat', 2],
-            ['Commute', 2],
-            ['Watch TV', 2],
-            ['Sleep', 7]
-        ]);
-
-        var options = {
-            title: 'My Daily Activities',
-            animation: {
-                duration: 1000,
-                easing: 'in',
-                startup: true
-            }
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-        chart.draw(data, options);
-        // initial value
-        var percent = 0;
-        // start the animation loop
-        var handler = setInterval(function () {
-            // values increment
-            percent += 1;
-            // apply new values
-            data.setValue(0, 1, percent);
-            data.setValue(1, 1, 100 - percent);
-            // update the pie
-            chart.draw(data, options);
-            // check if we have reached the desired value
-            if (percent > 74)
-                // stop the loop
-                clearInterval(handler);
-        }, 30);
-    }
-
 </script>
-
-<script>hljs.initHighlightingOnLoad();</script>
 
 </html>

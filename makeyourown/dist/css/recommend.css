@@ -190,9 +190,9 @@ footer {
 }
 
 .L img, .R img{
-    width: 150px;
-    height: 150px;
-    margin: 70px 75px 20px;
+    width: 40%;
+    height: 40%;
+    margin: 30px auto 20px;
 }
 .L{
     border-right: solid 1px black;
@@ -219,6 +219,7 @@ footer {
 
 .answercontainer{
     height:inherit;
+    display: grid;
 }
 
 .answer{

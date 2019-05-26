@@ -45,7 +45,7 @@ nav{
 
 #maker-container{
     display: grid;
-    grid-template-columns: [selector]320px auto [pane]30% [button]auto;
+    grid-template-columns: [selector]320px 20% [pane]30% [button]20%;
     grid-template-rows: 25% [pane]55% [button]20%; /* the layout is up to edits */
 
     border-radius: 20px;

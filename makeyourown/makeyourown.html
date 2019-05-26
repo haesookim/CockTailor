@@ -8,6 +8,8 @@
     <link href="make.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700" rel="stylesheet">
+
+    <script src="https://d3js.org/d3.v3.min.js"></script>
 </head>
 
 <body>
@@ -315,9 +317,14 @@
             </div>
 
         </div>
+
         <div class="button" id="finish-button">
             <div class="button-text" onclick="showNameInput()">FINISHED</div>
         </div>
+
+        <canvas id="previewcanvas">
+            
+        </canvas>
 
         <div id="enter-name">
             <input type="text" id="cocktail-name" placeholder="나만의 칵테일 이름을 지어주세요">
@@ -350,6 +357,7 @@
     </div>
 
     <script src="make.js"></script>
+    <script src="make_canvas.js"></script>
 </body>
 
 </html>

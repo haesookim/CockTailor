@@ -75,6 +75,7 @@ function showGlass(string) {
     let glass = document.getElementById(string);
     let glassArray = document.getElementsByClassName('glasstype')
     glass.style.display = "block";
+    glass.classList.toggle('active-glass');
     for (k = 0; k < glassItems.length; k++) {
         if (!glassItems[k].classList.contains('selected')) {
             glassArray[k].style.display = "none";

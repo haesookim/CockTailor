@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700" rel="stylesheet">
 
     <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvg/dist/browser/canvg.min.js"></script>
 </head>
 
 <body>
@@ -99,7 +100,7 @@
 
         <div id="preview">
             <div class="glasstype" id="liqueur">
-                <svg viewBox="0 0 500 500">
+                <svg viewBox="0 0 500 500" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <defs>
                         <style>
                             .cls-1 {
@@ -316,15 +317,15 @@
                 </svg>
             </div>
 
+            <canvas id="previewcanvas">
+            
+            </canvas>
         </div>
 
         <div class="button" id="finish-button">
             <div class="button-text" onclick="showNameInput()">FINISHED</div>
         </div>
 
-        <canvas id="previewcanvas">
-            
-        </canvas>
 
         <div id="enter-name">
             <input type="text" id="cocktail-name" placeholder="나만의 칵테일 이름을 지어주세요">

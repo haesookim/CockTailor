@@ -69,19 +69,6 @@ for (j = 0; j < glassItems.length; j++) {
     })
 }
 
-function showGlass(string) {
-    console.log(string);
-    let k;
-    let glass = document.getElementById(string);
-    let glassArray = document.getElementsByClassName('glasstype')
-    glass.style.display = "block";
-    for (k = 0; k < glassItems.length; k++) {
-        if (!glassItems[k].classList.contains('selected')) {
-            glassArray[k].style.display = "none";
-        }
-    }
-}
-
 function showNameInput() {
     let select = document.getElementById('select-wrapper');
     let button = document.getElementById('finish-button');
@@ -109,22 +96,27 @@ function showFinishScreen(name, desc) {
     finished.style.gridRow = "finished"
 }
 
-function getName(){
+function getName() {
     let name = document.getElementById('cocktail-name').value;
-    let desc= document.getElementById('cocktail-desc').value;
+    let desc = document.getElementById('cocktail-desc').value;
     showFinishScreen(name, desc);
-    //get the contents from #cocktail-name and #cocktail-desc
 }
 
-function share(){
+function share() {
     // share to SNS (facebook, instagram)
 }
 
-function saveImage(){
+function saveImage() {
+    var canvas = document.getElementById("previewcanvas");
+    image = canvas.toDataURL("image/png", 1.0).replace("image/png", "image/octet-stream");
+    var link = document.createElement('a');
+    link.download = "my-image.png";
+    link.href = image;
+    link.click();
     // save image to local
 }
 
-function toGallery(){
+function toGallery() {
     //is this necessary if the results are automatically uploaded to gallery
 }
 

@@ -1,0 +1,74 @@
+[
+    {
+        "name": "whiskey",
+        "color": "e34e04"
+    },
+    {
+        "name": "dark rum",
+        "color": "654323"
+    },
+    {
+        "name": "light rum",
+        "color": "b2beaf"
+    },
+    {
+        "name": "red wine",
+        "color": "cb002d"
+    },
+    {
+        "name": "tequila",
+        "color": "fdcd4f"
+    },
+    {
+        "name": "malibu",
+        "color": "ffffff"
+    },
+    {
+        "name": "creme de cacao",
+        "color": "3a2426"
+    },
+    {
+        "name": "blue curacao",
+        "color": "6defe5"
+    },
+    {
+        "name": "midori",
+        "color": "d9f852"
+    },
+    {
+        "name": "creme de violet",
+        "color": "b983c8"
+    },
+    {
+        "name": "advocat",
+        "color": "eec744"
+    },
+    {
+        "name": "bailey's",
+        "color": "f3e4c5"
+    },
+    {
+        "name": "cherry brandy",
+        "color": "e02031"
+    },
+    {
+        "name": "cranberry juice",
+        "color": "f11347"
+    },
+    {
+        "name": "lemon juice",
+        "color": "fee251"
+    },
+    {
+        "name": "lime juice",
+        "color": "c0d643"
+    },
+    {
+        "name": "orange juice",
+        "color": "ff9402"
+    },
+    {
+        "name": "grapefruit juice",
+        "color": "f3554a"
+    }
+]

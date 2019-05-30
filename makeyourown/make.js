@@ -247,5 +247,9 @@ function svgToCanvas() {
     canvas.height = 500;
 
     var glasses = document.querySelector(".active-glass");
+    var loading = document.querySelector("#isloading");
     glasses.style.display = "none";
+    loading.style.display = "block";
+    canvas.style.display = "block";
+
 }

@@ -322,8 +322,8 @@
             </canvas>
         </div>
 
-        <div class="button" id="finish-button">
-            <div class="button-text" onclick="showNameInput()">FINISHED</div>
+        <div class="button" id="finish-button" onclick="showNameInput()">
+            <div class="button-text">FINISHED</div>
         </div>
 
 
@@ -342,10 +342,10 @@
             </div>
 
             <div id="finished">
-                <div class="button" id="share-button" onclick="share()">
+                <a class="button" id="share-button" href = "http://www.facebook.com/sharer.php?u=#" onclick="share()" target="blank">
                     <div class="button-text">Share</div>
-                </div>
-                <div class="button" id="save-button" onclick="saveImage()" download="dd.png">
+                </a>
+                <div class="button" id="save-button" onclick="saveImage()">
                     <div class="button-text">Save</div>
                 </div>
                 <div class="button" id="gallery-button" onclick="toGallery()">

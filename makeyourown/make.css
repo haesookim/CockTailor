@@ -174,10 +174,10 @@ nav{
 
 #enter-name{
     display: none;
-    grid-column : pane;
-    grid-row : finished;
+    grid-column : finished;
+    grid-row: pane;
     justify-content: center;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 #enter-name .button{

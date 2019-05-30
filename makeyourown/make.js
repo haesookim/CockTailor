@@ -34,8 +34,6 @@ var j;
 for (j = 0; j < choiceItems.length; j++) {
     choiceItems[j].addEventListener("click", function () {
         this.classList.toggle("selected");
-
-        //paint each section
     })
 }
 
@@ -79,8 +77,8 @@ function showNameInput() {
 
     enter.style.display = "block";
     button.style.display = "none";
-    maker.style.gridTemplateColumns = "35% [pane]30% 35%";
-    maker.style.gridTemplateRows = "10% [pane]60% [finished]30%"
+    maker.style.gridTemplateColumns = "10% [pane]35% [finished]45% 10%";
+    maker.style.gridTemplateRows = "15% [pane]65% 20%"
     preview.style.marginTop = "5%";
 }
 
@@ -88,12 +86,12 @@ function showFinishScreen(name, desc) {
     let finished = document.querySelector('#final-result');
     let enter = document.getElementById('enter-name');
 
-    finished.querySelector('#name-output').innerHTML = name;
+    var cocktailname = finished.querySelector('#name-output').innerHTML = name;
     finished.querySelector('#desc-output').innerHTML = desc;
     enter.style.display = "none";
     finished.style.display = "block";
-    finished.style.gridColumn = "pane"
-    finished.style.gridRow = "finished"
+    finished.style.gridColumn = "finished"
+    finished.style.gridRow = "pane"
 }
 
 function getName() {
@@ -108,9 +106,10 @@ function share() {
 
 function saveImage() {
     var canvas = document.getElementById("previewcanvas");
+    var cocktailname = document.querySelector('#final-result').querySelector('#name-output').innerHTML;
     image = canvas.toDataURL("image/png", 1.0).replace("image/png", "image/octet-stream");
     var link = document.createElement('a');
-    link.download = "my-image.png";
+    link.download = cocktailname + ".png";
     link.href = image;
     link.click();
     // save image to local
@@ -135,10 +134,10 @@ class Glass {
         this.currentSlot = 0;
     }
 
-    onload() {
+    onload() { // initialize
         let image = document.getElementById(this.name); //each glass class
-        this.slots_space = image.querySelector("g#Layer_4").getElementsByClassName("cls-2"); //allocate the svg spaces here
-        this.slots_color = Array(this.units).fill(""); //everything starts as transparent
+        this.slots_space = image.querySelector("g#Layer_4").getElementsByClassName("cls-2");
+        this.slots_color = Array(this.units).fill("");
         this.slots_text = Array(this.units).fill("");
         this.color();
         this.currentSlot = 0;
@@ -153,11 +152,10 @@ class Glass {
             if (ingredient.name === this.slots_text[this.currentSlot - 1]) {
                 this.slots_text[this.currentSlot - 1] = "";
                 //show only 1 name of ingredient if two or more of same are stacked
+                //actually add this to the recipe
             }
             this.currentSlot++;
             console.log(ingredient.color);
-        } else {
-            //cannot add more, glass is full
         }
         this.color();
     }
@@ -215,6 +213,7 @@ function showGlassOOP(string) {
 }
 
 var ingredients = new Array();
+// ingredient colors
 var colors = ["e34e04", "654323", "b2beaf", "cb002d", "fdcd4f", "f0e5c9", "3a2426", "6defe5", "d9f852", "b983c8", "eec744", "f3e4c5", "e02031","f11347", "fee251", "c0d643", "ff9402", "f3554a"];
 
 for (let j = 0; j < choiceItems.length; j++) {
@@ -226,8 +225,7 @@ for (let j = 0; j < choiceItems.length; j++) {
     })
 }
 
-
-/* canvas code */
+/* convert svg to canvas */
 
 let finish = document.getElementById('finish-button');
 finish.addEventListener("click", svgToCanvas);

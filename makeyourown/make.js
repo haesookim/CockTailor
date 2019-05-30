@@ -138,6 +138,10 @@ class Glass {
     onload() {
         let image = document.getElementById(this.name); //each glass class
         this.slots_space = image.querySelector("g#Layer_4").getElementsByClassName("cls-2"); //allocate the svg spaces here
+        this.slots_color = Array(this.units).fill(""); //everything starts as transparent
+        this.slots_text = Array(this.units).fill("");
+        this.color();
+        this.currentSlot = 0;
     }
 
     addIngredient(ingredient) {
@@ -150,8 +154,8 @@ class Glass {
                 this.slots_text[this.currentSlot - 1] = "";
                 //show only 1 name of ingredient if two or more of same are stacked
             }
-
             this.currentSlot++;
+            console.log(ingredient.color);
         } else {
             //cannot add more, glass is full
         }
@@ -197,6 +201,7 @@ var currentGlass;
 function showGlassOOP(string) {
     let glass = document.getElementById(string);
     glass.style.display = "block";
+
     glass.classList.toggle('active-glass');
     currentGlass = glassMap[string];
     currentGlass.onload();
@@ -210,8 +215,10 @@ function showGlassOOP(string) {
 }
 
 var ingredients = new Array();
+var colors = ["e34e04", "654323", "b2beaf", "cb002d", "fdcd4f", "f0e5c9", "3a2426", "6defe5", "d9f852", "b983c8", "eec744", "f3e4c5", "e02031","f11347", "fee251", "c0d643", "ff9402", "f3554a"];
+
 for (let j = 0; j < choiceItems.length; j++) {
-    ingredients[j] = new ingredient(choiceItems[j].innerHTML, "blue");
+    ingredients[j] = new ingredient(choiceItems[j].innerHTML, "#"+colors[j]);
     choiceItems[j].addEventListener("click", function () {
         this.classList.toggle("selected");
 
@@ -219,3 +226,28 @@ for (let j = 0; j < choiceItems.length; j++) {
     })
 }
 
+
+/* canvas code */
+
+let finish = document.getElementById('finish-button');
+finish.addEventListener("click", svgToCanvas);
+
+var width = 500;
+var height = 500;
+
+function svgToCanvas() {
+    var svg = document.querySelector(".active-glass").querySelector("svg");
+    console.log(svg);
+
+    var serializer = new XMLSerializer(),
+        svgStr = serializer.serializeToString(svg);
+
+    var canvas = document.getElementById('previewcanvas');
+
+    canvg(canvas, svgStr);
+    canvas.width = 500;
+    canvas.height = 500;
+
+    var glasses = document.querySelector(".active-glass");
+    glasses.style.display = "none";
+}

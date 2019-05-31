@@ -1,0 +1,226 @@
+@font-face{
+    font-family: 'Romantic Beach';
+    src: url(../fonts/Romantic\ Beach.ttf);
+}
+
+html, body {
+    height: 100%;
+    color: white;
+    font-family: 'Roboto', 'Noto Sans KR';
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(asset_path("woodbackground.jpg"));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(26, 26, 26, 0.5);
+    background-blend-mode: overlay;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 0;
+    font-size: 17px;
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+.nav-right{
+    display:flex;
+    margin-right: 40px;
+}
+
+.nav-item{
+    margin-left: 25px;
+}
+
+.nav-item a{
+    text-decoration: none;
+    color: white;
+}
+
+#maker-container{
+    display: grid;
+    grid-template-columns: [selector]320px 20% [pane]30% [button]20%;
+    grid-template-rows: 25% [pane]55% [button]20%; /* the layout is up to edits */
+
+    border-radius: 20px;
+    border: 2px solid white;
+    margin: 50px 80px;
+    margin-bottom: 0px;
+    height: 80%;
+    background-image: image-url('woodbackground.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(26, 26, 26, 0.856);
+    background-blend-mode: overlay;
+}
+
+#select-wrapper{
+    grid-column: selector; 
+    grid-row-start: 1;
+    grid-row-end: 4;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.choice-item.selected, .glass.selected{
+    background-color: rgba(139, 139, 139, 0.43);
+}
+
+#preview{
+    grid-column: pane;
+    grid-row: pane;
+    justify-content: end;
+
+}
+
+.glasstype{
+    display: none;
+    color: black;
+}
+
+#select-pane{
+    align-items: flex-start;
+    height: 100%;
+    width: 320px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-radius: 20px 0 0 20px;
+    background-color: rgb(71, 44, 36);
+    /*transition: 0.3s ease-in-out;*/
+}
+
+#select-pane::-webkit-scrollbar, #select-desc::-webkit-scrollbar { 
+    display: none; 
+}
+
+#select-desc{
+    margin: 20px 20px 10px;
+    overflow-x: hidden;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#fold-select{
+    background-color: orange;
+    height: 60px;
+    width: 30px;
+    border-radius: 0 10px 10px 0;
+}
+
+#fold-select:hover{
+    background-color: rgb(185, 121, 1);
+}
+
+.choice-name{
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.choice{
+    border-radius: 5px;
+    padding-bottom: 15px;
+    margin: 0 2px 15px 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.choice.active{
+    background-color: rgba(255, 255, 255, 0.11);
+    transition: all 0.3s ease-in-out;
+}
+
+.choice-items{
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 290px;
+    display: none;
+    overflow-x: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.choice-item, .glass{
+    height: fit-content;
+    width: 70px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 12px;
+}
+
+.glass img{
+    height: 70px;
+    width: 70px;
+}
+
+.button{
+    height: 45px;
+    width: 70px;
+    padding: 0px 20px 0px;
+    border-radius: 25px;
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+    color: white;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#enter-name{
+    display: none;
+    grid-column : pane;
+    grid-row : finished;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#enter-name .button{
+    margin: 0 auto;
+}
+
+input{
+    margin: 0 10% 15px;
+    width: 80%;
+    height: 30px;
+    font-size: 17px;
+}
+
+.button-text{
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+#finish-button{
+    grid-column: button;
+    grid-row: button;
+    justify-self: center;
+    width: fit-content;
+    background-image: linear-gradient(45deg, #a6c0fe 0%, #f68084 100%);
+    text-align: center;
+    padding-top:0;
+}
+
+#finish-button .button-text{
+    margin-top: 10px;
+}
+
+#final-result{
+    display: none;
+}
+
+#finished{
+    display:flex;
+    margin: 20px auto;
+    place-self: stretch;
+    align-self: center;
+    justify-content: space-evenly;
+    justify-self: center;
+    text-align: center;
+    transition-delay: 0.5s;
+}

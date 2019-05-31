@@ -1,0 +1,382 @@
+<!--
+본 문서가 불러일으키는 style null의 문제는 아래를 통해서 해결할 수 있을 것으로 보임
+https://stackoverflow.com/questions/19235345/javascript-typeerror-cannot-read-property-style-of-null
+
+page-specific 
+https://thoughtbot.com/blog/slicing-up-rails-application-js-for-faster-load-times#leverage-require_directory-in-manifests
+-->
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Make your own</title>
+    <meta charset="utf-8">
+    <!--
+    <link href="make.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700" rel="stylesheet">
+    -->
+    <%= javascript_include_tag "https://cdn.jsdelivr.net/npm/canvg/dist/browser/canvg.min.js" %>
+    <%= javascript_include_tag "make" %>
+    
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-item"><a href="../index.html"
+            style="font-family:'Romantic Beach'; font-size: 23px; font-weight: 300;">CockTailor</a></div>
+        <div class="nav-right">
+            <div class="nav-item"><a href="makeyourown.html">칵테일 만들기</a></div>
+            <div class="nav-item"><a href="recommendation.html">칵테일 추천</a></div>
+            <div class="nav-item"><a href="gallery.html">칵테일 갤러리</a></div>
+        </div>
+    </nav>
+    
+    <div id="maker-container">
+        <div id="select-wrapper">
+            <div id="fold-select"  onclick="foldPane(this)"></div>
+            <div id="select-pane">
+                <div id="select-desc">사용할 재료들을 골라보세요!</div>
+                <div class="choice-wrapper">
+                    <div class="choice" id="glass">
+                        <div class="choice-name">Glass</div>
+                        <div class="choice-items">
+                            <div class="glass">
+                                <%= image_tag("glass/liqeur.png") %>
+                                Liqueur
+                            </div>
+                            <div class="glass">
+                                <%= image_tag("glass/martini.png") %>Martini
+                            </div>
+                            <div class="glass">
+                                <%= image_tag("glass/whiskey.png") %>
+                                Whiskey
+                            </div>
+                            <div class="glass">
+                                <%= image_tag("glass/margherita.png") %>
+                                Margherita
+                            </div>
+                            <div class="glass">
+                                <%= image_tag("glass/highball.png") %>
+                                
+                                High-ball
+                            </div>
+                            <div class="glass">
+                                <%= image_tag("glass/collins.png") %>
+                               
+                                Collins
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="choice-wrapper">
+                    <div class="choice" id="base">
+                        <div class="choice-name">Base</div>
+                        <div class="choice-items">
+                            <div class="choice-item">Whiskey</div>
+                            <div class="choice-item">Dark Rum</div>
+                            <div class="choice-item">Light Rum</div>
+                            <div class="choice-item">Red Wine</div>
+                            <div class="choice-item">Tequila</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="choice-wrapper">
+                    <div class="choice" id="Liquor">
+                        <div class="choice-name">Liqueur</div>
+                        <div class="choice-items">
+                            <div class="choice-item">Malibu</div>
+                            <div class="choice-item">Creme de Cacao</div>
+                            <div class="choice-item">Blue Curaçao</div>
+                            <div class="choice-item">Midori</div>
+                            <div class="choice-item">Creme de Violet</div>
+                            <div class="choice-item">Advocaat</div>
+                            <div class="choice-item">Bailey's</div>
+                            <div class="choice-item">Cherry Brandy</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="choice-wrapper">
+                    <div class="choice" id="Juice">
+                        <div class="choice-name">Juice</div>
+                        <div class="choice-items">
+                            <div class="choice-item">Cranberry Juice</div>
+                            <div class="choice-item">Lemon Juice</div>
+                            <div class="choice-item">Lime Juice</div>
+                            <div class="choice-item">Orange Juice</div>
+                            <div class="choice-item">Grapefruit Juice</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="preview">
+            <div class="glasstype" id="liqueur">
+                <svg viewBox="0 0 500 500" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: none;
+                            }
+
+                            .cls-2 {
+                                fill: #fff;
+                            }
+                        </style>
+                    </defs>
+                    <title>liqeur_segment</title>
+                    <g id="Layer_1" data-name="Layer 1">
+                        <rect class="cls-1" width="500" height="500" />
+                    </g>
+                    <g id="Layer_2" data-name="Layer 2">
+                        <path class="cls-2"
+                            d="M176.5,44h147s-9,13-14,34-9,58-9,103,.75,88-4,99c-6.25,8.25-30,18-30,40s-1,82.5-1,82.5,2,18.5,16,24.5,44,13,47,19a33,33,0,0,1,3,13s-30,7-78,7-85-11-85-11,0-11,5-14,36-9,42-16,17-13,18-23,0-67,0-84S210,286.5,204,278.5s-4.29-45.5-4.29-96.5-2.77-93.66-7.21-106C186.5,61,181.5,53,176.5,44Z" />
+                    </g>
+                    <g id="Layer_4" data-name="Layer 4">
+                        <path class="cls-2"
+                            d="M209.75,249c.64,11.86,2.06,19,6.26,23.44,0,0,5.74,11.24,33.74,11.24h.5c28,0,32.5-9.92,32.5-9.92C287.3,269,289,261.42,289.88,249Z" />
+                        <path class="cls-2"
+                            d="M209.75,249h80.13c.63-8.91.83-20.33,1.33-35H208.78C209.22,228.78,209.27,240.19,209.75,249Z" />
+                        <path class="cls-2"
+                            d="M207.55,179c.18,7.17.4,14.17.7,20.83.23,5,.39,9.75.53,14.17h82.43c.15-4.28.32-8.82.54-13.67.31-7,.55-14.11.77-21.33Z" />
+                        <path class="cls-2"
+                            d="M207.55,179h85c.34-11.64.63-23.47,1.06-35H206.77C207.05,155.59,207.25,167.5,207.55,179Z" />
+                        <path class="cls-2"
+                            d="M206.77,144h86.81c.45-12.2,1.07-24.06,2.09-35H205.41C206.09,119.71,206.47,131.67,206.77,144Z" />
+                        <path class="cls-2"
+                            d="M205.41,109h90.26c1.25-13.41,3.11-25.44,6-35H200.31C203,81.63,204.46,94.1,205.41,109Z" />
+                    </g>
+                </svg>
+            </div>
+            <div class="glasstype" id="martini">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: none;
+                            }
+
+                            .cls-2 {
+                                fill: #fff;
+                            }
+                        </style>
+                    </defs>
+                    <title>martini_segment</title>
+                    <g id="Layer_1" data-name="Layer 1">
+                        <rect class="cls-1" width="500" height="500" />
+                    </g>
+                    <g id="Layer_2" data-name="Layer 2">
+                        <path class="cls-2"
+                            d="M330,444c-5-3-48.5-12-54.5-19s-13-13-14-23-3.71-167,5-196c19-25,123-153,130-162h-293c7,9,111,137,130,162,8.71,29,6,186,5,196s-8,16-14,23S175,441,170,444s-5,11-5,11,37,11,85,11,85-11,85-11S335,447,330,444Z" />
+                    </g>
+                    <g id="Layer_4" data-name="Layer 4">
+                        <path class="cls-2"
+                            d="M211.33,156c11.84,14.17,21,24.53,23.67,25.62,8.27,3.42,11.33,4.27,15,4.27s6.73-.85,15-4.27c2.63-1.09,11.83-11.45,23.67-25.62Z" />
+                        <path class="cls-2"
+                            d="M211.33,156h77.34c7.48-8.94,16-19.39,24.62-30H186.71C195.33,136.61,203.85,147.06,211.33,156Z" />
+                        <path class="cls-2"
+                            d="M186.71,126H313.29c8.34-10.28,16.76-20.69,24.36-30H162.35C170,105.31,178.37,115.72,186.71,126Z" />
+                        <path class="cls-2"
+                            d="M137,66.17c4.82,4.93,14.2,16.19,25.35,29.83h175.3C348.8,82.36,358.18,71.1,363,66.17c-.32-.07-8.7-.13-22.05-.17H159.05C145.7,66,137.32,66.1,137,66.17Z" />
+                    </g>
+                </svg>
+            </div>
+            <div class="glasstype" id="whiskey">
+                <svg viewBox="0 0 500 500">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: none;
+                            }
+
+                            .cls-2 {
+                                fill: #fff;
+                            }
+                        </style>
+                    </defs>
+                    <title>whiskey_segment</title>
+                    <g id="Layer_1" data-name="Layer 1">
+                        <rect class="cls-1" width="500" height="500" />
+                    </g>
+                    <g id="Layer_2" data-name="Layer 2">
+                        <path class="cls-2"
+                            d="M369.5,195h-239l17,263.94s51.35,7,102,7.06h1c50.65-.09,102-7.06,102-7.06Z" />
+                    </g>
+                    <g id="Layer_4" data-name="Layer 4">
+                        <path class="cls-2"
+                            d="M156.31,390c1,11.8,1.69,19.38,1.69,19.38s26.44,7.56,92,7.56,92-7.56,92-7.56.67-7.58,1.69-19.38Z" />
+                        <path class="cls-2"
+                            d="M343.7,389.9c.66-7.56,1.45-16.85,2.31-27H154c.86,10.15,1.65,19.44,2.31,27Z" />
+                        <path class="cls-2"
+                            d="M346,362.8c.73-8.57,1.5-17.74,2.26-27H151.72c.76,9.26,1.53,18.43,2.26,27Z" />
+                        <path class="cls-2"
+                            d="M348.29,335.7c.75-9.08,1.49-18.24,2.18-27H149.53c.69,8.76,1.43,17.92,2.18,27Z" />
+                        <path class="cls-2" d="M350.48,308.6c.76-9.73,1.46-19,2-27h-205c.57,8,1.27,17.27,2,27Z" />
+                        <path class="cls-2"
+                            d="M147.48,281.5h205c.9-12.7,1.48-22.44,1.48-26.56H146C146,259.06,146.58,268.8,147.48,281.5Z" />
+                    </g>
+                </svg>
+            </div>
+            <div class="glasstype" id="margherita">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: none;
+                            }
+
+                            .cls-2 {
+                                fill: #fff;
+                            }
+                        </style>
+                    </defs>
+                    <title>margherita_segment</title>
+                    <g id="Layer_1" data-name="Layer 1">
+                        <rect class="cls-1" x="1" width="500" height="500" />
+                    </g>
+                    <g id="Layer_2" data-name="Layer 2">
+                        <path class="cls-2"
+                            d="M397,44H103c2.2,2.83-6,12.9,15,34,7.44,7.48,25.5,11.5,38.5,22.5,8,22,15.5,78.5,73.5,94.5,8.71,29,9,197,8,207s-8,16-14,23-49.5,16-54.5,19-5,11-5,11S202,466,250,466s85.5-11,85.5-11,0-8-5-11S282,432,276,425s-13-13-14-23-.71-178,8-207c58-16,64-74,72-96,13-11,32.56-10.62,40-18.1C403,59.8,394.8,46.83,397,44Z" />
+                    </g>
+                    <g id="Layer_4" data-name="Layer 4">
+                        <path class="cls-2"
+                            d="M310.31,154.48c.69-.76,1.35-1.59,2-2.48H187.68c.66.89,1.32,1.72,2,2.48C209.65,176.75,225.47,183,250,183S290.35,176.75,310.31,154.48Z" />
+                        <path class="cls-2"
+                            d="M312.32,152c5.65-7.69,10.12-19.74,13.61-31H174.07c3.49,11.26,8,23.31,13.61,31Z" />
+                        <path class="cls-2"
+                            d="M157.5,90h185C361.76,83.42,388,72,388,59H112C112,72,138.24,83.42,157.5,90Z" />
+                        <path class="cls-2"
+                            d="M157.5,90c2.66.91,5.19,1.73,7.5,2.45,1.72,1,4.59,14.11,9.07,28.55H325.93c4.48-14.44,7.35-27.58,9.07-28.55,2.31-.72,4.84-1.54,7.5-2.45Z" />
+                    </g>
+                </svg>
+            </div>
+            <div class="glasstype" id="high-ball">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: none;
+                            }
+                            .cls-2 {
+                                fill: #fff;
+                            }
+                        </style>
+                    </defs>
+                    <title>highball_segment</title>
+                    <g id="Layer_1" data-name="Layer 1">
+                        <rect class="cls-1" width="500" height="500" />
+                    </g>
+                    <g id="Layer_2" data-name="Layer 2">
+                        <path class="cls-2" d="M151,44l24.09,411S208,466,250,466s74.91-11,74.91-11L349,44Z" />
+                    </g>
+                    <g id="Layer_4" data-name="Layer 4">
+                        <path class="cls-2"
+                            d="M314.56,376H185.44c1.68,21.22,2.74,34.48,2.74,34.48S195.91,418,250,418s61.82-7.52,61.82-7.52S312.88,397.22,314.56,376Z" />
+                        <path class="cls-2"
+                            d="M314.56,376c.93-11.83,2.05-26.13,3.28-42H182.16c1.23,15.87,2.35,30.17,3.28,42Z" />
+                        <path class="cls-2"
+                            d="M317.84,334c1-13.11,2.12-27.28,3.24-42H178.92c1.12,14.72,2.22,28.89,3.24,42Z" />
+                        <path class="cls-2"
+                            d="M321.08,292c1-13.67,2.11-27.8,3.17-42H175.75c1.06,14.2,2.13,28.33,3.17,42Z" />
+                        <path class="cls-2"
+                            d="M324.25,250c1.05-14.08,2.09-28.21,3.09-42H172.66c1,13.79,2,27.92,3.09,42Z" />
+                        <path class="cls-2"
+                            d="M327.34,208c1.05-14.54,2.06-28.7,3-42H169.69c.91,13.3,1.92,27.46,3,42Z" />
+                        <path class="cls-2"
+                            d="M330.31,166c1.06-15.39,2-29.63,2.74-42H167c.75,12.37,1.68,26.61,2.74,42Z" />
+                        <path class="cls-2"
+                            d="M333.05,124c1.21-19.86,1.95-34.87,1.95-42H165c0,7.13.74,22.14,1.95,42Z" />
+                    </g>
+                </svg>
+            </div>
+            <div class="glasstype" id="collins">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: none;
+                            }
+
+                            .cls-2 {
+                                fill: #fff;
+                            }
+                        </style>
+                    </defs>
+                    <title>collins_segment</title>
+                    <g id="Layer_1" data-name="Layer 1">
+                        <rect class="cls-1" x="4" width="500" height="500" />
+                    </g>
+                    <g id="Layer_2" data-name="Layer 2">
+                        <path class="cls-2"
+                            d="M341,269c19.5-44-23.5-119.5-23.5-170.5C317.5,75.5,333,53,338,44H162c5,9,20.5,31.5,20.5,54.5,0,51-43,126.5-23.5,170.5s61,43,74.25,51.75c0,17,.5,73.5-.5,83.5S223.5,424,214,430s-38.5,8-43.5,11-5,14-5,14,36.49,10.84,84,11h1c47.51-.15,84-11,84-11s0-11-5-14-34-5-43.5-11-17.75-15.75-18.75-25.75-.5-66.5-.5-83.5C280,312,321.5,313,341,269Z" />
+                    </g>
+                    <g id="Layer_4" data-name="Layer 4">
+                        <path class="cls-2" d="M175.92,276c17.4,20.84,34,27.94,65,29h18.14c31-1.06,47.61-8.16,65-29Z" />
+                        <path class="cls-2"
+                            d="M165.23,247c.41,10,2.6,18.76,7.52,25.07,1.06,1.37,2.12,2.67,3.17,3.93H324.08c1.05-1.26,2.11-2.56,3.17-3.93,4.92-6.31,7.11-15.06,7.52-25.07Z" />
+                        <path class="cls-2"
+                            d="M165.23,247H334.77c.37-8.94-.68-18.88-2.49-29H167.72C165.91,228.12,164.86,238.06,165.23,247Z" />
+                        <path class="cls-2"
+                            d="M167.72,218H332.28c-1.75-9.75-4.19-19.67-6.74-29H174.46C171.91,198.33,169.47,208.25,167.72,218Z" />
+                        <path class="cls-2"
+                            d="M174.46,189H325.54c-3-10.84-6.07-20.9-8.38-29H182.84C180.53,168.1,177.43,178.16,174.46,189Z" />
+                        <path class="cls-2"
+                            d="M185,152c-.58,2.37-1.32,5.05-2.16,8H317.16c-.84-2.94-1.58-5.62-2.16-8-1.7-6.92-3.29-14-4.58-21H189.58C188.29,138,186.7,145.09,185,152Z" />
+                        <path class="cls-2" d="M310.42,131a179,179,0,0,1-3.18-29H192.76a179,179,0,0,1-3.18,29Z" />
+                        <path class="cls-2"
+                            d="M189,73.36c2.89,8.8,3.94,18.5,3.76,28.64H307.24c-.18-10.14.87-19.84,3.76-28.64C310.22,73.08,189.78,73.08,189,73.36Z" />
+                    </g>
+                </svg>
+            </div>
+
+            <canvas id="previewcanvas">
+            
+            </canvas>
+        </div>
+
+        <div class="button" id="finish-button">
+            <div class="button-text" onclick="showNameInput()">FINISHED</div>
+        </div>
+
+
+        <div id="enter-name">
+            <input type="text" id="cocktail-name" placeholder="나만의 칵테일 이름을 지어주세요">
+            <input type="text" id="cocktail-desc" placeholder="나만의 칵테일에 대한 설명을 해 주세요">
+            <div class="button" onclick="getName()">
+                <div class="button-text">Submit</div>
+            </div>
+        </div>
+
+        <div id="final-result">
+        <div id="title-desc">
+                <div id="name-output"></div>
+                <div id="desc-output"></div>
+            </div>
+
+        <div id="finished">
+            <div class="button" id="share-button" onclick="share()">
+                <div class="button-text">Share</div>
+            </div>
+            <div class="button" id="save-button" onclick="saveImage()" download="dd.png">
+                <div class="button-text">Save</div>
+            </div>
+            <div class="button" id="gallery-button" onclick="toGallery()">
+                <div class="button-text">To Gallery</div>
+            </div>
+            <!---공유버튼, 갤러리, 등등--->
+        </div>
+    </div>
+
+    </div>
+
+    <%
+=begin%>
+ <script src="make.js"></script>
+    <script src="make_canvas.js"></script> 
+<%
+=end%>
+</body>
+
+</html>

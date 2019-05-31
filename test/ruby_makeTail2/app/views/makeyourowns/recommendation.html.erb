@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
     <title>Make your own</title>
     <meta charset="utf-8">
-    
+    <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" %>
+    <%= javascript_include_tag "https://cdn.jsdelivr.net/gh/lyfeyaj/swipe/swipe.js" %>
     <%
 =begin%>
  <link href="dist/css/recommend.css" rel="stylesheet"> 
@@ -26,10 +25,10 @@
 
 <body>
     <nav class="navbar">
-        <div class="nav-item">
-        <%= link_to "CockTailor", welcome_index_path %>
-        
-        </div>
+        <%= link_to  welcome_index_path do %>
+            <div class="nav-item">Cocktailor</div>
+         <%end%>
+       
         <div class="nav-right">
             <%= link_to makeyourowns_makeyourown_path do %>
             <div class="nav-item">칵테일 만들기</div>
@@ -144,8 +143,10 @@
     </div>
 </body>
 <%= javascript_include_tag 'mySwipe.js' %>
+<!--moved javascript includ tag
 <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" %>
 <%= javascript_include_tag "https://cdn.jsdelivr.net/gh/lyfeyaj/swipe/swipe.js" %>
+-->
 
 
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->

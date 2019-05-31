@@ -1,24 +1,13 @@
-
-
-
 var maker = document.getElementById('maker-container');
 
-if(maker != null){
-    console.log("ok");
-} else {
-    console.log("no...");
-    maker = document.getElementById('maker-container');
-}
-
 function foldPane(button) {
-    if(maker == null) {
+    if (maker == null){
         console.log("no...");
-        maker = document.getElementById('maker-container');
+        maker = document.getElementById('maker-container')
     }
     let pane = button.nextElementSibling;
 
     pane.classList.toggle("visible");
-    // pane이 null이어서 그랬던 것으로 판명. 이 부분 추후 수정할 것.
     if (pane.style.width !== "20px") {
         pane.style.width = "20px";
         maker.style.gridTemplateColumns = "[selector]50px auto [pane]30% [button]auto"
@@ -30,16 +19,9 @@ function foldPane(button) {
 }
 
 var selectors = document.getElementsByClassName('choice-name');
-if (selectors != null) {
-    console.log("it's okay");
-} else {
-    console.log("no, it's not...")
-}
 var i;
 for (i = 0; i < selectors.length; i++) {
-    console.log("selector addEventListener working");
     selectors[i].addEventListener("click", function () {
-        console.log("selector working");
         this.parentElement.classList.toggle("active");
         let content = this.nextElementSibling;
         if (content.style.display === "flex") {
@@ -56,8 +38,6 @@ var j;
 for (j = 0; j < choiceItems.length; j++) {
     choiceItems[j].addEventListener("click", function () {
         this.classList.toggle("selected");
-
-        //paint each section
     })
 }
 
@@ -101,8 +81,8 @@ function showNameInput() {
 
     enter.style.display = "block";
     button.style.display = "none";
-    maker.style.gridTemplateColumns = "35% [pane]30% 35%";
-    maker.style.gridTemplateRows = "10% [pane]60% [finished]30%"
+    maker.style.gridTemplateColumns = "10% [pane]35% [finished]45% 10%";
+    maker.style.gridTemplateRows = "15% [pane]65% 20%"
     preview.style.marginTop = "5%";
 }
 
@@ -110,12 +90,12 @@ function showFinishScreen(name, desc) {
     let finished = document.querySelector('#final-result');
     let enter = document.getElementById('enter-name');
 
-    finished.querySelector('#name-output').innerHTML = name;
+    var cocktailname = finished.querySelector('#name-output').innerHTML = name;
     finished.querySelector('#desc-output').innerHTML = desc;
     enter.style.display = "none";
     finished.style.display = "block";
-    finished.style.gridColumn = "pane"
-    finished.style.gridRow = "finished"
+    finished.style.gridColumn = "finished"
+    finished.style.gridRow = "pane"
 }
 
 function getName() {
@@ -130,9 +110,10 @@ function share() {
 
 function saveImage() {
     var canvas = document.getElementById("previewcanvas");
+    var cocktailname = document.querySelector('#final-result').querySelector('#name-output').innerHTML;
     image = canvas.toDataURL("image/png", 1.0).replace("image/png", "image/octet-stream");
     var link = document.createElement('a');
-    link.download = "my-image.png";
+    link.download = cocktailname + ".png";
     link.href = image;
     link.click();
     // save image to local
@@ -157,9 +138,13 @@ class Glass {
         this.currentSlot = 0;
     }
 
-    onload() {
+    onload() { // initialize
         let image = document.getElementById(this.name); //each glass class
-        this.slots_space = image.querySelector("g#Layer_4").getElementsByClassName("cls-2"); //allocate the svg spaces here
+        this.slots_space = image.querySelector("g#Layer_4").getElementsByClassName("cls-2");
+        this.slots_color = Array(this.units).fill("");
+        this.slots_text = Array(this.units).fill("");
+        this.color();
+        this.currentSlot = 0;
     }
 
     addIngredient(ingredient) {
@@ -171,11 +156,10 @@ class Glass {
             if (ingredient.name === this.slots_text[this.currentSlot - 1]) {
                 this.slots_text[this.currentSlot - 1] = "";
                 //show only 1 name of ingredient if two or more of same are stacked
+                //actually add this to the recipe
             }
-
             this.currentSlot++;
-        } else {
-            //cannot add more, glass is full
+            console.log(ingredient.color);
         }
         this.color();
     }
@@ -219,6 +203,7 @@ var currentGlass;
 function showGlassOOP(string) {
     let glass = document.getElementById(string);
     glass.style.display = "block";
+
     glass.classList.toggle('active-glass');
     currentGlass = glassMap[string];
     currentGlass.onload();
@@ -232,8 +217,11 @@ function showGlassOOP(string) {
 }
 
 var ingredients = new Array();
+// ingredient colors
+var colors = ["e34e04", "654323", "b2beaf", "cb002d", "fdcd4f", "f0e5c9", "3a2426", "6defe5", "d9f852", "b983c8", "eec744", "f3e4c5", "e02031","f11347", "fee251", "c0d643", "ff9402", "f3554a"];
+
 for (let j = 0; j < choiceItems.length; j++) {
-    ingredients[j] = new ingredient(choiceItems[j].innerHTML, "blue");
+    ingredients[j] = new ingredient(choiceItems[j].innerHTML, "#"+colors[j]);
     choiceItems[j].addEventListener("click", function () {
         this.classList.toggle("selected");
 
@@ -241,3 +229,31 @@ for (let j = 0; j < choiceItems.length; j++) {
     })
 }
 
+/* convert svg to canvas */
+
+let finish = document.getElementById('finish-button');
+finish.addEventListener("click", svgToCanvas);
+
+var width = 500;
+var height = 500;
+
+function svgToCanvas() {
+    var svg = document.querySelector(".active-glass").querySelector("svg");
+    console.log(svg);
+
+    var serializer = new XMLSerializer(),
+        svgStr = serializer.serializeToString(svg);
+
+    var canvas = document.getElementById('previewcanvas');
+
+    canvg(canvas, svgStr);
+    canvas.width = 500;
+    canvas.height = 500;
+
+    var glasses = document.querySelector(".active-glass");
+    var loading = document.querySelector("#isloading");
+    glasses.style.display = "none";
+    loading.style.display = "block";
+    canvas.style.display = "block";
+
+}

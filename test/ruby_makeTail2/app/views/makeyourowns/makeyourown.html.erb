@@ -25,23 +25,24 @@ https://thoughtbot.com/blog/slicing-up-rails-application-js-for-faster-load-time
 <body>
     <nav class="navbar">
         <div class="nav-item"><a href="../index.html"
-            style="font-family:'Romantic Beach'; font-size: 23px; font-weight: 300;">CockTailor</a></div>
+                style="font-family:'Romantic Beach'; font-size: 23px; font-weight: 300;">CockTailor</a></div>
         <div class="nav-right">
             <div class="nav-item"><a href="makeyourown.html">칵테일 만들기</a></div>
             <div class="nav-item"><a href="recommendation.html">칵테일 추천</a></div>
             <div class="nav-item"><a href="gallery.html">칵테일 갤러리</a></div>
         </div>
     </nav>
-    
+
     <div id="maker-container">
         <div id="select-wrapper">
-            <div id="fold-select"  onclick="foldPane(this)"></div>
+            <div id="fold-select" onclick="foldPane(this)"></div>
             <div id="select-pane">
                 <div id="select-desc">사용할 재료들을 골라보세요!</div>
                 <div class="choice-wrapper">
                     <div class="choice" id="glass">
                         <div class="choice-name">Glass</div>
                         <div class="choice-items">
+                            
                             <div class="glass">
                                 <%= image_tag("glass/liqeur.png") %>
                                 Liqueur
@@ -330,17 +331,19 @@ https://thoughtbot.com/blog/slicing-up-rails-application-js-for-faster-load-time
                     </g>
                 </svg>
             </div>
-
+            <div id="isloading">
+                <img src="images/loading.gif">
+            </div>  
             <canvas id="previewcanvas">
             
             </canvas>
         </div>
-
-        <div class="button" id="finish-button">
-            <div class="button-text" onclick="showNameInput()">FINISHED</div>
+        
+        <div class="button" id="finish-button" onclick="showNameInput()">
+            <div class="button-text">FINISHED</div>
         </div>
 
-
+ ̰
         <div id="enter-name">
             <input type="text" id="cocktail-name" placeholder="나만의 칵테일 이름을 지어주세요">
             <input type="text" id="cocktail-desc" placeholder="나만의 칵테일에 대한 설명을 해 주세요">
@@ -356,10 +359,11 @@ https://thoughtbot.com/blog/slicing-up-rails-application-js-for-faster-load-time
             </div>
 
         <div id="finished">
-            <div class="button" id="share-button" onclick="share()">
+             <a class="button" id="share-button" href = "http://www.facebook.com/sharer.php?u=#" onclick="share()" target="blank">
                 <div class="button-text">Share</div>
-            </div>
-            <div class="button" id="save-button" onclick="saveImage()" download="dd.png">
+                </a>
+                <div class="button" id="save-button" onclick="saveImage()">
+            
                 <div class="button-text">Save</div>
             </div>
             <div class="button" id="gallery-button" onclick="toGallery()">

@@ -12,7 +12,7 @@ html, body {
 }
 
 body{
-    background-image: url(asset_path("woodbackground.jpg"));
+    background-image: asset-path("barbackground.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(26, 26, 26, 0.5);
@@ -53,7 +53,7 @@ nav{
     margin: 50px 80px;
     margin-bottom: 0px;
     height: 80%;
-    background-image: image-url('woodbackground.jpg');
+    background-image: url("images/woodbackground.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(26, 26, 26, 0.856);

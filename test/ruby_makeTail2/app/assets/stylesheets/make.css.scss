@@ -12,7 +12,8 @@ html, body {
 }
 
 body{
-    background-image: asset-path("barbackground.jpg");
+    
+    background-image: image-url("barbackground.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(26, 26, 26, 0.5);

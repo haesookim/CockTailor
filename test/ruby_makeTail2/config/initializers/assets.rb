@@ -9,7 +9,10 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.precompile += %w( mySwipe.js )
 Rails.application.config.assets.precompile += %w( make.js )
-
+Rails.application.config.assets.precompile += %w( make.css )
+Rails.application.config.assets.precompile += %w( recommend.css )
+Rails.application.config.assets.precompile += %w( gallery.css )
+Rails.application.config.assets.precompile += %w( style.css )
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.

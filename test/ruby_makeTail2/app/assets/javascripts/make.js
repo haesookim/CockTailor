@@ -1,10 +1,10 @@
 var maker = document.getElementById('maker-container');
-
+if (maker == null){
+    console.log("no...");
+    maker = document.getElementById('maker-container')
+}
 function foldPane(button) {
-    if (maker == null){
-        console.log("no...");
-        maker = document.getElementById('maker-container')
-    }
+    
     let pane = button.nextElementSibling;
 
     pane.classList.toggle("visible");
@@ -34,9 +34,15 @@ for (i = 0; i < selectors.length; i++) {
 
 // make the choices selectable
 var choiceItems = document.getElementsByClassName('choice-item');
+if (choiceItems != null) {
+    console.log(choiceItems.length);
+}
 var j;
 for (j = 0; j < choiceItems.length; j++) {
+
+    console.log("?");
     choiceItems[j].addEventListener("click", function () {
+        console.log("choice working?")
         this.classList.toggle("selected");
     })
 }
@@ -232,7 +238,13 @@ for (let j = 0; j < choiceItems.length; j++) {
 /* convert svg to canvas */
 
 let finish = document.getElementById('finish-button');
+if (finish == null) {
+    console.log("yes, it is null")
+    finish = document.getElementById('finish-button');
+    finish.addEventListener("click", svgToCanvas);
+} else {
 finish.addEventListener("click", svgToCanvas);
+}
 
 var width = 500;
 var height = 500;

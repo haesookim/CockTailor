@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" %>
     <%= javascript_include_tag "https://cdn.jsdelivr.net/gh/lyfeyaj/swipe/swipe.js" %>
+    <%= stylesheet_link_tag "recommend" %>
+    <!-- <%= stylesheet_link_tag "style" %> -->
     <%
 =begin%>
  <link href="dist/css/recommend.css" rel="stylesheet"> 
@@ -25,6 +27,7 @@
 
 <body>
     <nav class="navbar">
+    <!--
         <%= link_to  welcome_index_path do %>
             <div class="nav-item">Cocktailor</div>
          <%end%>
@@ -40,6 +43,14 @@
             <div class="nav-item">칵테일 갤러리</div>
          <%end%>
             
+        </div>
+    -->
+    <div class="nav-item"><a href="../index.html"
+                style="font-family:'Romantic Beach'; font-size: 23px; font-weight: 300;">CockTailor</a></div>
+        <div class="nav-right">
+            <div class="nav-item"><a href="makeyourown.html">칵테일 만들기</a></div>
+            <div class="nav-item"><a href="recommendation.html">칵테일 추천</a></div>
+            <div class="nav-item"><a href="gallery.html">칵테일 갤러리</a></div>
         </div>
     </nav>
 

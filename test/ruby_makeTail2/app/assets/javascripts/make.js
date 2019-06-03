@@ -82,20 +82,14 @@ function showNameInput() {
     enter.style.display = "block";
     button.style.display = "none";
     maker.style.gridTemplateColumns = "10% [pane]40% [finished]40% 10%";
-    maker.style.gridTemplateRows = "15% [pane]65% 20%"
+    maker.style.gridTemplateRows = "15% [recipe]50% [pane]35% "
     preview.style.marginTop = "5%";
-}
-
-function showFinishScreen(name, desc) {
-    let finished = document.querySelector('#final-result');
-    let enter = document.getElementById('enter-name');
-
-    var cocktailname = finished.querySelector('#name-output').innerHTML = name;
-    finished.querySelector('#desc-output').innerHTML = desc;
-    enter.style.display = "none";
-    finished.style.display = "block";
-    finished.style.gridColumn = "finished"
-    finished.style.gridRow = "pane"
+    recipe.style.gridColumn = "finished";
+    recipe.style.gridRow = "recipe";
+    
+    for (element in recipe.querySelectorAll("li")){
+        element.style.marginLeft="200px"; 
+    }
 }
 
 function getName() {

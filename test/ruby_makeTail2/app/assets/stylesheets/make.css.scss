@@ -236,6 +236,7 @@ input{
 #recipe{
     background-image: url("recipe.png");
     background-size: cover;
+    background-position-x: center;
     grid-row-start: recipe;
     grid-row-end: 5;
     margin: 0;

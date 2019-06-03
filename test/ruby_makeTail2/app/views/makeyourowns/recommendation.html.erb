@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Make your own</title>
+    <meta charset="utf-8">
+    <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" %>
+    <%= javascript_include_tag "https://cdn.jsdelivr.net/gh/lyfeyaj/swipe/swipe.js" %>
+    <%= stylesheet_link_tag "recommend" %>
+    <!-- <%= stylesheet_link_tag "style" %> -->
+    <%
+=begin%>
+ <link href="dist/css/recommend.css" rel="stylesheet"> 
+<%
+=end%>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200" rel="stylesheet" type="text/css" />
+</head>
+<style>
+
+</style>
+
+
+<body>
+    <nav class="navbar">
+    <!--
+        <%= link_to  welcome_index_path do %>
+            <div class="nav-item">Cocktailor</div>
+         <%end%>
+       
+        <div class="nav-right">
+            <%= link_to makeyourowns_makeyourown_path do %>
+            <div class="nav-item">칵테일 만들기</div>
+         <%end%>
+         <%= link_to makeyourowns_recommendation_path do %>
+            <div class="nav-item">칵테일 추천</div>
+         <%end%>
+         <%= link_to makeyourowns_gallery_path do %>
+            <div class="nav-item">칵테일 갤러리</div>
+         <%end%>
+            
+        </div>
+    -->
+    <div class="nav-item"><a href="../index.html"
+                style="font-family:'Romantic Beach'; font-size: 23px; font-weight: 300;">CockTailor</a></div>
+        <div class="nav-right">
+            <div class="nav-item"><a href="makeyourown.html">칵테일 만들기</a></div>
+            <div class="nav-item"><a href="recommendation.html">칵테일 추천</a></div>
+            <div class="nav-item"><a href="gallery.html">칵테일 갤러리</a></div>
+        </div>
+    </nav>
+
+
+    <div class="outercontainer">
+        <div id="mySwipe" class="swipe">
+            <div class="swipe-wrap">
+                <div class="questioncontainer">
+                    <div class="question"><b> Q1. 당신의 음주 스타일은 어떤가요?</b>
+                    </div>
+                        
+                        <a href="#" onclick="mySwipe.next()" class="L">
+                            
+                            <%= image_tag("choice/1-shot.svg") %>
+                            <!--
+                            <img src="images/choices/1-shot.svg">-->
+                            <div class="choice-text">한 잔을 마셔도 짧고 굵게!</div>
+                            
+                        </a>
+                        <a href="#" onclick="mySwipe.next()" class="R">
+                            <%= image_tag("choice/1-long.svg") %>
+                            
+                            <div class="choice-text">여유를 가지고 천천히 길-게!</div>
+                        </a>
+                </div>
+
+                <div class="questioncontainer">
+                    <div class="question"><b> Q2. 숲속의 님프들은 노래와 출을 즐기며 술을 즐겨마셨다고 하죠! 당신은 님프로 따지면 어떤 님프인가요?</b>
+                    </div>
+                        <a href="#" onclick="mySwipe.next()" class="L">
+                            <%= image_tag("choice/2-forest.svg") %>
+                            
+                            <div class="choice-text">쾌청한 숲속에서 달큰한 과일과 함께 </br>인생을 즐기는 숲의 님프!</div>
+                        </a>
+                        <a href="#" onclick="mySwipe.next()" class="R">
+                            <%= image_tag("choice/2-river.svg") %>
+                            
+                            <div class="choice-text">시원한 강가에서 첨벙첨벙 물놀이하며 물맛과 술맛을 즐기는 강의 님프!</div>
+                        </a>
+                </div>
+                <div class="questioncontainer">
+                    <div class="question"><b> Q3. 당신은 어떤 종류의 재료를 더 좋아하시나요?</b>
+                    </div>
+                        <a href="#" onclick="mySwipe.next()" class="L">
+                            <%= image_tag("choice/3-sour.svg") %>
+                            
+                            <div class="choice-text">상큼하게 톡톡! 입안을 터뜨리는 맛!</div>
+                        </a>
+                        <a href="#" onclick="mySwipe.next()" class="R">
+                             <%= image_tag("choice/3-bitter.svg") %>
+                            
+                            <div class="choice-text">은은한듯 시크한듯 묵직한 듯 내 혀를 돌돌 감싸는 맛</div>
+                        </a>
+                </div>
+                <div class="answercontainer">
+                    <div class="answer" id="tequila-sunrise">
+                        <div class="answer-image">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+                                <defs>
+                                    <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+                                        <stop id="teqsun-top" offset="0%" />
+                                        <stop id="teqsun-down" offset="100%" />
+                                    </linearGradient>
+                                    <style>
+                                        .cls-1 { fill: none;}
+                                        .cls-2 { fill: #fff;}
+                                        #teqsun-top{ stop-color:  yellow;}
+                                        #teqsun-down{stop-color: rgb(255, 123, 0);}
+                                    </style>
+                                </defs>
+                                <title>highball_full</title>
+                                <g id="Layer_1" data-name="Layer 1">
+                                    <rect class="cls-1" width="500" height="500" />
+                                </g>
+                                <g id="Layer_2" data-name="Layer 2">
+                                    <path class="cls-2"
+                                        d="M151,44l24.09,411S208,466,250,466s74.91-11,74.91-11L349,44Z" />
+                                </g>
+                                <g id="Layer_3" data-name="Layer 3" >
+                                    <path class="cls-3" fill="url(#gradient)"
+                                        d="M165,82c0,40,23.18,328.48,23.18,328.48S195.91,418,250,418s61.82-7.52,61.82-7.52S335,122,335,82Z" />
+                                </g>
+                            </svg>
+                        </div>
+
+                        <div class="answer-desc">
+                            <div class="answer-title">데킬라 선라이즈</br><span class="title-eng">Tequila Sunrise</span></div>
+                            <div class="answer-text">데킬라 선라이즈.</br>
+                                    이름부터 여명을 뜻하는 이 술. 매력적이지 않나요? 여명을 이름에 담은 이 술은 당신에게 칵테일이라는 신세계의 여명을 밝혀줄 것입니다!</br>
+                                    데킬라가 이름에 들어가 쓸 것 같다구요? 그런 걱정은 No no no~ 석류맛이 나는 그레나딘 시럽과 상큼한 오렌지 주스가 섞인 이 음료를 한모금 마시는 순간, 페이스 조절을 위해 자제력을 발휘하는 스스로를 발견할걸요?</br>
+                                    하지만 너무 빠르게 마시진 마세요. 서양에서는 숙취를 “데킬라 선라이즈” 라고 한다구요?</div>
+                        </div>
+                    </div>
+                    <div class="button" id="replay-button">
+                        <div class="button-text" onclick="mySwipe.next()">다시 하기</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+<%= javascript_include_tag 'mySwipe.js' %>
+<!--moved javascript includ tag
+<%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" %>
+<%= javascript_include_tag "https://cdn.jsdelivr.net/gh/lyfeyaj/swipe/swipe.js" %>
+-->
+
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+<%
+=begin%>
+ javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" 
+<%
+=end%>
+<!--<script src="https://cdn.jsdelivr.net/gh/lyfeyaj/swipe/swipe.js"></script>-->
+<%
+=begin%>
+ javascript_include_tag "https://cdn.jsdelivr.net/gh/lyfeyaj/swipe/swipe.js" 
+<%
+=end%>
+<script>
+   
+
+</script>
+
+</html>

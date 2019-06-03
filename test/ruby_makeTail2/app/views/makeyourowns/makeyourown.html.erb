@@ -13,12 +13,13 @@ https://thoughtbot.com/blog/slicing-up-rails-application-js-for-faster-load-time
     <title>Make your own</title>
     <meta charset="utf-8">
     <!--
-    <link href="make.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700" rel="stylesheet">
     -->
     <%= javascript_include_tag "https://cdn.jsdelivr.net/npm/canvg/dist/browser/canvg.min.js" %>
     <%= stylesheet_link_tag "make" %>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700" rel="stylesheet">
     
 </head>
 
@@ -113,6 +114,9 @@ https://thoughtbot.com/blog/slicing-up-rails-application-js-for-faster-load-time
             </div>
         </div>
 
+        <ul id="recipe">
+            Recipe
+        </ul>
         <div id="preview">
             <div class="glasstype" id="liqueur">
                 <svg viewBox="0 0 500 500" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -247,9 +251,9 @@ https://thoughtbot.com/blog/slicing-up-rails-application-js-for-faster-load-time
                         <path class="cls-2"
                             d="M312.32,152c5.65-7.69,10.12-19.74,13.61-31H174.07c3.49,11.26,8,23.31,13.61,31Z" />
                         <path class="cls-2"
-                            d="M157.5,90h185C361.76,83.42,388,72,388,59H112C112,72,138.24,83.42,157.5,90Z" />
-                        <path class="cls-2"
                             d="M157.5,90c2.66.91,5.19,1.73,7.5,2.45,1.72,1,4.59,14.11,9.07,28.55H325.93c4.48-14.44,7.35-27.58,9.07-28.55,2.31-.72,4.84-1.54,7.5-2.45Z" />
+                        <path class="cls-2"
+                            d="M157.5,90h185C361.76,83.42,388,72,388,59H112C112,72,138.24,83.42,157.5,90Z" />
                     </g>
                 </svg>
             </div>
@@ -375,13 +379,6 @@ https://thoughtbot.com/blog/slicing-up-rails-application-js-for-faster-load-time
 
     </div>
     <%= javascript_include_tag "make" %>
-
-    <%
-=begin%>
- <script src="make.js"></script>
-    <script src="make_canvas.js"></script> 
-<%
-=end%>
 </body>
 
 </html>

@@ -1,10 +1,9 @@
 var maker = document.getElementById('maker-container');
-if (maker == null){
-    console.log("no...");
+if (maker == null) {
     maker = document.getElementById('maker-container')
 }
 function foldPane(button) {
-    
+
     let pane = button.nextElementSibling;
 
     pane.classList.toggle("visible");
@@ -34,15 +33,10 @@ for (i = 0; i < selectors.length; i++) {
 
 // make the choices selectable
 var choiceItems = document.getElementsByClassName('choice-item');
-if (choiceItems != null) {
-    console.log(choiceItems.length);
-}
+
 var j;
 for (j = 0; j < choiceItems.length; j++) {
-
-    console.log("?");
     choiceItems[j].addEventListener("click", function () {
-        console.log("choice working?")
         this.classList.toggle("selected");
     })
 }
@@ -87,7 +81,7 @@ function showNameInput() {
 
     enter.style.display = "block";
     button.style.display = "none";
-    maker.style.gridTemplateColumns = "10% [pane]35% [finished]45% 10%";
+    maker.style.gridTemplateColumns = "10% [pane]40% [finished]40% 10%";
     maker.style.gridTemplateRows = "15% [pane]65% 20%"
     preview.style.marginTop = "5%";
 }
@@ -148,13 +142,12 @@ class Glass {
         let image = document.getElementById(this.name); //each glass class
         this.slots_space = image.querySelector("g#Layer_4").getElementsByClassName("cls-2");
         this.slots_color = Array(this.units).fill("");
-        this.slots_text = Array(this.units).fill("");
         this.color();
         this.currentSlot = 0;
+        recipe.innerHTML = "Recipe";
     }
 
     addIngredient(ingredient) {
-        console.log(ingredient);
         if (this.currentSlot < this.units) {
             this.slots_color[this.currentSlot] = ingredient.color;
             this.slots_text[this.currentSlot] = ingredient.name;
@@ -165,7 +158,6 @@ class Glass {
                 //actually add this to the recipe
             }
             this.currentSlot++;
-            console.log(ingredient.color);
         }
         this.color();
     }
@@ -177,13 +169,6 @@ class Glass {
                 slot.style.fill = transparent;
             } else {
                 slot.style.fill = this.slots_color[space];
-                // slot.append() = this.slots_text[space];
-                let element = document.createElement('text');
-                element.setAttribute('x', 5);
-                element.setAttribute('y', 15);
-                let txt = document.createTextNode("Hello World");
-                element.append(txt)
-                slot.append(element);
             }
         }
     }
@@ -224,26 +209,38 @@ function showGlassOOP(string) {
 
 var ingredients = new Array();
 // ingredient colors
-var colors = ["e34e04", "654323", "b2beaf", "cb002d", "fdcd4f", "f0e5c9", "3a2426", "6defe5", "d9f852", "b983c8", "eec744", "f3e4c5", "e02031","f11347", "fee251", "c0d643", "ff9402", "f3554a"];
+var colors = ["e34e04", "654323", "b2beaf", "cb002d", "fdcd4f", "f0e5c9", "3a2426", "6defe5", "d9f852", "b983c8", "eec744", "f3e4c5", "e02031", "f11347", "fee251", "c0d643", "ff9402", "f3554a"];
+var recipe = document.querySelector("#recipe");
 
 for (let j = 0; j < choiceItems.length; j++) {
-    ingredients[j] = new ingredient(choiceItems[j].innerHTML, "#"+colors[j]);
+    ingredients[j] = new ingredient(choiceItems[j].innerHTML, "#" + colors[j]);
     choiceItems[j].addEventListener("click", function () {
         this.classList.toggle("selected");
-
+        createRecipe(ingredients[j]);
         currentGlass.addIngredient(ingredients[j]);
     })
+}
+
+function createRecipe(ingredient) {
+    if (currentGlass.currentSlot < currentGlass.units) {
+        let recipeElement = document.createElement("li");
+        let recipeColor = document.createElement("div");
+        recipeColor.className = "recipe-color";
+        recipeColor.style.backgroundColor = ingredient.color;
+        recipeElement.append(recipeColor);
+        recipeElement.append(ingredient.name);
+        recipe.appendChild(recipeElement);
+    }
 }
 
 /* convert svg to canvas */
 
 let finish = document.getElementById('finish-button');
 if (finish == null) {
-    console.log("yes, it is null")
     finish = document.getElementById('finish-button');
     finish.addEventListener("click", svgToCanvas);
 } else {
-finish.addEventListener("click", svgToCanvas);
+    finish.addEventListener("click", svgToCanvas);
 }
 
 var width = 500;
@@ -251,7 +248,6 @@ var height = 500;
 
 function svgToCanvas() {
     var svg = document.querySelector(".active-glass").querySelector("svg");
-    console.log(svg);
 
     var serializer = new XMLSerializer(),
         svgStr = serializer.serializeToString(svg);
@@ -267,5 +263,4 @@ function svgToCanvas() {
     glasses.style.display = "none";
     loading.style.display = "block";
     canvas.style.display = "block";
-
 }

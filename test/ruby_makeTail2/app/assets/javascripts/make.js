@@ -92,6 +92,20 @@ function showNameInput() {
     }
 }
 
+function showFinishScreen(name, desc) {
+    let finished = document.querySelector('#final-result');
+    let enter = document.getElementById('enter-name');
+
+    var cocktailname = finished.querySelector('#name-output').innerHTML = name;
+    finished.querySelector('#desc-output').innerHTML = desc;
+    enter.style.display = "none";
+    finished.style.display = "block";
+    finished.style.gridColumn = "finished"
+    finished.style.gridRow = "pane"
+    recipe.style.gridColumn = "finished";
+    recipe.style.gridRow = "recipe";
+}
+
 function getName() {
     let name = document.getElementById('cocktail-name').value;
     let desc = document.getElementById('cocktail-desc').value;

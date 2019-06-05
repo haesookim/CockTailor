@@ -349,6 +349,9 @@ https://thoughtbot.com/blog/slicing-up-rails-application-js-for-faster-load-time
 
  ̰
         <div id="enter-name">
+        <%= form_for :image, html:{id: "cocktail-name"} do |f|%>
+            
+        <% end %>
             <input type="text" id="cocktail-name" placeholder="나만의 칵테일 이름을 지어주세요">
             <input type="text" id="cocktail-desc" placeholder="나만의 칵테일에 대한 설명을 해 주세요">
             <div class="button" onclick="getName()">

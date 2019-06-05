@@ -217,17 +217,6 @@ input{
     transition-delay: 0.5s;
 }
 
-#isloading{
-    height: inherit;
-    display:none;
-    text-align: center;
-    line-height: 100%;
-    position: fixed;
-    margin: 200px;
-    img{
-        width: 50px;
-    }
-}
 
 #previewcanvas{
     display:none;

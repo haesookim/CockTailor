@@ -335,11 +335,7 @@ https://thoughtbot.com/blog/slicing-up-rails-application-js-for-faster-load-time
                     </g>
                 </svg>
             </div>
-            <div id="isloading">
-                <img src="images/loading.gif">
-            </div>  
-            <canvas id="previewcanvas">
-            
+            <canvas id="previewcanvas">          
             </canvas>
         </div>
         
@@ -357,25 +353,24 @@ https://thoughtbot.com/blog/slicing-up-rails-application-js-for-faster-load-time
         </div>
 
         <div id="final-result">
-        <div id="title-desc">
+            <div id="title-desc">
                 <div id="name-output"></div>
                 <div id="desc-output"></div>
             </div>
 
-        <div id="finished">
-             <a class="button" id="share-button" href = "http://www.facebook.com/sharer.php?u=#" onclick="share()" target="blank">
+            <div id="finished">
+                <a class="button" id="share-button" href = "http://www.facebook.com/sharer.php?u=#" onclick="share()" target="blank">
                 <div class="button-text">Share</div>
                 </a>
                 <div class="button" id="save-button" onclick="saveImage()">
-            
-                <div class="button-text">Save</div>
+                    <div class="button-text">Save</div>
+                </div>
+                <div class="button" id="gallery-button" onclick="toGallery()">
+                    <div class="button-text">To Gallery</div>
+                </div>
+                <!---공유버튼, 갤러리, 등등--->
             </div>
-            <div class="button" id="gallery-button" onclick="toGallery()">
-                <div class="button-text">To Gallery</div>
-            </div>
-            <!---공유버튼, 갤러리, 등등--->
         </div>
-    </div>
 
     </div>
     <%= javascript_include_tag "make" %>

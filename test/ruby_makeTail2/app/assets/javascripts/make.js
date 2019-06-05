@@ -81,8 +81,10 @@ function showNameInput() {
 
     enter.style.display = "block";
     button.style.display = "none";
-    maker.style.gridTemplateColumns = "10% [pane]40% [finished]40% 10%";
-    maker.style.gridTemplateRows = "15% [recipe]50% [pane]35% "
+    maker.style.gridTemplateColumns = "[pane]45% [finished]45% 10%";
+    maker.style.gridTemplateRows = "[start]15% [recipe]50% [pane]35% "
+    preview.style.gridRowStart = "start";
+    preview.style.gridRowEnd = "pane-end";
     preview.style.marginTop = "5%";
     recipe.style.gridColumn = "finished";
     recipe.style.gridRow = "recipe";
@@ -96,7 +98,6 @@ function showFinishScreen(name, desc) {
     let finished = document.querySelector('#final-result');
     let enter = document.getElementById('enter-name');
 
-    var cocktailname = finished.querySelector('#name-output').innerHTML = name;
     finished.querySelector('#desc-output').innerHTML = desc;
     enter.style.display = "none";
     finished.style.display = "block";
@@ -251,9 +252,6 @@ if (finish == null) {
     finish.addEventListener("click", svgToCanvas);
 }
 
-var width = 500;
-var height = 500;
-
 function svgToCanvas() {
     var svg = document.querySelector(".active-glass").querySelector("svg");
 
@@ -267,8 +265,8 @@ function svgToCanvas() {
     canvas.height = 500;
 
     var glasses = document.querySelector(".active-glass");
-    var loading = document.querySelector("#isloading");
     glasses.style.display = "none";
-    loading.style.display = "block";
     canvas.style.display = "block";
+    console.log("ran");
+
 }

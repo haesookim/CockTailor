@@ -1,3 +1,4 @@
+require 'base64'
 <!--
 본 문서가 불러일으키는 style null의 문제는 아래를 통해서 해결할 수 있을 것으로 보임
 https://stackoverflow.com/questions/19235345/javascript-typeerror-cannot-read-property-style-of-null
@@ -349,11 +350,22 @@ https://thoughtbot.com/blog/slicing-up-rails-application-js-for-faster-load-time
 
  ̰
         <div id="enter-name">
-        <%= form_for :image, html:{id: "cocktail-name"} do |f|%>
-            
+        <%= form_for :image do |f|%>
+        
+                
+                <%= f.text_field :title, placeholder:"나만의 칵테일 이름을 지어주세요", :id=> "cocktail-name" %> </p>
+                <%= f.  %>
+                
+                <%= f.text_area :text, placeholder:"나만의 칵테일에 대한 설명을 해주세요", :id=> "cocktail-desc" %>
+ 
+                <%= f.submit %>
+            </p>
+
         <% end %>
+        <!--
             <input type="text" id="cocktail-name" placeholder="나만의 칵테일 이름을 지어주세요">
             <input type="text" id="cocktail-desc" placeholder="나만의 칵테일에 대한 설명을 해 주세요">
+        -->    
             <div class="button" onclick="getName()">
                 <div class="button-text">Submit</div>
             </div>

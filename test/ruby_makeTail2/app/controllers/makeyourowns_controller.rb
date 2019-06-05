@@ -1,4 +1,5 @@
 class MakeyourownsController < ApplicationController
+  
   def makeyourown
   end
 
@@ -7,4 +8,7 @@ class MakeyourownsController < ApplicationController
 
   def gallery
   end
+
+
+
 end

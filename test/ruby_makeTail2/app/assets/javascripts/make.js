@@ -115,6 +115,15 @@ function saveImage() {
 
 function toGallery() {
     //is this necessary if the results are automatically uploaded to gallery
+    //delete if error happened. using ruby code, we can submit image with title and explanation(I hope so...)
+    document.getElementById('create-drawing').addEventListener('click', function(){
+        var dataUrl = canvas.toDataURL("image/jpeg");
+        var dataImg = document.createElement('img');
+        dataImg.src = dataUrl;
+        var drawingField = document.createElement('div');
+        drawingField.innerHTML = "<input type='hidden' name='listing[image]' id='image' value='" + dataImg.src + "'>"
+        document.getElementById('listing_image').value = dataUrl;
+      });
 }
 
 /* Glass operaton with classes section */

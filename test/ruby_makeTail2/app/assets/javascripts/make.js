@@ -101,7 +101,7 @@ function showFinishScreen(name, desc) {
     enter.style.display = "none";
     finished.style.display = "block";
     finished.style.gridColumn = "finished"
-    finished.style.gridRow = "pane"
+    finished.style.gridRow = "recipe"
     recipe.style.gridColumn = "finished";
     recipe.style.gridRow = "recipe";
 }

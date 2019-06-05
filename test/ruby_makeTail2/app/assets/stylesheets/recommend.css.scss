@@ -149,7 +149,7 @@ footer {
     margin-bottom: 0px;
     height: 80%;
     background-color: rgba(0,0,0,0.3);
-    background-image: url("../../images/woodbackground.jpg");
+    background-image: url("woodbackground.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(26, 26, 26, 0.856);
@@ -218,41 +218,54 @@ footer {
 /*}*/
 
 .answercontainer{
-    height:inherit;
-    display: grid;
-}
-
-.answer{
-    display:flex;
-    width: 100%;
-    height: 85%;
-}
-
-.answer-image{
-    height: 450px;
-    width: 450px;
-    margin-top: 100px;
-}
-
-.answer-desc{
-    margin-top: 70px;
-    width: 70%;
-    height: 70%;
-}
-
-.answer-title{
-    font-size: 30px;
-    text-align: center;
-}
-
-.title-eng{
-    font-family: 'Romantic Beach';
-}
-
-.answer-text{
-    width: 80%;
-    margin: 30px auto 0;
-    font-size: 16px;
+    height:100%;
+    .answer{
+        height:100%;
+        display: grid;
+        grid-template-columns: [cocktail]35% [desc]65%;
+        grid-template-rows: [title]10% [body]65% [button]25%;
+        .answer-image{
+            grid-column: cocktail;
+            grid-row: body;
+            margin-top: 60px;
+        }
+        .answer-desc{
+            margin-left: -10%;
+            grid-column: desc;
+            grid-row: body;
+            display: grid;
+            grid-template-rows: [title]20% [else]80%;
+            grid-template-columns: [recipe]50% [description]50%;
+            .answer-title{
+                margin-left: -20%;
+                font-size: 30px;
+                text-align: center;
+                grid-row: title;
+                grid-column-start: recipe;
+                grid-column-end: description-end;
+                .title-eng{
+                    font-family: 'Romantic Beach';
+                }
+            }
+            .recipe{
+                background-image: url("recipe.png");
+                background-repeat: no-repeat;
+            }     
+            .answer-text{
+                grid-column: description;
+                width: 80%;
+                margin: 30px auto 0;
+                font-size: 16px;
+            }
+        }  
+        #replay-button{
+            width: 90px;
+            grid-row: button;
+            grid-column: desc;
+            justify-self: end;
+            margin: 0 50px 100px 85%;
+        } 
+    }
 }
 
 .button{

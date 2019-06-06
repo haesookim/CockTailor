@@ -132,7 +132,9 @@ function toGallery() {
         console.log("check if working")
         var canvas = document.getElementById("previewcanvas");
         var dataUrl = canvas.toDataURL("image/jpeg");
-        var dataImg = document.createElement('img');
+        var dataImg = document.createElement('img');    
+        var finalName = document.getElementById("")
+        var finalDesc 
         dataImg.src = dataUrl;
         console.log(dataUrl);
         // var drawingField = document.createElement('div');

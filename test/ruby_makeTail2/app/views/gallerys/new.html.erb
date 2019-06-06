@@ -348,7 +348,7 @@ https://thoughtbot.com/blog/slicing-up-rails-application-js-for-faster-load-time
             <div class="button-text">FINISHED</div>
         </div>
 
- ̰
+
         <div id="enter-name">
         <!-- 
             https://stackoverflow.com/questions/45263409/append-canvas-image-to-form-and-upload-using-carrierwave
@@ -357,11 +357,9 @@ https://thoughtbot.com/blog/slicing-up-rails-application-js-for-faster-load-time
         <%= form_for :gallery, url: gallerys_path  do |f| %>
         
                 
-                <%= f.text_field :title, placeholder:"나만의 칵테일 이름을 지어주세요", :id=> "cocktail-name" %> </p>
+                <%= f.text_field :title, placeholder:"나만의 칵테일 이름을 지어주세요", :id=> "cocktail-name" %> 
                 <%= f.hidden_field :image, :id => 'listing_image' %>
-                
-                <%= f.text_area :text, placeholder:"나만의 칵테일에 대한 설명을 해주세요", :id=> "cocktail-desc" %>
-           
+                <%= f.text_area :body , :id=> "cocktail-desc"%>
                 <%= f.submit :id => "create-drawing" %>
             
 
@@ -372,12 +370,15 @@ https://thoughtbot.com/blog/slicing-up-rails-application-js-for-faster-load-time
         -->    
             
             <!--<div class="button" onclick="getName()">-->
-            <div class ="button" onclick="toGallery()">
+
+        
+
+            <div class ="button" onclick=" getName(); toGallery();">
                 <div class="button-text">Submit</div>
             </div>
         
         </div>
-
+<!---->
         <div id="final-result">
         <div id="title-desc">
                 <div id="name-output"></div>
@@ -385,6 +386,7 @@ https://thoughtbot.com/blog/slicing-up-rails-application-js-for-faster-load-time
             </div>
 
         <div id="finished">
+             
      
              <a class="button" id="share-button" href = "http://www.facebook.com/sharer.php?u=#" onclick="share()" target="blank">
                 <div class="button-text">Share</div>
@@ -393,11 +395,22 @@ https://thoughtbot.com/blog/slicing-up-rails-application-js-for-faster-load-time
             
                 <div class="button-text">Save</div>
             </div>
+
             <div class="button" id="gallery-button" onclick="toGallery()">
                 <div class="button-text">To Gallery</div>
             </div>
+            
             <!---공유버튼, 갤러리, 등등--->
         </div>
+        <%= form_for :gallery, url: gallerys_path  do |f| %>
+        
+                
+                <%= f.hidden_field :image, :id => 'listing_image' %>
+                <%= f.hidden_field :body , :id=> "cocktail-desc"%>
+                <%= f.submit :id => "create-drawing" %>
+            
+
+        <% end %>
     </div>
 
     </div>

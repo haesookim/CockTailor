@@ -64,6 +64,10 @@ GEM
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
+    carrierwave-base64 (2.8.0)
+      carrierwave (>= 0.8.0)
+      mime-types (~> 3.0)
+      mimemagic (~> 0.3.2)
     childprocess (1.0.1)
       rake (< 13.0)
     chromedriver-helper (2.1.1)
@@ -204,6 +208,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   carrierwave (~> 1.0)
+  carrierwave-base64 (~> 2.8)
   chromedriver-helper
   coffee-rails (~> 4.2)
   jbuilder (~> 2.5)

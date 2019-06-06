@@ -14,7 +14,7 @@
     <nav class="navbar">
         <div class="nav-item"><a href="index.html" style="font-family:'Romantic Beach'; font-size: 23px; font-weight: 300;">CockTailor</a></div>
         <div class="nav-right">
-         <%= link_to makeyourowns_makeyourown_path do %>
+         <%= link_to gallerys_path do %>
             <div class="nav-item">칵테일 만들기</div>
          <%end%>
          <%= link_to makeyourowns_recommendation_path do %>
@@ -35,13 +35,13 @@
         </div>
 
         <div id="navigate">
-            <%= link_to makeyourowns_makeyourown_path do %>
+            <%= link_to new_gallery_path do %>
                 <div class="goto" id="goto-make">나만의 칵테일 만들기</div>
             <%end%>
             <%= link_to makeyourowns_recommendation_path do %>
                 <div class="goto" id="goto-recc">칵테일 추천 받기</div></a>
             <%end%>
-            <%= link_to makeyourowns_gallery_path do %>
+            <%= link_to gallerys_path do %>
                 <div class="goto" id="goto-gallery">칵테일 갤러리</div>
             <%end%>
         </div>

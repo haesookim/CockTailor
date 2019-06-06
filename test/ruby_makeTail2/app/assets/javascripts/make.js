@@ -94,9 +94,22 @@ function showNameInput() {
 
 function getName() {
     let name = document.getElementById('cocktail-name').value;
+    console.log(name);
     let desc = document.getElementById('cocktail-desc').value;
     showFinishScreen(name, desc);
 }
+function showFinishScreen(name, desc) {
+    let finished = document.querySelector('#final-result');
+    let enter = document.getElementById('enter-name');
+
+    var cocktailname = finished.querySelector('#name-output').innerHTML = name;
+    finished.querySelector('#desc-output').innerHTML = desc;
+    enter.style.display = "none";
+    finished.style.display = "block";
+    finished.style.gridColumn = "finished"
+    finished.style.gridRow = "pane"
+}
+
 
 function share() {
     // share to SNS (facebook, instagram)
@@ -116,14 +129,17 @@ function saveImage() {
 function toGallery() {
     //is this necessary if the results are automatically uploaded to gallery
     //delete if error happened. using ruby code, we can submit image with title and explanation(I hope so...)
-    document.getElementById('create-drawing').addEventListener('click', function(){
+        console.log("check if working")
+        var canvas = document.getElementById("previewcanvas");
         var dataUrl = canvas.toDataURL("image/jpeg");
         var dataImg = document.createElement('img');
         dataImg.src = dataUrl;
-        var drawingField = document.createElement('div');
-        drawingField.innerHTML = "<input type='hidden' name='listing[image]' id='image' value='" + dataImg.src + "'>"
+        console.log(dataUrl);
+        // var drawingField = document.createElement('div');
+        // drawingField.innerHTML = "<input type='hidden' name='listing[image]' id='image' value='" + dataImg.src + "'>"
+
         document.getElementById('listing_image').value = dataUrl;
-      });
+      
 }
 
 /* Glass operaton with classes section */

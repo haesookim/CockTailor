@@ -80,7 +80,15 @@ nav{
 
 .glasstype{
     display: none;
-    color: black;
+}
+
+.active-glass{
+    #ice, #lemon, #lime, #strawberry, #cinnamon, #orange, #lemon_zest, #cherry, #irishcream , #celery{
+        visibility: hidden;
+        &.selected{
+            visibility: visible;
+        }
+    }
 }
 
 #select-pane{
@@ -143,7 +151,7 @@ nav{
     transition: all 0.3s ease-in-out;
 }
 
-.choice-item, .glass{
+.choice-item, .glass, .extra-item{
     height: fit-content;
     width: 70px;
     padding: 5px;

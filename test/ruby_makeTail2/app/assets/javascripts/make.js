@@ -34,10 +34,19 @@ for (i = 0; i < selectors.length; i++) {
 // make the choices selectable
 var choiceItems = document.getElementsByClassName('choice-item');
 
-var j;
-for (j = 0; j < choiceItems.length; j++) {
+for (var j = 0; j < choiceItems.length; j++) {
     choiceItems[j].addEventListener("click", function () {
         this.classList.toggle("selected");
+    })
+}
+
+var extraItems = document.getElementsByClassName('extra-item');
+for (let k = 0; k<extraItems.length; k++){
+    extraItems[k].addEventListener("click", function(){
+       let itemName = extraItems[k].innerHTML.toLowerCase().trim();
+       let extraItem =  document.querySelector('.active-glass').querySelector("#"+itemName);
+       extraItem.classList.toggle("selected");
+       extraItems[k].classList.toggle("selected");
     })
 }
 
@@ -60,6 +69,7 @@ for (j = 0; j < glassItems.length; j++) {
                             glassChosen = false;
                         } else {
                             glassItems[k].classList.toggle('selected');
+                            toggleActive(glassItems[k].innerHTML.toLowerCase().split(">")[1].trim())
                         }
                     }
                     //adjust for cancel condition : we get both cups if we say cancel
@@ -149,7 +159,7 @@ class Glass {
 
     onload() { // initialize
         let image = document.getElementById(this.name); //each glass class
-        this.slots_space = image.querySelector("g#Layer_4").getElementsByClassName("cls-2");
+        this.slots_space = image.querySelector("g#cuts").getElementsByClassName("cls-3");
         this.slots_color = Array(this.units).fill("");
         this.color();
         this.currentSlot = 0;
@@ -204,7 +214,7 @@ function showGlassOOP(string) {
     let glass = document.getElementById(string);
     glass.style.display = "block";
 
-    glass.classList.toggle('active-glass');
+    toggleActive(string);
     currentGlass = glassMap[string];
     currentGlass.onload();
 
@@ -214,6 +224,11 @@ function showGlassOOP(string) {
             glassArray[k].style.display = "none";
         }
     }
+}
+
+function toggleActive(string){
+    let glass = document.getElementById(string);
+    glass.classList.toggle('active-glass');
 }
 
 var ingredients = new Array();
@@ -254,6 +269,12 @@ if (finish == null) {
 
 function svgToCanvas() {
     var svg = document.querySelector(".active-glass").querySelector("svg");
+    var innerG = svg.querySelector('#Layer_2').querySelectorAll('g');
+    for (let x = 3; x<innerG.length; x++){
+        if (!innerG[x].classList.contains('selected')){
+            innerG[x].remove();
+        }
+    }
 
     var serializer = new XMLSerializer(),
         svgStr = serializer.serializeToString(svg);
@@ -267,6 +288,4 @@ function svgToCanvas() {
     var glasses = document.querySelector(".active-glass");
     glasses.style.display = "none";
     canvas.style.display = "block";
-    console.log("ran");
-
 }

@@ -13,19 +13,19 @@ function appendAnswer(object){
     } if (object.classList.contains('CL')){
         answerString+="02";
         mySwipe.next();
-    } if (object.classList.contains('PL') || object.classList.contains('PL')){
+    } if (object.classList.contains('PL') || object.classList.contains('PR')){
         if (answerString[0] == "0" && answerString[1] =="2"){
             if (object.classList.contains('PL')){
                 answerString+="02";
-            } else {
-                answerString+="12"; // this is not working somehow
+            } if (object.classList.contains('PR')) {
+                answerString+="12";
             }
             mySwipe.next();
         } else{
             if (object.classList.contains('PL')){
                 answerString+="0";
             } if (object.classList.contains('PR')){
-                answerString+="1"; // this is not working either
+                answerString+="1";
             }
         }
     }

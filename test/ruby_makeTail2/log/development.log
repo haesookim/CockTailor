@@ -54676,3 +54676,10 @@ Processing by MakeyourownsController#recommendation as HTML
 Completed 200 OK in 179ms (Views: 170.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 03:09:30 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (195.8ms)
+Completed 200 OK in 243ms (Views: 228.9ms | ActiveRecord: 0.0ms)
+
+

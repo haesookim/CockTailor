@@ -26,10 +26,17 @@ function appendAnswer(object){
         }
     }
     console.log(answerString);
+    if (answerString.length == 6){
+        findMatch(answerString);
+    }
 }
 
-var cocktailData;
-$.getJSON('cocktail_data.json', function(data){
-    cocktailData = data;
-    console.log(cocktailData);
-});
+function findMatch(string){
+    for (let i = 0; i<cocktail_data.length; i++){
+        if (string === cocktail_data[i].answerstring){
+            //load corresponding cocktail
+            console.log(cocktail_data[i].name);
+            break;
+        }
+    }
+}

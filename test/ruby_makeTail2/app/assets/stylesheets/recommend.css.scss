@@ -235,7 +235,7 @@ footer {
             display: grid;
             grid-template-rows: [title]20% [else]80%;
             grid-template-columns: [recipe]40% [description]60%;
-            .answer-title{
+            #answer-title{
                 margin-left: -20%;
                 font-size: 30px;
                 text-align: center;
@@ -250,7 +250,7 @@ footer {
                 background-image: url("recipe.png");
                 background-repeat: no-repeat;
             }     
-            .answer-text{
+            #answer-text{
                 grid-column: description;
                 width: 80%;
                 margin: 30px 0 auto 20px;

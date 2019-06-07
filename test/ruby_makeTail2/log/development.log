@@ -52486,3 +52486,1530 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 01:19:30 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (1294.8ms)
+Completed 200 OK in 1448ms (Views: 1411.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/cocktail_data.json" for ::1 at 2019-06-08 01:19:32 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/makeyourowns/cocktail_data.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 01:19:33 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (91.8ms)
+Completed 200 OK in 144ms (Views: 137.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/cocktail_data.json" for ::1 at 2019-06-08 01:19:33 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/makeyourowns/cocktail_data.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 01:19:37 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+Started GET "/makeyourowns/cocktail_data.json" for ::1 at 2019-06-08 01:19:37 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/makeyourowns/cocktail_data.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (97.0ms)
+Completed 200 OK in 164ms (Views: 154.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/cocktail_data.json" for ::1 at 2019-06-08 01:19:37 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/makeyourowns/cocktail_data.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 01:19:58 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (113.9ms)
+Completed 200 OK in 187ms (Views: 175.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/cocktail_data.json" for ::1 at 2019-06-08 01:19:59 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/makeyourowns/cocktail_data.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 01:20:02 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (55.7ms)
+Completed 200 OK in 108ms (Views: 99.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/cocktail_data.json" for ::1 at 2019-06-08 01:20:02 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/makeyourowns/cocktail_data.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 01:20:23 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (92.9ms)
+Completed 200 OK in 156ms (Views: 149.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/cocktail_data.json" for ::1 at 2019-06-08 01:20:24 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/makeyourowns/cocktail_data.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 01:20:39 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 73ms (Views: 68.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/cocktail_data.json" for ::1 at 2019-06-08 01:20:39 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/makeyourowns/cocktail_data.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 01:21:42 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (95.0ms)
+Completed 200 OK in 166ms (Views: 156.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/cocktail_data.json" for ::1 at 2019-06-08 01:21:43 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/makeyourowns/cocktail_data.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 01:22:08 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (82.3ms)
+Completed 200 OK in 139ms (Views: 131.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/cocktail_data.json" for ::1 at 2019-06-08 01:22:09 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/makeyourowns/cocktail_data.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 01:23:36 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (147.3ms)
+Completed 200 OK in 255ms (Views: 237.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/cocktail_data.json" for ::1 at 2019-06-08 01:23:37 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/makeyourowns/cocktail_data.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/index.html" for ::1 at 2019-06-08 01:23:39 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/index.html"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-06-08 01:23:45 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 85ms (Views: 76.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-08 01:24:43 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (64.1ms)
+Completed 200 OK in 174ms (Views: 156.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/makeyourown" for ::1 at 2019-06-08 01:24:46 +0900
+Processing by MakeyourownsController#makeyourown as HTML
+  Rendering makeyourowns/makeyourown.html.erb within layouts/application
+  Rendered makeyourowns/makeyourown.html.erb within layouts/application (87.0ms)
+Completed 200 OK in 153ms (Views: 144.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/makeyourown" for ::1 at 2019-06-08 01:25:16 +0900
+Processing by MakeyourownsController#makeyourown as HTML
+  Rendering makeyourowns/makeyourown.html.erb within layouts/application
+  Rendered makeyourowns/makeyourown.html.erb within layouts/application (162.7ms)
+Completed 200 OK in 305ms (Views: 287.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/recommendation.html" for ::1 at 2019-06-08 01:25:17 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (126.5ms)
+Completed 200 OK in 179ms (Views: 168.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/cocktail_data.json" for ::1 at 2019-06-08 01:25:18 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/makeyourowns/cocktail_data.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/makeyourowns/makeyourown.html" for ::1 at 2019-06-08 01:25:19 +0900
+Processing by MakeyourownsController#makeyourown as HTML
+  Rendering makeyourowns/makeyourown.html.erb within layouts/application
+  Rendered makeyourowns/makeyourown.html.erb within layouts/application (38.4ms)
+Completed 200 OK in 89ms (Views: 77.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/makeyourown.html" for ::1 at 2019-06-08 01:25:55 +0900
+Processing by MakeyourownsController#makeyourown as HTML
+  Rendering makeyourowns/makeyourown.html.erb within layouts/application
+  Rendered makeyourowns/makeyourown.html.erb within layouts/application (55.9ms)
+Completed 200 OK in 124ms (Views: 114.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index.html" for ::1 at 2019-06-08 01:25:58 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/index.html"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-06-08 01:26:03 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 63ms (Views: 53.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/makeyourown.html" for ::1 at 2019-06-08 01:26:05 +0900
+Processing by MakeyourownsController#makeyourown as HTML
+  Rendering makeyourowns/makeyourown.html.erb within layouts/application
+  Rendered makeyourowns/makeyourown.html.erb within layouts/application (42.4ms)
+Completed 200 OK in 94ms (Views: 83.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index.html" for ::1 at 2019-06-08 01:27:40 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/index.html"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-06-08 01:27:44 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (892.8ms)
+Completed 200 OK in 1000ms (Views: 993.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-08 01:29:07 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (65.0ms)
+Completed 200 OK in 166ms (Views: 140.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-08 01:31:23 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (56.1ms)
+Completed 200 OK in 146ms (Views: 135.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/makeyourown" for ::1 at 2019-06-08 01:31:28 +0900
+Processing by MakeyourownsController#makeyourown as HTML
+  Rendering makeyourowns/makeyourown.html.erb within layouts/application
+  Rendered makeyourowns/makeyourown.html.erb within layouts/application (83.1ms)
+Completed 200 OK in 296ms (Views: 280.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/makeyourown" for ::1 at 2019-06-08 01:31:33 +0900
+Processing by MakeyourownsController#makeyourown as HTML
+  Rendering makeyourowns/makeyourown.html.erb within layouts/application
+  Rendered makeyourowns/makeyourown.html.erb within layouts/application (83.3ms)
+Completed 200 OK in 269ms (Views: 243.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index.html" for ::1 at 2019-06-08 01:31:39 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/index.html"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/makeyourowns/makeyourown" for ::1 at 2019-06-08 01:33:35 +0900
+Processing by MakeyourownsController#makeyourown as HTML
+  Rendering makeyourowns/makeyourown.html.erb within layouts/application
+  Rendered makeyourowns/makeyourown.html.erb within layouts/application (206.0ms)
+Completed 200 OK in 407ms (Views: 379.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/makeyourown" for ::1 at 2019-06-08 01:33:37 +0900
+Processing by MakeyourownsController#makeyourown as HTML
+  Rendering makeyourowns/makeyourown.html.erb within layouts/application
+  Rendered makeyourowns/makeyourown.html.erb within layouts/application (46.2ms)
+Completed 200 OK in 114ms (Views: 101.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-08 01:33:41 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (36.2ms)
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `stringify_keys' for "/makeyourowns/makeyourown":String):
+    16:     <nav class="navbar">
+    17:         <div class="nav-item"><a href="#" style="font-family:'Romantic Beach'; font-size: 23px; font-weight: 300;">CockTailor</a></div>
+    18:         <div class="nav-right">
+    19:             <%= link_to "칵테일 만들기", makeyourowns_makeyourown_path do %>
+    20:                 <div class="nav-item">칵테일 만들기</div>
+    21:             <%end%>
+    22:             <%= link_to makeyourowns_recommendation_path do %>
+  
+app/views/welcome/index.html.erb:19:in `_app_views_welcome_index_html_erb__692602044044183728_70151583482060'
+Started GET "/" for ::1 at 2019-06-08 01:34:43 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (72.4ms)
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `stringify_keys' for "makeyourowns_makeyourown_path":String):
+    16:     <nav class="navbar">
+    17:         <div class="nav-item"><a href="#" style="font-family:'Romantic Beach'; font-size: 23px; font-weight: 300;">CockTailor</a></div>
+    18:         <div class="nav-right">
+    19:             <%= link_to "칵테일 만들기", "makeyourowns_makeyourown_path" do %>
+    20:                 <div class="nav-item">칵테일 만들기</div>
+    21:             <%end%>
+    22:             <%= link_to makeyourowns_recommendation_path do %>
+  
+app/views/welcome/index.html.erb:19:in `_app_views_welcome_index_html_erb__692602044044183728_70151611971320'
+Started GET "/" for ::1 at 2019-06-08 01:34:55 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (29.0ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `stringify_keys' for "/makeyourowns/makeyourown":String):
+    16:     <nav class="navbar">
+    17:         <div class="nav-item"><a href="#" style="font-family:'Romantic Beach'; font-size: 23px; font-weight: 300;">CockTailor</a></div>
+    18:         <div class="nav-right">
+    19:             <%= link_to "칵테일 만들기", makeyourowns_makeyourown_path do %>
+    20:                 <div class="nav-item">칵테일 만들기</div>
+    21:             <%end%>
+    22:             <%= link_to makeyourowns_recommendation_path do %>
+  
+app/views/welcome/index.html.erb:19:in `_app_views_welcome_index_html_erb__692602044044183728_70151627210400'
+Started GET "/" for ::1 at 2019-06-08 01:35:18 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (347.0ms)
+Completed 500 Internal Server Error in 372ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `makeyourowns_makeyourown' for #<#<Class:0x00007f9ae1138fe8>:0x00007f9ae584ba20>
+Did you mean?  makeyourowns_makeyourown_url
+               makeyourowns_makeyourown_path):
+    16:     <nav class="navbar">
+    17:         <div class="nav-item"><a href="#" style="font-family:'Romantic Beach'; font-size: 23px; font-weight: 300;">CockTailor</a></div>
+    18:         <div class="nav-right">
+    19:             <%= link_to "칵테일 만들기", makeyourowns_makeyourown do %>
+    20:                 <div class="nav-item">칵테일 만들기</div>
+    21:             <%end%>
+    22:             <%= link_to makeyourowns_recommendation_path do %>
+  
+app/views/welcome/index.html.erb:19:in `_app_views_welcome_index_html_erb__692602044044183728_70151626197120'
+Started GET "/" for ::1 at 2019-06-08 01:35:31 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (84.0ms)
+Completed 500 Internal Server Error in 135ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `stringify_keys' for "http://localhost:3000/makeyourowns/makeyourown":String):
+    16:     <nav class="navbar">
+    17:         <div class="nav-item"><a href="#" style="font-family:'Romantic Beach'; font-size: 23px; font-weight: 300;">CockTailor</a></div>
+    18:         <div class="nav-right">
+    19:             <%= link_to "칵테일 만들기", makeyourowns_makeyourown_url do %>
+    20:                 <div class="nav-item">칵테일 만들기</div>
+    21:             <%end%>
+    22:             <%= link_to makeyourowns_recommendation_path do %>
+  
+app/views/welcome/index.html.erb:19:in `_app_views_welcome_index_html_erb__692602044044183728_70151591046700'
+Started GET "/" for ::1 at 2019-06-08 01:36:13 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (37.4ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `stringify_keys' for "/makeyourowns/makeyourown":String):
+    16:     <nav class="navbar">
+    17:         <div class="nav-item"><a href="#" style="font-family:'Romantic Beach'; font-size: 23px; font-weight: 300;">CockTailor</a></div>
+    18:         <div class="nav-right">
+    19:             <%= link_to "칵테일 만들기", makeyourowns_makeyourown_path() do %>
+    20:                 <div class="nav-item">칵테일 만들기</div>
+    21:             <%end%>
+    22:             <%= link_to makeyourowns_recommendation_path do %>
+  
+app/views/welcome/index.html.erb:19:in `_app_views_welcome_index_html_erb__692602044044183728_70151626378900'
+Started GET "/" for ::1 at 2019-06-08 01:36:28 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 108ms (Views: 101.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/makeyourown" for ::1 at 2019-06-08 01:36:32 +0900
+Processing by MakeyourownsController#makeyourown as HTML
+  Rendering makeyourowns/makeyourown.html.erb within layouts/application
+  Rendered makeyourowns/makeyourown.html.erb within layouts/application (63.2ms)
+Completed 200 OK in 116ms (Views: 109.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/makeyourown" for ::1 at 2019-06-08 01:36:36 +0900
+Processing by MakeyourownsController#makeyourown as HTML
+  Rendering makeyourowns/makeyourown.html.erb within layouts/application
+  Rendered makeyourowns/makeyourown.html.erb within layouts/application (77.7ms)
+Completed 200 OK in 189ms (Views: 179.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-08 01:36:54 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (47.5ms)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `stringify_keys' for "/makeyourowns/makeyourown":String):
+    16:     <nav class="navbar">
+    17:         <div class="nav-item"><a href="#" style="font-family:'Romantic Beach'; font-size: 23px; font-weight: 300;">CockTailor</a></div>
+    18:         <div class="nav-right">
+    19:             <%= link_to "칵테일 만들기", makeyourowns_makeyourown_path do %>
+    20:                 <div class="nav-item">칵테일 만들기</div>
+    21:             <%end%>
+    22:             <%= link_to makeyourowns_recommendation_path do %>
+  
+app/views/welcome/index.html.erb:19:in `_app_views_welcome_index_html_erb__692602044044183728_70151582425880'
+Started GET "/" for ::1 at 2019-06-08 01:37:26 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (48.3ms)
+Completed 200 OK in 156ms (Views: 141.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-08 01:38:03 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (45.5ms)
+Completed 200 OK in 126ms (Views: 117.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/makeyourown" for ::1 at 2019-06-08 01:38:06 +0900
+Processing by MakeyourownsController#makeyourown as HTML
+  Rendering makeyourowns/makeyourown.html.erb within layouts/application
+  Rendered makeyourowns/makeyourown.html.erb within layouts/application (70.2ms)
+Completed 200 OK in 119ms (Views: 109.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/recommendation.html" for ::1 at 2019-06-08 01:38:08 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (169.8ms)
+Completed 200 OK in 234ms (Views: 220.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/cocktail_data.json" for ::1 at 2019-06-08 01:38:08 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/makeyourowns/cocktail_data.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/makeyourowns/gallery.html" for ::1 at 2019-06-08 01:38:09 +0900
+Processing by MakeyourownsController#gallery as HTML
+  Rendering makeyourowns/gallery.html.erb within layouts/application
+  Rendered makeyourowns/gallery.html.erb within layouts/application (32.8ms)
+Completed 500 Internal Server Error in 130ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The asset "blue.png" is not present in the asset pipeline.):
+    48:             <div id="gallery-content">
+    49:                 <div class="gallery-item">
+    50:                     <figure class="fig">
+    51:                         <%= image_tag("blue.png") %>
+    52:                         <img src="images/blue.png" class="img-responsive" />
+    53:                         <figcaption>
+    54:                             <p class="figure-title">나만의 칵테일 블루</p>
+  
+app/views/makeyourowns/gallery.html.erb:51:in `_app_views_makeyourowns_gallery_html_erb___1439124845673403020_70151591968180'
+Started GET "/makeyourowns/recommendation.html" for ::1 at 2019-06-08 01:38:13 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (30.6ms)
+Completed 200 OK in 61ms (Views: 56.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/cocktail_data.json" for ::1 at 2019-06-08 01:38:13 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/makeyourowns/cocktail_data.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/makeyourowns/recommendation.html" for ::1 at 2019-06-08 01:38:14 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (50.0ms)
+Completed 200 OK in 98ms (Views: 90.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/cocktail_data.json" for ::1 at 2019-06-08 01:38:14 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/makeyourowns/cocktail_data.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/makeyourowns/makeyourown.html" for ::1 at 2019-06-08 01:38:15 +0900
+Processing by MakeyourownsController#makeyourown as HTML
+  Rendering makeyourowns/makeyourown.html.erb within layouts/application
+  Rendered makeyourowns/makeyourown.html.erb within layouts/application (54.8ms)
+Completed 200 OK in 111ms (Views: 102.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/recommendation.html" for ::1 at 2019-06-08 01:38:16 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (92.8ms)
+Completed 200 OK in 183ms (Views: 172.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/cocktail_data.json" for ::1 at 2019-06-08 01:38:16 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/makeyourowns/cocktail_data.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/makeyourowns/cocktail_data.json" for ::1 at 2019-06-08 01:38:17 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/makeyourowns/cocktail_data.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/makeyourowns/makeyourown.html" for ::1 at 2019-06-08 01:38:17 +0900
+Processing by MakeyourownsController#makeyourown as HTML
+  Rendering makeyourowns/makeyourown.html.erb within layouts/application
+  Rendered makeyourowns/makeyourown.html.erb within layouts/application (41.9ms)
+Completed 200 OK in 154ms (Views: 148.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index.html" for ::1 at 2019-06-08 01:38:19 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/index.html"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/makeyourowns/makeyourown.html" for ::1 at 2019-06-08 01:38:21 +0900
+Processing by MakeyourownsController#makeyourown as HTML
+  Rendering makeyourowns/makeyourown.html.erb within layouts/application
+  Rendered makeyourowns/makeyourown.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 65ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/makeyourown.html" for ::1 at 2019-06-08 01:39:01 +0900
+Processing by MakeyourownsController#makeyourown as HTML
+  Rendering makeyourowns/makeyourown.html.erb within layouts/application
+  Rendered makeyourowns/makeyourown.html.erb within layouts/application (58.8ms)
+Completed 200 OK in 137ms (Views: 128.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/makeyourown" for ::1 at 2019-06-08 01:39:04 +0900
+Processing by MakeyourownsController#makeyourown as HTML
+  Rendering makeyourowns/makeyourown.html.erb within layouts/application
+  Rendered makeyourowns/makeyourown.html.erb within layouts/application (53.0ms)
+Completed 200 OK in 98ms (Views: 89.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 01:39:05 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (97.4ms)
+Completed 200 OK in 147ms (Views: 139.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/cocktail_data.json" for ::1 at 2019-06-08 01:39:05 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/makeyourowns/cocktail_data.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/makeyourowns/gallery" for ::1 at 2019-06-08 01:39:06 +0900
+Processing by MakeyourownsController#gallery as HTML
+  Rendering makeyourowns/gallery.html.erb within layouts/application
+  Rendered makeyourowns/gallery.html.erb within layouts/application (31.5ms)
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The asset "blue.png" is not present in the asset pipeline.):
+    48:             <div id="gallery-content">
+    49:                 <div class="gallery-item">
+    50:                     <figure class="fig">
+    51:                         <%= image_tag("blue.png") %>
+    52:                         <img src="images/blue.png" class="img-responsive" />
+    53:                         <figcaption>
+    54:                             <p class="figure-title">나만의 칵테일 블루</p>
+  
+app/views/makeyourowns/gallery.html.erb:51:in `_app_views_makeyourowns_gallery_html_erb___1439124845673403020_70151626099980'
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 01:39:09 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (105.0ms)
+Completed 200 OK in 155ms (Views: 145.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/cocktail_data.json" for ::1 at 2019-06-08 01:39:09 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/makeyourowns/cocktail_data.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/index.html" for ::1 at 2019-06-08 01:39:22 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/index.html"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 01:41:09 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (212.4ms)
+Completed 200 OK in 350ms (Views: 315.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/cocktail_data.json" for ::1 at 2019-06-08 01:41:09 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/makeyourowns/cocktail_data.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/welcome/index" for ::1 at 2019-06-08 01:41:11 +0900
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (34.3ms)
+Completed 200 OK in 98ms (Views: 88.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/makeyourown" for ::1 at 2019-06-08 01:41:13 +0900
+Processing by MakeyourownsController#makeyourown as HTML
+  Rendering makeyourowns/makeyourown.html.erb within layouts/application
+  Rendered makeyourowns/makeyourown.html.erb within layouts/application (64.6ms)
+Completed 200 OK in 110ms (Views: 103.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 01:41:14 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (66.4ms)
+Completed 200 OK in 160ms (Views: 152.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/cocktail_data.json" for ::1 at 2019-06-08 01:41:14 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/makeyourowns/cocktail_data.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/makeyourowns/cocktail_data.json" for ::1 at 2019-06-08 01:41:14 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/makeyourowns/cocktail_data.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/makeyourowns/makeyourown" for ::1 at 2019-06-08 01:41:15 +0900
+Processing by MakeyourownsController#makeyourown as HTML
+  Rendering makeyourowns/makeyourown.html.erb within layouts/application
+  Rendered makeyourowns/makeyourown.html.erb within layouts/application (44.9ms)
+Completed 200 OK in 188ms (Views: 182.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 01:41:16 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (52.3ms)
+Completed 200 OK in 113ms (Views: 108.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/cocktail_data.json" for ::1 at 2019-06-08 01:41:16 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/makeyourowns/cocktail_data.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/makeyourowns/cocktail_data.json" for ::1 at 2019-06-08 01:41:17 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/makeyourowns/cocktail_data.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/makeyourowns/makeyourown" for ::1 at 2019-06-08 01:41:17 +0900
+Processing by MakeyourownsController#makeyourown as HTML
+  Rendering makeyourowns/makeyourown.html.erb within layouts/application
+  Rendered makeyourowns/makeyourown.html.erb within layouts/application (44.6ms)
+Completed 200 OK in 178ms (Views: 171.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 01:41:18 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (101.6ms)
+Completed 200 OK in 179ms (Views: 172.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/cocktail_data.json" for ::1 at 2019-06-08 01:41:18 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/makeyourowns/cocktail_data.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/makeyourowns/cocktail_data.json" for ::1 at 2019-06-08 01:41:19 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/makeyourowns/cocktail_data.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/makeyourowns/makeyourown" for ::1 at 2019-06-08 01:41:23 +0900
+Processing by MakeyourownsController#makeyourown as HTML
+  Rendering makeyourowns/makeyourown.html.erb within layouts/application
+  Rendered makeyourowns/makeyourown.html.erb within layouts/application (49.7ms)
+Completed 200 OK in 131ms (Views: 125.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/makeyourown" for ::1 at 2019-06-08 01:41:26 +0900
+Processing by MakeyourownsController#makeyourown as HTML
+  Rendering makeyourowns/makeyourown.html.erb within layouts/application
+  Rendered makeyourowns/makeyourown.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 56ms (Views: 50.6ms | ActiveRecord: 0.0ms)
+
+

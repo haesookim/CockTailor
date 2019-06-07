@@ -22,30 +22,27 @@
 
 <body>
     <nav class="navbar">
-    <!--
-        <%= link_to  welcome_index_path do %>
-            <div class="nav-item">Cocktailor</div>
-         <%end%>
-       
-        <div class="nav-right">
-            <%= link_to makeyourowns_makeyourown_path do %>
-            <div class="nav-item">칵테일 만들기</div>
-         <%end%>
-         <%= link_to makeyourowns_recommendation_path do %>
-            <div class="nav-item">칵테일 추천</div>
-         <%end%>
-         <%= link_to makeyourowns_gallery_path do %>
-            <div class="nav-item">칵테일 갤러리</div>
-         <%end%>
-            
+        <div class="nav-item" style="font-family:'Romantic Beach'; font-size: 23px; font-weight: 300;">
+            <%= link_to welcome_index_path do %>
+                CockTailor
+            <%end%>
         </div>
-    -->
-    <div class="nav-item"><a href="../index.html"
-                style="font-family:'Romantic Beach'; font-size: 23px; font-weight: 300;">CockTailor</a></div>
         <div class="nav-right">
-            <div class="nav-item"><a href="makeyourown.html">칵테일 만들기</a></div>
-            <div class="nav-item"><a href="recommendation.html">칵테일 추천</a></div>
-            <div class="nav-item"><a href="gallery.html">칵테일 갤러리</a></div>
+            <div class="nav-item">
+                <%= link_to makeyourowns_makeyourown_path do %>
+                    칵테일 만들기
+                <%end%>
+            </div>
+            <div class="nav-item">
+                <%= link_to makeyourowns_recommendation_path do %>
+                    칵테일 추천
+                <%end%>
+            </div>
+            <div class="nav-item">
+                <%= link_to makeyourowns_gallery_path do %>
+                    칵테일 갤러리
+                <%end%>
+            </div>
         </div>
     </nav>
 
@@ -57,13 +54,13 @@
                     <div class="question"><b>과일맛</b>
                     </div>
                         
-                        <a href="#" onclick="appendAnswer(this)" class="CL">
+                        <a onclick="appendAnswer(this)" class="CL">
                             
                             <%= image_tag("choice/1_0.png") %>
                             <div class="choice-text">좋아요!</div>
                             
                         </a>
-                        <a href="#" onclick="appendAnswer(this)" class="R">
+                        <a onclick="appendAnswer(this)" class="R">
                             <%= image_tag("choice/1_1.png") %>
                             
                             <div class="choice-text">싫어요!</div>
@@ -73,12 +70,12 @@
                 <div class="questioncontainer">
                     <div class="question"><b>커피맛</b>
                     </div>
-                        <a href="#" onclick="appendAnswer(this)" class="CL">
+                        <a  onclick="appendAnswer(this)" class="CL">
                             <%= image_tag("choice/2_0.png") %>
                             
                             <div class="choice-text">좋아요! </div>
                         </a>
-                        <a href="#" onclick="appendAnswer(this)" class="R">
+                        <a  onclick="appendAnswer(this)" class="R">
                             <%= image_tag("choice/2_1.png") %>
                             
                             <div class="choice-text">싫어요! </div>
@@ -87,12 +84,12 @@
                 <div class="questioncontainer">
                     <div class="question"><b>탄산?</b>
                     </div>
-                        <a href="#" onclick="appendAnswer(this)" class="PL">
+                        <a  onclick="appendAnswer(this)" class="PL">
                             <%= image_tag("choice/3_0.png") %>
                             
                             <div class="choice-text">싫어욧!</div>
                         </a>
-                        <a href="#" onclick="appendAnswer(this)" class="PR">
+                        <a  onclick="appendAnswer(this)" class="PR">
                              <%= image_tag("choice/3_1.png") %>
                             
                             <div class="choice-text">좋아욧!</div>
@@ -101,12 +98,12 @@
                 <div class="questioncontainer">
                     <div class="question"><b>찬거 따뜻한거?</b>
                     </div>
-                        <a href="#" onclick="appendAnswer(this)" class="L">
+                        <a  onclick="appendAnswer(this)" class="L">
                             <%= image_tag("choice/4_0.png") %>
                             
                             <div class="choice-text">찬거!</div>
                         </a>
-                        <a href="#" onclick="appendAnswer(this)" class="R">
+                        <a  onclick="appendAnswer(this)" class="R">
                              <%= image_tag("choice/4_1.png") %>
                             
                             <div class="choice-text">따뜻한거!</div>
@@ -115,12 +112,12 @@
                 <div class="questioncontainer">
                     <div class="question"><b>도수는 낮은거 높은거?</b>
                     </div>
-                        <a href="#" onclick="appendAnswer(this)" class="L">
+                        <a  onclick="appendAnswer(this)" class="L">
                             <%= image_tag("choice/5_0.png") %>
                             
                             <div class="choice-text">낮은거!</div>
                         </a>
-                        <a href="#" onclick="appendAnswer(this)" class="R">
+                        <a  onclick="appendAnswer(this)" class="R">
                              <%= image_tag("choice/5_1.png") %>
                             
                             <div class="choice-text">높은거!</div>
@@ -129,12 +126,12 @@
                 <div class="questioncontainer">
                     <div class="question"><b>양은 어떻게?</b>
                     </div>
-                        <a href="#" onclick="appendAnswer(this)" class="L">
+                        <a  onclick="appendAnswer(this)" class="L">
                             <%= image_tag("choice/6_0.png") %>
                             
                             <div class="choice-text">숏!</div>
                         </a>
-                        <a href="#" onclick="appendAnswer(this)" class="R">
+                        <a  onclick="appendAnswer(this)" class="R">
                              <%= image_tag("choice/6_1.png") %>
                             
                             <div class="choice-text">롱!</div>

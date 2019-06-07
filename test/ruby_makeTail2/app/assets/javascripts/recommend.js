@@ -28,8 +28,6 @@ function appendAnswer(object){
     console.log(answerString);
 }
 
-var cocktailData;
 $.getJSON('cocktail_data.json', function(data){
-    cocktailData = data;
-    console.log(cocktailData);
+
 });

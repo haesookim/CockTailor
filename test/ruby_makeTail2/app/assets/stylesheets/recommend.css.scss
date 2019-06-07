@@ -169,7 +169,7 @@ footer {
     grid-column-end: 6;
 }
 
-.L, .R{
+.L, .R, .CL, .PL, .PR{
     width: 320px;
     height: 500px;
     background-color: white;
@@ -181,25 +181,24 @@ footer {
     margin-top: 10px;
     transition: all 0.3s ease-out;
     grid-row: choices;
+    &:hover{
+        background-color: rgb(231, 231, 231);
+        margin-top:0px;
+        transition: all 0.3s ease-out;
+    }
+    img{
+        width: 40%;
+        height: 40%;
+        margin: 30px auto 20px;
+    }
 }
 
-.L:hover, .R:hover{
-    background-color: rgb(231, 231, 231);
-    margin-top:0px;
-    transition: all 0.3s ease-out;
-}
-
-.L img, .R img{
-    width: 40%;
-    height: 40%;
-    margin: 30px auto 20px;
-}
-.L{
+.L, .CL, .PL{
     border-right: solid 1px black;
     grid-column: choice-1;
 }
 
-.R{
+.R, .PR{
     border-left: solid 1px black;
     grid-column: choice-2;
 }
@@ -235,7 +234,7 @@ footer {
             grid-row: body;
             display: grid;
             grid-template-rows: [title]20% [else]80%;
-            grid-template-columns: [recipe]50% [description]50%;
+            grid-template-columns: [recipe]40% [description]60%;
             .answer-title{
                 margin-left: -20%;
                 font-size: 30px;
@@ -254,7 +253,7 @@ footer {
             .answer-text{
                 grid-column: description;
                 width: 80%;
-                margin: 30px auto 0;
+                margin: 30px 0 auto 10px;
                 font-size: 16px;
             }
         }  

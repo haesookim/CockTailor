@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" %>
     <%= javascript_include_tag "https://cdn.jsdelivr.net/gh/lyfeyaj/swipe/swipe.js" %>
+    <%= javascript_include_tag "recommend" %>
     <%= stylesheet_link_tag "recommend" %>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900" rel="stylesheet">
@@ -53,50 +54,93 @@
         <div id="mySwipe" class="swipe">
             <div class="swipe-wrap">
                 <div class="questioncontainer">
-                    <div class="question"><b> Q1. 당신의 음주 스타일은 어떤가요?</b>
+                    <div class="question"><b>과일맛</b>
                     </div>
                         
-                        <a href="#" onclick="mySwipe.next()" class="L">
+                        <a href="#" onclick="appendAnswer(this)" class="CL">
                             
                             <%= image_tag("choice/1-shot.svg") %>
-                            <div class="choice-text">한 잔을 마셔도 짧고 굵게!</div>
+                            <div class="choice-text">좋아요!</div>
                             
                         </a>
-                        <a href="#" onclick="mySwipe.next()" class="R">
+                        <a href="#" onclick="appendAnswer(this)" class="R">
                             <%= image_tag("choice/1-long.svg") %>
                             
-                            <div class="choice-text">여유를 가지고 천천히 길-게!</div>
+                            <div class="choice-text">싫어요!</div>
                         </a>
                 </div>
 
                 <div class="questioncontainer">
-                    <div class="question"><b> Q2. 숲속의 님프들은 노래와 출을 즐기며 술을 즐겨마셨다고 하죠! 당신은 님프로 따지면 어떤 님프인가요?</b>
+                    <div class="question"><b>커피맛</b>
                     </div>
-                        <a href="#" onclick="mySwipe.next()" class="L">
+                        <a href="#" onclick="appendAnswer(this)" class="CL">
                             <%= image_tag("choice/2-forest.svg") %>
                             
-                            <div class="choice-text">쾌청한 숲속에서 달큰한 과일과 함께 </br>인생을 즐기는 숲의 님프!</div>
+                            <div class="choice-text">좋아요! </div>
                         </a>
-                        <a href="#" onclick="mySwipe.next()" class="R">
+                        <a href="#" onclick="appendAnswer(this)" class="R">
                             <%= image_tag("choice/2-river.svg") %>
                             
-                            <div class="choice-text">시원한 강가에서 첨벙첨벙 물놀이하며 물맛과 술맛을 즐기는 강의 님프!</div>
+                            <div class="choice-text">싫어요! </div>
                         </a>
                 </div>
                 <div class="questioncontainer">
-                    <div class="question"><b> Q3. 당신은 어떤 종류의 재료를 더 좋아하시나요?</b>
+                    <div class="question"><b>탄산?</b>
                     </div>
-                        <a href="#" onclick="mySwipe.next()" class="L">
+                        <a href="#" onclick="appendAnswer(this)" class="PL">
                             <%= image_tag("choice/3-sour.svg") %>
                             
-                            <div class="choice-text">상큼하게 톡톡! 입안을 터뜨리는 맛!</div>
+                            <div class="choice-text">싫어욧!</div>
                         </a>
-                        <a href="#" onclick="mySwipe.next()" class="R">
+                        <a href="#" onclick="appendAnswer(this)" class="PR">
                              <%= image_tag("choice/3-bitter.svg") %>
                             
-                            <div class="choice-text">은은한듯 시크한듯 묵직한 듯 내 혀를 돌돌 감싸는 맛</div>
+                            <div class="choice-text">좋아욧!</div>
                         </a>
                 </div>
+                <div class="questioncontainer">
+                    <div class="question"><b>찬거 따뜻한거?</b>
+                    </div>
+                        <a href="#" onclick="appendAnswer(this)" class="L">
+                            <%= image_tag("choice/3-sour.svg") %>
+                            
+                            <div class="choice-text">찬거!</div>
+                        </a>
+                        <a href="#" onclick="appendAnswer(this)" class="R">
+                             <%= image_tag("choice/3-bitter.svg") %>
+                            
+                            <div class="choice-text">따뜻한거!</div>
+                        </a>
+                </div>
+                <div class="questioncontainer">
+                    <div class="question"><b>도수는 낮은거 높은거?</b>
+                    </div>
+                        <a href="#" onclick="appendAnswer(this)" class="L">
+                            <%= image_tag("choice/3-sour.svg") %>
+                            
+                            <div class="choice-text">낮은거!</div>
+                        </a>
+                        <a href="#" onclick="appendAnswer(this)" class="R">
+                             <%= image_tag("choice/3-bitter.svg") %>
+                            
+                            <div class="choice-text">높은거!</div>
+                        </a>
+                </div>
+                <div class="questioncontainer">
+                    <div class="question"><b>양은 어떻게?</b>
+                    </div>
+                        <a href="#" onclick="appendAnswer(this)" class="L">
+                            <%= image_tag("choice/3-sour.svg") %>
+                            
+                            <div class="choice-text">숏!</div>
+                        </a>
+                        <a href="#" onclick="appendAnswer(this)" class="R">
+                             <%= image_tag("choice/3-bitter.svg") %>
+                            
+                            <div class="choice-text">롱!</div>
+                        </a>
+                </div>
+
                 <div class="answercontainer">
                     <div class="answer" id="tequila-sunrise">
                         <div class="answer-image">
@@ -137,7 +181,7 @@
                                     하지만 너무 빠르게 마시진 마세요. 서양에서는 숙취를 “데킬라 선라이즈” 라고 한다구요?</div>
                         </div>
                         <div class="button" id="replay-button">
-                            <div class="button-text" onclick="mySwipe.next()">다시 하기</div>
+                            <div class="button-text" onclick="appendAnswer(this)">다시 하기</div>
                         </div>
                     </div>
                 </div>
@@ -147,10 +191,5 @@
     </div>
 </body>
 <%= javascript_include_tag 'mySwipe.js' %>
-
-<script>
-   
-
-</script>
 
 </html>

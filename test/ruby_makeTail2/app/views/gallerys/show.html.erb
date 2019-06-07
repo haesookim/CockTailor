@@ -63,7 +63,7 @@ https://stackoverflow.com/questions/8273410/how-to-add-class-to-an-image-tag-rai
 
       </div>
     </div>
-    <%= button_to "모든 갤러리보기", gallerys_path, :method => "get" %>
+    <%= button_to "모든 갤러리보기" ,gallerys_path, :method => "get" %>
 <%if @gallery %>
       <div id="gallery-content">
         <div class="gallery-item">
@@ -72,7 +72,7 @@ https://stackoverflow.com/questions/8273410/how-to-add-class-to-an-image-tag-rai
             <figcaption>
               <p class="figure-title"><%= @gallery.title %></p>
               <p class="description"><%= @gallery.body %></p>
-              <p><%= @gallery.created_at %></p>
+
 
             </figcaption>
           </figure>

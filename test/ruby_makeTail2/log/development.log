@@ -54977,3 +54977,115 @@ Processing by MakeyourownsController#recommendation as HTML
 Completed 200 OK in 251ms (Views: 246.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 21:36:56 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (177.6ms)
+Completed 200 OK in 301ms (Views: 225.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 21:52:27 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (278.6ms)
+Completed 200 OK in 339ms (Views: 321.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 21:53:39 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (197.5ms)
+Completed 200 OK in 243ms (Views: 230.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 21:54:04 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (133.2ms)
+Completed 200 OK in 165ms (Views: 154.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 21:54:12 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (79.3ms)
+Completed 200 OK in 123ms (Views: 110.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 22:04:19 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (352.5ms)
+Completed 200 OK in 415ms (Views: 395.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 22:04:37 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (129.0ms)
+Completed 200 OK in 161ms (Views: 151.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 22:05:27 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (190.7ms)
+Completed 200 OK in 245ms (Views: 227.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 22:06:03 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (203.1ms)
+Completed 200 OK in 248ms (Views: 239.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 22:07:02 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (229.4ms)
+Completed 200 OK in 262ms (Views: 251.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 22:08:14 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (210.5ms)
+Completed 200 OK in 266ms (Views: 253.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 22:08:34 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (135.3ms)
+Completed 200 OK in 163ms (Views: 158.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 22:09:23 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (215.8ms)
+Completed 200 OK in 273ms (Views: 252.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 22:11:02 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (280.8ms)
+Completed 200 OK in 334ms (Views: 320.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 22:11:10 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (196.0ms)
+Completed 200 OK in 243ms (Views: 223.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/makeyourowns/recommendation" for ::1 at 2019-06-08 22:16:06 +0900
+Processing by MakeyourownsController#recommendation as HTML
+  Rendering makeyourowns/recommendation.html.erb within layouts/application
+  Rendered makeyourowns/recommendation.html.erb within layouts/application (227.2ms)
+Completed 200 OK in 281ms (Views: 267.5ms | ActiveRecord: 0.0ms)
+
+

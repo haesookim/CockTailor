@@ -3,7 +3,7 @@ class CreateGalleries < ActiveRecord::Migration[5.2]
     create_table :galleries do |t|
       t.string :title
       t.text :body
-      t.string :image
+      t.text :image
 
       t.timestamps
     end

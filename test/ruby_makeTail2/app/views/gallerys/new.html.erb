@@ -18,6 +18,8 @@ https://thoughtbot.com/blog/slicing-up-rails-application-js-for-faster-load-time
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700" rel="stylesheet">
     -->
     <%= javascript_include_tag "https://cdn.jsdelivr.net/npm/canvg/dist/browser/canvg.min.js" %>
+    <!-- caman js for dealing with canvas image -->
+    <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.0.0/caman.full.min.js'%>
     <%= stylesheet_link_tag "make" %>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700" rel="stylesheet">
@@ -360,7 +362,7 @@ https://thoughtbot.com/blog/slicing-up-rails-application-js-for-faster-load-time
                 <%= f.text_field :title, placeholder:"나만의 칵테일 이름을 지어주세요", :id=> "cocktail-name" %> 
                 <%= f.hidden_field :image, :id => 'listing_image' %>
                 <%= f.text_area :body , :id=> "cocktail-desc"%>
-                <%= f.submit :id => "create-drawing" %>
+            
             
 
         <% end %>
@@ -396,7 +398,8 @@ https://thoughtbot.com/blog/slicing-up-rails-application-js-for-faster-load-time
                 <div class="button-text">Save</div>
             </div>
 
-            <div class="button" id="gallery-button" onclick="toGallery()">
+            <!--<div class="button" id="gallery-button" onclick="toGallery()"> -->
+                <div class="button" id="gallery-button" onclick="fakeButton()">
                 <div class="button-text">To Gallery</div>
             </div>
             
@@ -404,10 +407,10 @@ https://thoughtbot.com/blog/slicing-up-rails-application-js-for-faster-load-time
         </div>
         <%= form_for :gallery, url: gallerys_path  do |f| %>
         
-                
-                <%= f.hidden_field :image, :id => 'listing_image' %>
-                <%= f.hidden_field :body , :id=> "cocktail-desc"%>
-                <%= f.submit :id => "create-drawing" %>
+                <%= f.hidden_field :title, :id => "hidden-name" %>
+                <%= f.hidden_field :image, :id => 'hidden_image' %>
+                <%= f.hidden_field :body , :id=> "hidden-desc"%>
+                <%= f.submit :id => "create-drawing", :style => "display:none;" %>
             
 
         <% end %>
@@ -415,6 +418,7 @@ https://thoughtbot.com/blog/slicing-up-rails-application-js-for-faster-load-time
 
     </div>
     <%= javascript_include_tag "make" %>
+    <%= javascript_include_tag "https://cdn.jsdelivr.net/npm/canvg/dist/browser/canvg.min.js" %>
 </body>
 
 </html>

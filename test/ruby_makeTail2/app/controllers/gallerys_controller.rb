@@ -9,8 +9,11 @@ class GallerysController < ApplicationController
         @gallery.save
         redirect_to action: "index"
     end
+
     private 
         def gallery_params
-            params.require(:gallery).permit(:title, :body)
+            :image
+            params.require(:gallery).permit(:title, :body, :image)
+            
         end
 end

@@ -356,13 +356,13 @@ https://thoughtbot.com/blog/slicing-up-rails-application-js-for-faster-load-time
             https://stackoverflow.com/questions/45263409/append-canvas-image-to-form-and-upload-using-carrierwave
             form_for를 통해서 canvas image를 받는 법. stackoverflow의 답변을 참조하길 바람
         -->
-        <%= form_for :gallery, url: gallerys_path  do |f| %>
-        
-                
+        <%= form_for :gallery,:form_class=>'form', url: gallerys_path  do |f| %>
+
                 <%= f.text_field :title, placeholder:"나만의 칵테일 이름을 지어주세요", :id=> "cocktail-name" %> 
                 <%= f.hidden_field :image, :id => 'listing_image' %>
-                <%= f.text_area :body , :id=> "cocktail-desc"%>
+                <%= f.text_area :body , placeholder:"설명을 적어주세요", :id=> "cocktail-desc"%>
                 <%= f.text_field :maker, placeholder:"만든이",:id => "maker-name" %>
+
 
 
 
@@ -408,14 +408,14 @@ https://thoughtbot.com/blog/slicing-up-rails-application-js-for-faster-load-time
             
             <!---공유버튼, 갤러리, 등등--->
         </div>
-        <%= form_for :gallery, url: gallerys_path  do |f| %>
-        
+        <%= form_for :gallery,:form_class=> 'form', :class=>'button' , url: gallerys_path  do |f|%>
+
                 <%= f.hidden_field :title, :id => "hidden-name" %>
                 <%= f.hidden_field :maker, :id => "hidden-maker" %>
                 <%= f.hidden_field :image, :id => 'hidden_image' %>
                 <%= f.hidden_field :body , :id=> "hidden-desc"%>
                 <%= f.submit :id => "create-drawing", :style => "display:none;" %>
-            
+
 
         <% end %>
     </div>

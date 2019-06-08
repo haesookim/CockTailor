@@ -47,26 +47,30 @@ https://stackoverflow.com/questions/8273410/how-to-add-class-to-an-image-tag-rai
 
 
 </nav>
+<div class="search-container">
+  <!--gallery start-->
+  <%= form_tag gallerys_path, :method => 'get' do %>
+    <p>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "검색", :title => nil, :form_class=> 'form', :class=>'button' %>
+    </p>
 
-<!--gallery start-->
-<%= form_tag gallerys_path, :method => 'get' do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :title => nil %>
-  </p>
-
-<% end %>
-
+  <% end %>
+</div>
 
 <section id="gallery" class="light-bg">
+
+
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
         <div class="section-title">
           <h2>칵테일 갤러리</h2>
+
           <p>여러분이 만든 칵테일을 살펴보세요</p>
 
         </div>
+
       </div>
 
 

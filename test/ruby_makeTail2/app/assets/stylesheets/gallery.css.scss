@@ -31,6 +31,7 @@ nav{
     background-color: rgba(0, 0, 0, 0.5)
 }
 
+
 .nav-right{
     display:flex;
     margin-right: 40px;
@@ -148,9 +149,41 @@ figcaption {
 
 
 
-.fig:hover .figure-title,
+.fig:hover .figure-title
+{
+  opacity:0.9;
+  -webkit-transform: translate3d(0,-20%,0);
+  transform: translate3d(0,-20%,0)
+}
+
 .fig:hover .description {
     opacity:0.9;
     -webkit-transform: translate3d(0,-20%,0);
-    transform: translate3d(0,-20%,0)
+    transform: translate3d(0,-100%,0)
+}
+.search-container{
+  float:right;
+}
+//.search-container button {
+//  float: right;
+//  padding: 6px 10px;
+//  margin-top: 8px;
+//  margin-right: 16px;
+//  background: #ddd;
+//  font-size: 17px;
+//  border: none;
+//  cursor: pointer;
+//}
+.button{
+  height: 45px;
+  width: 70px;
+
+  border-radius: 25px;
+  background-image: linear-gradient(to right, #c471ed 0%, #f64f59 100%);
+  color: white;
+
+  cursor: pointer;
+}
+.form {
+
 }

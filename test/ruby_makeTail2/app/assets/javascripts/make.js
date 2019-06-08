@@ -298,6 +298,7 @@ if (finish == null) {
     finish = document.getElementById('finish-button');
     finish.addEventListener("click", svgToCanvas);
 } else {
+    finish = document.getElementById('finish-button');
     finish.addEventListener("click", svgToCanvas);
 }
 
@@ -313,12 +314,12 @@ function svgToCanvas() {
     var canvas = document.getElementById('previewcanvas');
 
     canvg(canvas, svgStr);
-    canvas.width = 500;
-    canvas.height = 500;
+    canvas.width = 1000;
+    canvas.height = 600;
 
     var glasses = document.querySelector(".active-glass");
-    var loading = document.querySelector("#isloading");
+    // var loading = document.querySelector("#isloading");
     glasses.style.display = "none";
-    loading.style.display = "block";
+    // loading.style.display = "block";
     canvas.style.display = "block";
 }

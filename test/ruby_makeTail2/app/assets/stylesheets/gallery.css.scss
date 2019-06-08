@@ -1,6 +1,7 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
 @font-face{
     font-family: 'Romantic Beach';
-    src: url(../../../fonts/Romantic\ Beach.ttf);
+    src: url(../fonts/RomanticBeach.ttf);
 }
 
 html, body {
@@ -111,8 +112,8 @@ figcaption {
 
 .figure-title {
     color: #fff;
-    font-size: 24px;
-
+    font-size: 50px;
+    font-family : 'Nanum Pen Script';
     padding-top: 25%;
     -webkit-transition: -webkit-transform 0.5s;
     transition: transform 0.5s;

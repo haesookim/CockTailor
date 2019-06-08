@@ -1,19 +1,32 @@
 <!--왠지 나중에 하단의 주소를 쓸 수 있을 것 같다는 생각이 들었다.
 https://stackoverflow.com/questions/8273410/how-to-add-class-to-an-image-tag-rails-helper
 -->
+<%#= link_to 'All gallerys', gallerys_path %>
+<!--<h1><%#= @gallery.title %></h1>-->
+
+<%#= image_tag(@gallery.image.url, alt: 'Image') if @gallery.image? %>
+
+<!--<p><%#= @gallery.body %></p>-->
+
+<!--<p><%#= link_to 'Edit', edit_post_path(@gallery) %></p>-->
+<!--<-->
+
+<!--왠지 나중에 하단의 주소를 쓸 수 있을 것 같다는 생각이 들었다.
+https://stackoverflow.com/questions/8273410/how-to-add-class-to-an-image-tag-rails-helper
+-->
 <!DOCTYPE html>
 
 <html>
 
 <head>
-    <title>Cocktail Gallery</title>
-    <meta charset="utf-8">
-    
-    <link href="dist/css/gallery.css" rel="stylesheet">
-    <%= stylesheet_link_tag "gallery"%>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900" rel="stylesheet">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Cocktail Gallery</title>
+  <meta charset="utf-8">
+
+  <link href="dist/css/gallery.css" rel="stylesheet">
+  <%= stylesheet_link_tag "gallery"%>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900" rel="stylesheet">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 </head>
 <style>
 
@@ -21,143 +34,71 @@ https://stackoverflow.com/questions/8273410/how-to-add-class-to-an-image-tag-rai
 
 
 <body>
-    <nav>
-        <div class="nav-item">
-            <a href="../index.html" style="font-family:'Romantic Beach', Cursive; font-size: 23px; font-weight: 300;">
-                CockTailor</a>
-        </div>
-        <div class="nav-right">
-            <div class="nav-item"><a href="makeyourown.html">칵테일 만들기</a></div>
-            <div class="nav-item"><a href="recommendation.html">칵테일 추천</a></div>
-            <div class="nav-item"><a href="gallery.html">칵테일 갤러리</a></div>
-        </div>
-    </nav>
+<nav>
+  <div class="nav-item">
+    <a href="../index.html" style="font-family:'Romantic Beach', Cursive; font-size: 23px; font-weight: 300;">
+      CockTailor</a>
+  </div>
+  <div class="nav-right">
+    <div class="nav-item"><a href="makeyourown.html">칵테일 만들기</a></div>
+    <div class="nav-item"><a href="recommendation.html">칵테일 추천</a></div>
+    <div class="nav-item"><a href="gallery.html">칵테일 갤러리</a></div>
+  </div>
 
-    <section id="gallery" class="light-bg">
-        
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="section-title">
-                        <h2>칵테일 갤러리</h2>
-                        <p>여러분이 만든 칵테일을 살펴보세요</p>
 
-                    </div>
-                </div>
+</nav>
+
+<!--gallery start-->
+<%= form_tag gallerys_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :title => nil %>
+  </p>
+
+<% end %>
+
+
+<section id="gallery" class="light-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="section-title">
+          <h2>칵테일 갤러리</h2>
+          <p>여러분이 만든 칵테일을 살펴보세요</p>
+
+        </div>
+      </div>
+
+
+
+      <% if @galleries %>
+        <% @galleries.each do |gallery| %>
+          <%= link_to gallery do %>
+          <div id="gallery-content">
+            <div class="gallery-item">
+              <figure class="fig">
+               
+                <%= image_tag gallery.image.url %>
+
+                <figcaption>
+                  <p class="figure-title"><%= gallery.title %></p>
+                  <p class="description"><%= gallery.body %></p>
+
+
+                </figcaption>
+              </figure>
             </div>
-                     
-            <div id="gallery-content">
-                <div class="gallery-item">
-                    <figure class="fig">
-                        <%= image_tag("glass/blue.png") %>
-                        
-                        <figcaption>
-                            <p class="figure-title">나만의 칵테일 블루</p>
-                            <p class="description">맛있는 칵테일이래요 -by HS</p>
+          </div>
 
+<%end %>
+        <% end %>
+      <%end %>
+    </div>
+  </div>
+</section>
 
-                        </figcaption>
-                    </figure>
-                </div>
+<!--galleryfinish-->
 
-                <div class="gallery-item">
-                    <figure class="fig">
-                        <%= image_tag("glass/blue.png") %>
-                        
-                        <figcaption>
-                            <p class="figure-title">블랙인가 퍼플인가</p>
-                            <p class="description">시크한 퍼플칵테일도 필요하죠 -by SJ</p>
-
-                        </figcaption>
-                    </figure>
-                </div>
-
-                <div class="gallery-item">
-                    <figure class="fig">
-                        <%= image_tag("glass/blue.png") %>
-                        
-                        <figcaption>
-                            <p class="figure-title">레드자몽 위스키 한잔</p>
-                            <p class="description">최애 레드에 자몽에 알코올까지 -by MC</p>
-                        </figcaption>
-                    </figure>
-                </div>
-
-                <div class="gallery-item">
-                    <figure class="fig">
-                        <%= image_tag("glass/blue.png") %>
-                        
-                        <figcaption>
-                            <p class="figure-title">키위를 기억해</p>
-                            <p class="description">새콤달콤 -by HJ</p>
-
-                        </figcaption>
-                    </figure>
-                </div>
-
-                <div class="gallery-item">
-                    <figure class="fig">
-                        <%= image_tag("glass/blue.png") %>
-                        
-                        <figcaption>
-                            <p class="figure-title">아이셔</p>
-                            <p class="description">먹지 마세요, 피부에 양보하세요</p>
-                        </figcaption>
-                    </figure>
-                </div>
-
-                <div class="gallery-item">
-                    <figure class="fig">
-                        <%= image_tag("glass/blue.png") %>
-                        
-                        <figcaption>
-                            <p class="figure-title">바다맛, 맛있기만 한걸</p>
-                            <p class="description">세상에 하나뿐인 칵테일</p>
-
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="gallery-item">
-                    <figure class="fig">
-                        <%= image_tag("barbackground.jpg") %>
-                        
-                        <figcaption>
-                            <p class="figure-title">나만의 칵테일 블루</p>
-                            <p class="description">맛있는 칵테일이래요 -by HS</p>
-
-                        </figcaption>
-                    </figure>
-                </div>
-
-                <div class="gallery-item">
-                    <figure class="fig">
-                        <%= image_tag("glass/blue.png") %>
-                        
-                        <figcaption>
-                            <p class="figure-title">시크블랙 칵테일인가</p>
-                            <p class="description">시크한 블랙칵테일도 필요하죠 -by SJ</p>
-
-
-                        </figcaption>
-                    </figure>
-                </div>
-
-                <div class="gallery-item">
-                    <figure class="fig">
-                        <%= image_tag("glass/blue.png") %>
-                        
-                        <figcaption>
-                            <p class="figure-title">블랙</p>
-                            <p class="description">시크한 블랙칵테일도 필요하죠 -by SJ</p>
-
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-
-        </div>
-        </div>
-    </section>
 
 
 </body>

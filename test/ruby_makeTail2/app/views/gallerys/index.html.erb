@@ -78,7 +78,7 @@ https://stackoverflow.com/questions/8273410/how-to-add-class-to-an-image-tag-rai
             <div class="gallery-item">
               <figure class="fig">
                
-                <%= image_tag gallery.image.url %>
+                <%= image_tag gallery.image.url unless gallery.image.nil? %>
 
                 <figcaption>
                   <p class="figure-title"><%= gallery.title %></p>

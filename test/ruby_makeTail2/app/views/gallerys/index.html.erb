@@ -72,9 +72,10 @@ https://stackoverflow.com/questions/8273410/how-to-add-class-to-an-image-tag-rai
 
 
       <% if @galleries %>
+        <div id="gallery-content">
         <% @galleries.each do |gallery| %>
           <%= link_to gallery do %>
-          <div id="gallery-content">
+
             <div class="gallery-item">
               <figure class="fig">
                
@@ -88,11 +89,12 @@ https://stackoverflow.com/questions/8273410/how-to-add-class-to-an-image-tag-rai
                 </figcaption>
               </figure>
             </div>
-          </div>
+
 
 <%end %>
         <% end %>
       <%end %>
+      </div>
     </div>
   </div>
 </section>

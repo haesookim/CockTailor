@@ -96,14 +96,16 @@ function getName() {
     let name = document.getElementById('cocktail-name').value;
     console.log(name);
     let desc = document.getElementById('cocktail-desc').value;
-    showFinishScreen(name, desc);
+    let maker = document.getElementById('maker-name').value;
+    showFinishScreen(name, desc,maker);
 }
-function showFinishScreen(name, desc) {
+function showFinishScreen(name, desc,maker) {
     let finished = document.querySelector('#final-result');
     let enter = document.getElementById('enter-name');
 
     var cocktailname = finished.querySelector('#name-output').innerHTML = name;
     finished.querySelector('#desc-output').innerHTML = desc;
+    finished.querySelector('#maker-output').innerHTML = maker;
     enter.style.display = "none";
     finished.style.display = "block";
     finished.style.gridColumn = "finished"
@@ -152,10 +154,13 @@ function toGallery() {
         // dataImg.src = dataUrl;
         var finalName = document.getElementById("hidden-name");
         var finalDesc = document.getElementById("hidden-desc");
+        var finalMaker = document.getElementById("hidden-maker");
         var finalimage = document.getElementById("hidden_image");
+
         finalimage.value = image;
         finalName.value = document.getElementById("cocktail-name").value;
         finalDesc.value = document.getElementById("cocktail-desc").value;
+        finalMaker.value = document.getElementById("maker-name").value;
         // var entername = document.getElementById("cocktail-name").value;
         // var enterdesc = document.getElementById("cocktail-desc").value;
         // finalName.value = entername;

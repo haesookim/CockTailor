@@ -362,8 +362,9 @@ https://thoughtbot.com/blog/slicing-up-rails-application-js-for-faster-load-time
                 <%= f.text_field :title, placeholder:"나만의 칵테일 이름을 지어주세요", :id=> "cocktail-name" %> 
                 <%= f.hidden_field :image, :id => 'listing_image' %>
                 <%= f.text_area :body , :id=> "cocktail-desc"%>
-            
-            
+                <%= f.text_field :maker, placeholder:"만든이",:id => "maker-name" %>
+
+
 
         <% end %>
         <!--
@@ -385,7 +386,9 @@ https://thoughtbot.com/blog/slicing-up-rails-application-js-for-faster-load-time
         <div id="title-desc">
                 <div id="name-output"></div>
                 <div id="desc-output"></div>
+                <div id="maker-output"></div>
             </div>
+
 
         <div id="finished">
              
@@ -408,6 +411,7 @@ https://thoughtbot.com/blog/slicing-up-rails-application-js-for-faster-load-time
         <%= form_for :gallery, url: gallerys_path  do |f| %>
         
                 <%= f.hidden_field :title, :id => "hidden-name" %>
+                <%= f.hidden_field :maker, :id => "hidden-maker" %>
                 <%= f.hidden_field :image, :id => 'hidden_image' %>
                 <%= f.hidden_field :body , :id=> "hidden-desc"%>
                 <%= f.submit :id => "create-drawing", :style => "display:none;" %>

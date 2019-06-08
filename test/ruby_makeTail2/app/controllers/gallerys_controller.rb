@@ -34,7 +34,7 @@ class GallerysController < ApplicationController
     private 
         def gallery_params
             :image
-            params.require(:gallery).permit(:title, :body, :image)
+            params.require(:gallery).permit(:title, :body, :image,:maker)
             
         end
 end

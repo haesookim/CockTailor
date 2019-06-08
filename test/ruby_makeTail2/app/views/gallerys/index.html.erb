@@ -82,8 +82,12 @@ https://stackoverflow.com/questions/8273410/how-to-add-class-to-an-image-tag-rai
                 <%= image_tag gallery.image.url unless gallery.image.nil? %>
 
                 <figcaption>
-                  <p class="figure-title"><%= gallery.title %></p>
-                  <p class="description"><%= gallery.body %></p>
+                  <div  class="figure-title">
+                    <p><%= @gallery.title %></p>
+                    <p class="figure-maker">BY<br/> <%= @gallery.maker %></p>
+                  </div>
+                  <div class="description"><%= @gallery.body %></div>
+
 
 
                 </figcaption>

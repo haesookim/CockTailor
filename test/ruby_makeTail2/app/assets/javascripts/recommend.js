@@ -2,6 +2,7 @@ var answerString = "";
 
 function initialize(){
     answerString = "";
+    recipe.innerHTML = "Recipe";
     mySwipe.next();
 }
 
@@ -30,8 +31,8 @@ function appendAnswer(object){
         }
     }
     mySwipe.next();
-    console.log(answerString);
     if (answerString.length == 6){
+        recipe.innerHTML = "Recipe";
         findMatch(answerString);
     }
 }
@@ -41,7 +42,22 @@ function findMatch(string){
         if (string === cocktail_data[i].answerstring){
             document.getElementById('answer-title').innerHTML = cocktail_data[i].name;
             document.getElementById('answer-text').innerHTML = cocktail_data[i].description;
+            document.getElementById('answer-subtitle').innerHTML = cocktail_data[i].oneliner;
+
+            for (let j = 0; j<cocktail_data[i].recipe.length; j++){
+                let ingredient = cocktail_data[i].recipe[j];
+                var recipe = document.querySelector("#recipe");
+                
+                let recipeElement = document.createElement("li");
+                let recipeColor = document.createElement("div");
+                recipeColor.className = "recipe-color";
+                recipeColor.style.backgroundColor = ingredient.ingredColor;
+                recipeElement.append(recipeColor);
+                recipeElement.append(ingredient.ingredName);
+                recipe.appendChild(recipeElement);
+            }
             break;
         }
     }
 }
+

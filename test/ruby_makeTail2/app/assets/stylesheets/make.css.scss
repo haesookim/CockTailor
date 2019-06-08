@@ -212,20 +212,32 @@ input{
 
 #final-result{
     display: none;
+    margin-top: 20px;
+    #title-desc{
+        text-align: center;
+        #name-output{
+            font-size: 25px;
+            font-weight: 900;
+        }
+        #desc-output{
+            font-size: 17px;
+            font-weight: 400;
+        }
+    }
+    #finished{
+        display: flex;
+        margin: 20px auto;
+        place-self: stretch;
+        align-self: center;
+        justify-content: space-evenly;
+        justify-self: center;
+        text-align: center;
+        transition-delay: 0.5s;
+        grid-column : finished;
+        grid-row: pane;
+    }
+    
 }
-
-#finished{
-    display:flex;
-    margin: 20px auto;
-    place-self: stretch;
-    align-self: center;
-    justify-content: space-evenly;
-    justify-self: center;
-    text-align: center;
-    transition-delay: 0.5s;
-}
-
-
 #previewcanvas{
     display:none;
 }
@@ -237,7 +249,6 @@ input{
     grid-row-start: recipe;
     grid-row-end: 5;
     margin: 0;
-    margin-left: 30px;
     padding: 0;
     padding-top: 15px;
     color: black;

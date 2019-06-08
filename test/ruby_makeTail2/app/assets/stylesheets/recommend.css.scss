@@ -222,39 +222,67 @@ footer {
         height:100%;
         display: grid;
         grid-template-columns: [cocktail]35% [desc]65%;
-        grid-template-rows: [title]10% [body]65% [button]25%;
+        grid-template-rows: [title]15% [body]65% [button]20%;
         .answer-image{
             grid-column: cocktail;
             grid-row: body;
-            margin-top: 60px;
+            margin-top: 10px;
         }
         .answer-desc{
             margin-left: -10%;
+            margin-top: -5%;
             grid-column: desc;
             grid-row: body;
             display: grid;
             grid-template-rows: [title]20% [else]80%;
             grid-template-columns: [recipe]40% [description]60%;
-            #answer-title{
+            #answer-titles{
                 margin-left: -20%;
                 font-size: 30px;
+                font-weight: 700;
                 text-align: center;
                 grid-row: title;
                 grid-column-start: recipe;
                 grid-column-end: description-end;
-                .title-eng{
-                    font-family: 'Romantic Beach';
+                #answer-subtitle{
+                    font-size: 22px;
+                    font-style: italic;
+                    font-weight: 200;
                 }
             }
-            .recipe{
+            #recipe{
                 background-image: url("recipe.png");
                 background-repeat: no-repeat;
+                background-image: url("recipe.png");
+                background-size: cover;
+                background-position-x: center;
+                margin: 0;
+                padding-top: 30px;
+                color: black;
+                font-size: 30px;
+                text-align: center;
+                font-family: 'Romantic Beach';
+                li{
+                    margin: 10px 0px 0px 40px;
+                    display: flex;
+                    font-size: 20px;
+                    vertical-align: center;
+                    font-family: 'Noto Sans KR';
+                    .recipe-color{
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 100%;
+                        margin-right: 20px;
+                        margin-top: 4px;
+                        border: 0.2px black solid;
+                    }
+                }
             }     
             #answer-text{
                 grid-column: description;
                 width: 80%;
                 margin: 30px 0 auto 20px;
-                font-size: 16px;
+                font-size: 18px;
             }
         }  
         #replay-button{

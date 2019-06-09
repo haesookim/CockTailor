@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
 @font-face{
     font-family: 'Romantic Beach';
     src: font-url('RomanticBeach.ttf');
@@ -29,6 +30,7 @@ nav{
     font-weight: 700;
     background-color: rgba(0, 0, 0, 0.5)
 }
+
 
 .nav-right{
     display:flex;
@@ -62,9 +64,10 @@ a{
 }
  
 img{
-    margin-left: 30px;
-    width:300px;
-    height:200px;
+    margin-left: -150px;
+    margin-top : 30px;
+    width:606px;
+    height:226px;
 }
 
 .gallery-item{
@@ -93,7 +96,7 @@ figcaption {
 
 .fig {
     background: #000;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     width: 300px;
     height: 300px;
 }
@@ -111,35 +114,73 @@ figcaption {
 
 .figure-title {
     color: #fff;
-    font-size: 24px;
-
+    font-size: 50px;
+    font-family : 'Nanum Pen Script';
     padding-top: 25%;
     -webkit-transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
-    -webkit-transform: translate3d(0,-10px,0);
-    transform: translate3d(0,-10px,0);
+    -webkit-transform: translate3d(0,10px,0);
+    transform: translate3d(0,10px,0);
 }
+.figure-title  .figure-maker{
+                    color: #fff;
+                    font-size: 20px;
+                    font-family : 'Nanum Brush Script';
 
+                    -webkit-transition: -webkit-transform 0.5s;
+                    transition: transform 0.5s;
+                    -webkit-transform: translate3d(0,-10px,0);
+                    transform: translate3d(0,-10px,0);
+                }
 .description {
     line-height:10px;
     opacity: 0;
     font-size:12px;
-    padding : 20px;
+    padding : 10px;
     border: 1px solid #fff;
 
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
     color: rgba(255,255,255,0.95);
 
-    -webkit-transform: translate3d(0,100%,0);
-    transform: translate3d(0,100%,0);
+    -webkit-transform: translate3d(0,10%,0);
+    transform: translate3d(0,10%,0);
 }
 
 
 
-.fig:hover .figure-title,
+.fig:hover .figure-title
+{
+  opacity:0.9;
+  -webkit-transform: translate3d(0,-20%,0);
+  transform: translate3d(0,-20%,0)
+}
+
 .fig:hover .description {
     opacity:0.9;
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,-20%,0);
+    transform: translate3d(0,-100%,0)
+}
+.search-container{
+  float:right;
+}
+//.search-container button {
+//  float: right;
+//  padding: 6px 10px;
+//  margin-top: 8px;
+//  margin-right: 16px;
+//  background: #ddd;
+//  font-size: 17px;
+//  border: none;
+//  cursor: pointer;
+//}
+.button{
+  height: 45px;
+  width: 70px;
+
+  border-radius: 25px;
+  background-image: linear-gradient(to right, #c471ed 0%, #f64f59 100%);
+  color: white;
+
+  cursor: pointer;
 }

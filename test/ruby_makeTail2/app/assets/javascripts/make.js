@@ -121,9 +121,24 @@ function showFinishScreen(name, desc) {
 
 function getName() {
     let name = document.getElementById('cocktail-name').value;
+    console.log(name);
     let desc = document.getElementById('cocktail-desc').value;
-    showFinishScreen(name, desc);
+    let maker = document.getElementById('maker-name').value;
+    showFinishScreen(name, desc,maker);
 }
+function showFinishScreen(name, desc,maker) {
+    let finished = document.querySelector('#final-result');
+    let enter = document.getElementById('enter-name');
+
+    var cocktailname = finished.querySelector('#name-output').innerHTML = name;
+    finished.querySelector('#desc-output').innerHTML = desc;
+    finished.querySelector('#maker-output').innerHTML = maker;
+    enter.style.display = "none";
+    finished.style.display = "block";
+    finished.style.gridColumn = "finished"
+    finished.style.gridRow = "pane"
+}
+
 
 function share() {
     // share to SNS (facebook, instagram)
@@ -139,9 +154,58 @@ function saveImage() {
     link.click();
     // save image to local
 }
+function fakeButton(){
+    // when click "to Gallery this function is gonna activate f.submit"
+    var submitButton = document.getElementById("create-drawing");
+    var realsubmit = document.getElementById("gallery-button");
+    console.log(submitButton);
+    console.log("working?");
+    submitButton.click();
+
+}
+// delete as soon as some shit happened
+
 
 function toGallery() {
     //is this necessary if the results are automatically uploaded to gallery
+    //delete if error happened. using ruby code, we can submit image with title and explanation(I hope so...)
+        console.log("check if working")
+        var canvas = document.getElementById("previewcanvas");
+        
+        var dataUrl = canvas.toDataURL("image/png");
+        
+        var cocktailname = document.querySelector('#final-result').querySelector('#name-output').innerHTML;
+        image = canvas.toDataURL("image/png", 1.0).replace("image/png", "image/octet-stream");
+        
+        // var dataImg = document.createElement('img');    
+        // dataImg.src = dataUrl;
+        var finalName = document.getElementById("hidden-name");
+        var finalDesc = document.getElementById("hidden-desc");
+        var finalMaker = document.getElementById("hidden-maker");
+        var finalimage = document.getElementById("hidden_image");
+
+        finalimage.value = image;
+        finalName.value = document.getElementById("cocktail-name").value;
+        finalDesc.value = document.getElementById("cocktail-desc").value;
+        finalMaker.value = document.getElementById("maker-name").value;
+        // var entername = document.getElementById("cocktail-name").value;
+        // var enterdesc = document.getElementById("cocktail-desc").value;
+        // finalName.value = entername;
+        // finalDesc.value = enterdesc;
+        
+        
+        // dataImg.src = dataUrl;
+        // console.log(dataUrl);
+        // // var drawingField = document.createElement('div');
+        // // drawingField.innerHTML = "<input type='hidden' name='listing[image]' id='image' value='" + dataImg.src + "'>"
+
+        // document.getElementById('hidden_image').value = dataUrl;
+        // if (document.getElementById('hidden_image').value != null ) {
+        //     console.log(dataUrl, 'this is url');
+        // } else {
+        //     console.log("No, it is null")
+        // }
+      
 }
 
 /* Glass operaton with classes section */
@@ -266,6 +330,7 @@ if (finish == null) {
     finish = document.getElementById('finish-button');
     finish.addEventListener("click", svgToCanvas);
 } else {
+    finish = document.getElementById('finish-button');
     finish.addEventListener("click", svgToCanvas);
 }
 
@@ -284,10 +349,11 @@ function svgToCanvas() {
     var canvas = document.getElementById('previewcanvas');
 
     canvg(canvas, svgStr);
-    canvas.width = 500;
-    canvas.height = 500;
+    canvas.width = 1000;
+    canvas.height = 600;
 
     var glasses = document.querySelector(".active-glass");
+    
     glasses.style.display = "none";
     canvas.style.display = "block";
 }

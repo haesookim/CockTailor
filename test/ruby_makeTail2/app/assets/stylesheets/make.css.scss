@@ -1,6 +1,6 @@
 @font-face{
     font-family: 'Romantic Beach';
-    src: url(../fonts/Romantic\ Beach.ttf);
+    src: font-url('RomanticBeach.ttf');
 }
 
 html, body {
@@ -80,7 +80,15 @@ nav{
 
 .glasstype{
     display: none;
-    color: black;
+}
+
+.active-glass{
+    #ice, #lemon, #lime, #strawberry, #cinnamon, #orange, #lemon_zest, #cherry, #irishcream , #celery{
+        visibility: hidden;
+        &.selected{
+            visibility: visible;
+        }
+    }
 }
 
 #select-pane{
@@ -143,7 +151,7 @@ nav{
     transition: all 0.3s ease-in-out;
 }
 
-.choice-item, .glass{
+.choice-item, .glass, .extra-item{
     height: fit-content;
     width: 70px;
     padding: 5px;
@@ -204,31 +212,32 @@ input{
 
 #final-result{
     display: none;
-}
-
-#finished{
-    display:flex;
-    margin: 20px auto;
-    place-self: stretch;
-    align-self: center;
-    justify-content: space-evenly;
-    justify-self: center;
-    text-align: center;
-    transition-delay: 0.5s;
-}
-
-#isloading{
-    height: inherit;
-    display:none;
-    text-align: center;
-    line-height: 100%;
-    position: fixed;
-    margin: 200px;
-    img{
-        width: 50px;
+    margin-top: 20px;
+    #title-desc{
+        text-align: center;
+        #name-output{
+            font-size: 25px;
+            font-weight: 900;
+        }
+        #desc-output{
+            font-size: 17px;
+            font-weight: 400;
+        }
     }
+    #finished{
+        display: flex;
+        margin: 20px auto;
+        place-self: stretch;
+        align-self: center;
+        justify-content: space-evenly;
+        justify-self: center;
+        text-align: center;
+        transition-delay: 0.5s;
+        grid-column : finished;
+        grid-row: pane;
+    }
+    
 }
-
 #previewcanvas{
     display:none;
 }
@@ -240,7 +249,6 @@ input{
     grid-row-start: recipe;
     grid-row-end: 5;
     margin: 0;
-    margin-left: 30px;
     padding: 0;
     padding-top: 15px;
     color: black;

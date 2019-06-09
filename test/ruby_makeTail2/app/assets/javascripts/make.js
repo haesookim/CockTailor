@@ -34,10 +34,19 @@ for (i = 0; i < selectors.length; i++) {
 // make the choices selectable
 var choiceItems = document.getElementsByClassName('choice-item');
 
-var j;
-for (j = 0; j < choiceItems.length; j++) {
+for (var j = 0; j < choiceItems.length; j++) {
     choiceItems[j].addEventListener("click", function () {
         this.classList.toggle("selected");
+    })
+}
+
+var extraItems = document.getElementsByClassName('extra-item');
+for (let k = 0; k<extraItems.length; k++){
+    extraItems[k].addEventListener("click", function(){
+       let itemName = extraItems[k].innerHTML.toLowerCase().trim();
+       let extraItem =  document.querySelector('.active-glass').querySelector("#"+itemName);
+       extraItem.classList.toggle("selected");
+       extraItems[k].classList.toggle("selected");
     })
 }
 
@@ -60,6 +69,7 @@ for (j = 0; j < glassItems.length; j++) {
                             glassChosen = false;
                         } else {
                             glassItems[k].classList.toggle('selected');
+                            toggleActive(glassItems[k].innerHTML.toLowerCase().split(">")[1].trim())
                         }
                     }
                     //adjust for cancel condition : we get both cups if we say cancel
@@ -81,8 +91,10 @@ function showNameInput() {
 
     enter.style.display = "block";
     button.style.display = "none";
-    maker.style.gridTemplateColumns = "10% [pane]40% [finished]40% 10%";
-    maker.style.gridTemplateRows = "15% [recipe]50% [pane]35% "
+    maker.style.gridTemplateColumns = "[pane]45% [finished]45% 10%";
+    maker.style.gridTemplateRows = "[start]15% [recipe]50% [pane]35% "
+    preview.style.gridRowStart = "start";
+    preview.style.gridRowEnd = "pane-end";
     preview.style.marginTop = "5%";
     recipe.style.gridColumn = "finished";
     recipe.style.gridRow = "recipe";
@@ -90,6 +102,21 @@ function showNameInput() {
     for (element in recipe.querySelectorAll("li")){
         element.style.marginLeft="200px"; 
     }
+}
+
+function showFinishScreen(name, desc) {
+    let finished = document.querySelector('#final-result');
+    let enter = document.getElementById('enter-name');
+
+    finished.querySelector('#name-output').innerHTML = name;
+    finished.querySelector('#desc-output').innerHTML = desc;
+    
+    enter.style.display = "none";
+    finished.style.display = "block";
+    finished.style.gridColumn = "finished"
+    finished.style.gridRow = "pane"
+    recipe.style.gridColumn = "finished";
+    recipe.style.gridRow = "recipe";
 }
 
 function getName() {
@@ -198,7 +225,7 @@ class Glass {
 
     onload() { // initialize
         let image = document.getElementById(this.name); //each glass class
-        this.slots_space = image.querySelector("g#Layer_4").getElementsByClassName("cls-2");
+        this.slots_space = image.querySelector("g#cuts").getElementsByClassName("cls-3");
         this.slots_color = Array(this.units).fill("");
         this.color();
         this.currentSlot = 0;
@@ -253,7 +280,7 @@ function showGlassOOP(string) {
     let glass = document.getElementById(string);
     glass.style.display = "block";
 
-    glass.classList.toggle('active-glass');
+    toggleActive(string);
     currentGlass = glassMap[string];
     currentGlass.onload();
 
@@ -263,6 +290,11 @@ function showGlassOOP(string) {
             glassArray[k].style.display = "none";
         }
     }
+}
+
+function toggleActive(string){
+    let glass = document.getElementById(string);
+    glass.classList.toggle('active-glass');
 }
 
 var ingredients = new Array();
@@ -302,11 +334,14 @@ if (finish == null) {
     finish.addEventListener("click", svgToCanvas);
 }
 
-var width = 500;
-var height = 500;
-
 function svgToCanvas() {
     var svg = document.querySelector(".active-glass").querySelector("svg");
+    var innerG = svg.querySelector('#Layer_2').querySelectorAll('g');
+    for (let x = 3; x<innerG.length; x++){
+        if (!innerG[x].classList.contains('selected')){
+            innerG[x].remove();
+        }
+    }
 
     var serializer = new XMLSerializer(),
         svgStr = serializer.serializeToString(svg);
@@ -318,8 +353,7 @@ function svgToCanvas() {
     canvas.height = 600;
 
     var glasses = document.querySelector(".active-glass");
-    // var loading = document.querySelector("#isloading");
+    
     glasses.style.display = "none";
-    // loading.style.display = "block";
     canvas.style.display = "block";
 }

@@ -5,25 +5,37 @@
 <head>
     <title>Make your own</title>
     <meta charset="utf-8">
-    <%= stylesheet_link_tag 'style' %>
-    <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Roboto:300,400,700,900' %>
-    <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700' %>
+
+    <%= stylesheet_link_tag "style" %>
+    <%= stylesheet_link_tag "make" %>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700" rel="stylesheet">
+
 </head>
 
 <body>
     <nav class="navbar">
-        <div class="nav-item"><a href="index.html" style="font-family:'Romantic Beach'; font-size: 23px; font-weight: 300;">CockTailor</a></div>
+        <div class="nav-item"><a href="#" style="font-family:'Romantic Beach'; font-size: 23px; font-weight: 300;">CockTailor</a></div>
         <div class="nav-right">
-         <%= link_to gallerys_path do %>
-            <div class="nav-item">칵테일 만들기</div>
-         <%end%>
-         <%= link_to makeyourowns_recommendation_path do %>
-            <div class="nav-item">칵테일 추천</div>
-         <%end%>
-         <%= link_to makeyourowns_gallery_path do %>
-            <div class="nav-item">칵테일 갤러리</div>
-         <%end%>
-           
+
+            <div class="nav-item">
+                <%= link_to makeyourowns_makeyourown_path do %>
+                    칵테일 만들기
+                <%end%>
+            </div>
+            <div class="nav-item">
+                <%= link_to makeyourowns_recommendation_path do %>
+                    칵테일 추천
+                <%end%>
+            </div>
+            <div class="nav-item">
+                <%= link_to makeyourowns_gallery_path do %>
+                    칵테일 갤러리
+                <%end%>
+            </div>
+        </div>
+
     </nav>
 
     <main>

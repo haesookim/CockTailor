@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
 @font-face{
     font-family: 'Romantic Beach';
-    src: url(../fonts/RomanticBeach.ttf);
+    src: font-url('RomanticBeach.ttf');
 }
 
 html, body {
@@ -183,7 +183,4 @@ figcaption {
   color: white;
 
   cursor: pointer;
-}
-.form {
-
 }

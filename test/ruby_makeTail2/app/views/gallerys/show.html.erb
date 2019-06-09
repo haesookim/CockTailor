@@ -31,17 +31,30 @@ https://stackoverflow.com/questions/8273410/how-to-add-class-to-an-image-tag-rai
 
 
 <body>
-<nav>
-  <div class="nav-item">
-    <a href="../index.html" style="font-family:'Romantic Beach', Cursive; font-size: 23px; font-weight: 300;">
-      CockTailor</a>
-  </div>
-  <div class="nav-right">
-    <div class="nav-item"><a href="makeyourown.html">칵테일 만들기</a></div>
-    <div class="nav-item"><a href="recommendation.html">칵테일 추천</a></div>
-    <div class="nav-item"><a href="gallery.html">칵테일 갤러리</a></div>
-  </div>
-</nav>
+  <nav class="navbar">
+      <div class="nav-item" style="font-family:'Romantic Beach'; font-size: 23px; font-weight: 300;">
+          <%= link_to welcome_index_path do %>
+              CockTailor
+          <%end%>
+      </div>
+      <div class="nav-right">
+          <div class="nav-item">
+              <%= link_to new_gallery_path do %>
+                  칵테일 만들기
+              <%end%>
+          </div>
+          <div class="nav-item">
+              <%= link_to makeyourowns_recommendation_path do %>
+                  칵테일 추천
+              <%end%>
+          </div>
+          <div class="nav-item">
+              <%= link_to gallerys_path do %>
+                  칵테일 갤러리
+              <%end%>
+          </div>
+      </div>
+  </nav>
 <div class="search-container">
 <% form_tag gallerys_path, :method => 'get' do %>
   <p class>
@@ -50,7 +63,6 @@ https://stackoverflow.com/questions/8273410/how-to-add-class-to-an-image-tag-rai
   </p>
 <% end %>
 </div>
-
 
 <!--gallery start-->
 <section id="gallery" class="light-bg">

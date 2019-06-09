@@ -997,9 +997,8 @@
         </div>
 
         <div id="enter-name">
-        <%= form_for(@gallery, method: :post) do |f|%>
-        
-                
+        <%= form_for (@gallery, method: :post) do |f|%>
+               
                 <%= f.text_field :title, placeholder:"나만의 칵테일 이름을 지어주세요", :id=> "cocktail-name" %> </p>
                 <%= f.hidden_field :image, :id => 'listing_image' %>
                 

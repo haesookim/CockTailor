@@ -997,7 +997,7 @@
         </div>
 
         <div id="enter-name">
-        <%= form_for (@gallery, method: :post) do |f|%>
+        <%= form_for(@gallery, method: :post) do |f|%>
         
                 
                 <%= f.text_field :title, placeholder:"나만의 칵테일 이름을 지어주세요", :id=> "cocktail-name" %> </p>
@@ -1029,14 +1029,10 @@
                 <div id="desc-output"></div>
             </div>
 
-<<<<<<< HEAD
         <div id="finished">
      
              <a class="button" id="share-button" href = "http://www.facebook.com/sharer.php?u=#" onclick="share()" target="blank">
-=======
-            <div id="finished">
-                <a class="button" id="share-button" href = "http://www.facebook.com/sharer.php?u=#" onclick="share()" target="blank">
->>>>>>> master
+
                 <div class="button-text">Share</div>
                 </a>
                 <div class="button" id="save-button" onclick="saveImage()">

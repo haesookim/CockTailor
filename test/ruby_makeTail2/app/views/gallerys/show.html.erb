@@ -42,42 +42,21 @@
           </div>
       </div>
   </nav>
-  <div class="search-container">
-    <% form_tag gallerys_path, :method => 'get' do %>
-      <p class>
-        <%= text_field_tag :search, params[:search] %>
-        <%= submit_tag "Search", :title => nil  %>
-      </p>
-    <% end %>
-  </div>
 
-  <!--gallery start-->
-  <section id="gallery" class="light-bg">
-    <div class="container">
-      <div class="section-title">
-        <h2>칵테일 갤러리</h2>
-        <p>여러분이 만든 칵테일을 살펴보세요</p>
-
+  <div class="show-container">
+    <%if @gallery %>
+      <div class="image">
+        <%= image_tag @gallery.image.url %>
+      </div>
+      <div class="recipe">
+        <div class="gallery-desc">
+          <div class="title"><%= @gallery.title %><span class="maker"> - BY <%= @gallery.maker %></span></div>
+          <div class="description"><%= @gallery.body %></div>
+        </div>
       </div>
       <%= button_to "갤러리로 돌아가기" ,gallerys_path, :method => "get" , :class=>'button'%>
-      <div id="gallery-content">
-        <%if @gallery %>
-          <div class="gallery-item">
-            <figure class="fig">
-              <%= image_tag @gallery.image.url %>
-              <figcaption>
-                <div  class="figure-title">
-                  <p><%= @gallery.title %></p>
-                  <p class="figure-maker">BY</br> <%= @gallery.maker %></p>
-                </div>
-                <div class="description"><%= @gallery.body %></div>
-              </figcaption>
-            </figure>
-          </div>
-        <% end %>
-      </div>
-    </div>
-  </section>
+    <% end %>
+  </div>
 </body>
 
 </html>

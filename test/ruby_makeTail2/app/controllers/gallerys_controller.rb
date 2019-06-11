@@ -28,7 +28,7 @@ class GallerysController < ApplicationController
     def create
         @gallery = Gallery.new(gallery_params)
         @gallery.save
-        redirect_to action: "show", id: @gallery.id
+        redirect_to action: "index"
     end
 
     private 

@@ -53,15 +53,19 @@ nav{
     text-align: center;
     h1{
         color:#f2f2f2;
+        font-size: 35px;
     }
     p{
         color:lightgray;
+        font-size: 20px;
     }
 }
 
 .fig {
-    margin:10px;
-    margin-bottom: 20px;
+    margin:20px 10px;
+    
+    border-radius: 10px;
+    border: white 1px solid;
 
     position: relative;
     overflow: hidden;
@@ -89,20 +93,21 @@ nav{
         transition: opacity 0.5s ease-in-out;
         .figure-title {
             color: #fff;
-            font-size: 50px;
+            font-size: 45px;
             height:220px;
             font-family : 'Noto Sans KR';
+            font-weight: 700;
             -webkit-transition: -webkit-transform 0.5s;
             transition: transform 0.5s;
             -webkit-transform: translate3d(0,10px,0);
             transform: translate3d(0,10px,0);
-            margin-top: 80px;
+            margin: 80px 10px 0px;
             p{
                 margin: 0;
             }
             .figure-maker{
                 padding-top: 40px;
-                font-size: 20px;
+                font-size: 27px;
                 font-family : 'Nanum Brush Script';
                 -webkit-transition: -webkit-transform 0.5s;
                 transition: transform 0.5s;
@@ -111,9 +116,9 @@ nav{
             }
         }
         .description {
-            line-height:10px;
+            line-height:15px;
             opacity: 0;
-            font-size:12px;
+            font-size:15px;
             padding : 10px;
             border: 1px solid #fff;
         
@@ -157,6 +162,7 @@ nav{
     }
     .button{
         width: 70px;
+        margin-right: 80px;
     }
 }
 
@@ -173,4 +179,74 @@ nav{
     color: white;
   
     cursor: pointer;
+}
+
+.container{
+    border-radius: 20px;
+    border: 2px solid white;
+    margin: 10px 80px;
+    height: 80%;
+    background-color: rgba(0,0,0,0.3);
+    background-image: url("woodbackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(26, 26, 26, 0.856);
+    background-blend-mode: overlay;
+    padding: 20px;
+}
+
+.show-container{
+    border-radius: 20px;
+    border: 2px solid white;
+    margin: 50px 80px;
+    margin-bottom: 0px;
+    height: 80%;
+    background-color: rgba(0,0,0,0.3);
+    background-image: url("woodbackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(26, 26, 26, 0.856);
+    background-blend-mode: overlay;
+    display:grid;
+    grid-template-columns: [cocktail]45% [desc]45% [button]10%;
+    grid-template-rows: [title]10% [body]70% [button]10%;
+    .image{
+        grid-column: cocktail;
+        grid-row: body;
+        img{
+            width: 100%;
+        }
+        margin-top: -10%;
+    }
+    .recipe{
+        grid-column: desc;
+        grid-row: body;
+        background-image: url("recipe.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 20px;
+        .gallery-desc{
+            color: black;
+            text-align: center;
+            margin-top: 30px;
+            margin-left: 30px;
+            .title{
+                font-size: 30px;
+                font-weight: 700;
+                .maker{
+                    font-size: 20px;
+                    font-family: 'Nanum Brush Script';
+                }
+            }
+            .description{
+                font-style: italic;
+            }
+        }
+    }
+    .button_to{
+        grid-column: desc;
+        grid-row: button;
+        justify-self: end;
+        margin-top: 20px;
+    }
 }

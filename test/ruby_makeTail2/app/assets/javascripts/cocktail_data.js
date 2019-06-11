@@ -78,7 +78,7 @@ var cocktail_data = [
 
         cocktailColor: "#C13010",
         glass: "collins",
-        garnish: "lemon, cellery"
+        garnish: "lemon"
     },
     {
         name: "핫 버터드 럼",
@@ -239,7 +239,7 @@ var cocktail_data = [
         description: "스키리프트는 특이하게도 핫초코와 럼을 섞어 만드는 칵테일입니다.</br>보통 핫초코하면 초콜릿의 깊은 단 맛부터 떠올리기 쉽지만, 이 칵테일에는 피치 슈냅스와 코코넛 리큐르가 들어가 열대과일의 싱그러운 맛 또한 느낄 수 있습니다."
         , cocktailColor: "#703712, #D7A168",
         glass: "high-ball",
-        garnish: "cream"
+        garnish: ""
     },
     {
         name: "오후의 죽음",
@@ -527,7 +527,7 @@ var cocktail_data = [
         description: "아이리쉬 커피는 커피에 위스키를 넣어만든 칵테일입니다.</br>제2차 세계대전이 끝난 직후, 아일랜드의 국제공항에 위치한 한 술집 주인이 처음 만들어 유명해진 칵테일이라고 합니다.</br>알코올 도수가 높은 위스키가 들어가 차가운 몸을 데워주고 피로를 풀어줍니다.</br>고운 우유 형태의 크림을 올려 부드럽게 마시는 것이 일반적입니다."
         , cocktailColor: "#521E19, #FEFEFD",
         glass: "high-ball",
-        garnish: "cream"
+        garnish: ""
     },
     {
         name: "로시니",
@@ -647,7 +647,7 @@ var cocktail_data = [
         description: "아이리쉬 커피는 커피에 위스키를 넣어만든 칵테일입니다.</br>제2차 세계대전이 끝난 직후, 아일랜드의 국제공항에 위치한 한 술집 주인이 처음 만들어 유명해진 칵테일이라고 합니다.</br>알코올 도수가 높은 위스키가 들어가 차가운 몸을 데워주고 피로를 풀어줍니다.</br>고운 우유 형태의 크림을 올려 부드럽게 마시는 것이 일반적입니다."
         , cocktailColor: "#521E19, #FEFEFD",
         glass: "high-ball",
-        garnish: "cream"
+        garnish: ""
     },
     {
         name: "핫 버터드 럼",
@@ -701,7 +701,7 @@ var cocktail_data = [
         description: "스키리프트는 특이하게도 핫초코와 럼을 섞어 만드는 칵테일입니다.</br>보통 핫초코하면 초콜릿의 깊은 단 맛부터 떠올리기 쉽지만, 이 칵테일에는 피치 슈냅스와 코코넛 리큐르가 들어가 열대과일의 싱그러운 맛 또한 느낄 수 있습니다."
         , cocktailColor: "#703712, #D7A168",
         glass: "high-ball",
-        garnish: "cream"
+        garnish: ""
     },
     {
         name: "블랙벨벳",

@@ -45,20 +45,21 @@
   </nav>
 
   <section id="gallery">
+    <div class="section-title">
+      <h1>칵테일 갤러리</h1>
+
+      <p>여러분이 만든 칵테일을 살펴보세요!</p>
+    </div>
+
+    <div class="search-container">
+      <!--gallery start-->
+      <%= form_tag gallerys_path, :method => 'get' do %>
+          <%= text_field_tag :search, params[:search], :id=>'search-input' %>
+          <%= submit_tag "검색", :title => nil, :form_class=> 'form', :class=>'button' %>
+      <% end %>
+    </div>
+
     <div class="container">
-      <div class="section-title">
-        <h1>칵테일 갤러리</h1>
-
-        <p>여러분이 만든 칵테일을 살펴보세요</p>
-      </div>
-
-        <div class="search-container">
-          <!--gallery start-->
-          <%= form_tag gallerys_path, :method => 'get' do %>
-              <%= text_field_tag :search, params[:search], :id=>'search-input' %>
-              <%= submit_tag "검색", :title => nil, :form_class=> 'form', :class=>'button' %>
-          <% end %>
-        </div>
 
       <% if @galleries %>
         <div id="gallery-content">

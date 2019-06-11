@@ -161,8 +161,6 @@ function fakeButton(){
     var realsubmit = document.getElementById("gallery-button");
     submitButton.click();
 }
-// delete as soon as some shit happened
-
 
 function toGallery() {
     var canvas = document.getElementById("previewcanvas");
@@ -183,7 +181,6 @@ function toGallery() {
     finalDesc.value = document.getElementById("cocktail-desc").value;
     finalMaker.value = document.getElementById("maker-name").value;
     finalRecipe.value = finalrecipe.innerHTML;
-      
 }
 
 /* Glass operaton with classes section */

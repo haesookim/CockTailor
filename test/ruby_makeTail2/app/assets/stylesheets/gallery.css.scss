@@ -242,6 +242,24 @@ nav{
                 font-style: italic;
             }
         }
+        .recipe-content{
+            color: black;
+            li{
+                margin: 10px 0px 0px 20%;
+                display: flex;
+                font-size: 20px;
+                vertical-align: center;
+                font-family: 'Noto Sans KR';
+                .recipe-color{
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 100%;
+                    margin-right: 20px;
+                    margin-top: 4px;
+                    border: 0.2px black solid;
+                }
+            }
+        }
     }
     .button_to{
         grid-column: desc;
@@ -250,3 +268,4 @@ nav{
         margin-top: 20px;
     }
 }
+

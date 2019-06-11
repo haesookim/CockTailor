@@ -8,7 +8,7 @@
 
   <link href="dist/css/gallery.css" rel="stylesheet">
   <%= stylesheet_link_tag "gallery"%>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:200,400,700" rel="stylesheet">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 </head>
@@ -42,7 +42,6 @@
           </div>
       </div>
   </nav>
-  <%= @gallery.recipe %>
   <div class="show-container">
     <%if @gallery %>
       <div class="image">
@@ -55,10 +54,17 @@
           <div class="description"><%= @gallery.body %></div>
           <div class="title"></div>
         </div>
+        <ul class="recipe-content"><%=raw @gallery.recipe %></ul>
       </div>
       <%= button_to "갤러리로 돌아가기" ,gallerys_path, :method => "get" , :class=>'button'%>
     <% end %>
   </div>
 </body>
+<script>
+let baseRecipe = document.querySelector('.recipe-content').innerHTML;
+let newbase = baseRecipe.substr(6, baseRecipe.length);
+console.log(newbase);
+document.querySelector('.recipe-content').innerHTML = newbase;
+</script>
 
 </html>

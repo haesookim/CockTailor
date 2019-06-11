@@ -203,7 +203,13 @@ nav{
     justify-content: center;
     margin: 20px auto;
     .button{
-        margin: 0 auto; 
+        margin: 0 auto;
+        cursor: pointer;
+        .button-text{
+            padding-top: 10px;
+            font-weight: 700;
+            cursor: pointer;
+        }
     }
 }
 
@@ -270,7 +276,7 @@ input{
     text-align: center;
     font-family: 'Romantic Beach';
     li{
-        margin: 10px 0px 0px 70px;
+        margin: 10px 0px 0px 20%;
         display: flex;
         font-size: 17px;
         vertical-align: center;

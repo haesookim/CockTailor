@@ -223,10 +223,13 @@ footer {
         display: grid;
         grid-template-columns: [cocktail]35% [desc]65%;
         grid-template-rows: [title]15% [body]65% [button]20%;
-        .answer-image{
+        #answer-image{
             grid-column: cocktail;
             grid-row: body;
             margin-top: 10px;
+            #lemon, #lime, #strawberry, #cinnamon, #orange, #lemon_zest, #cherry, #cream , #celery{
+                display:none;
+            }
         }
         .answer-desc{
             margin-left: -10%;

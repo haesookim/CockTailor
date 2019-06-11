@@ -116,7 +116,12 @@ function showFinishScreen(name, desc) {
 }
 
 function getName() {
-    let name = document.getElementById('cocktail-name').value;
+
+    var name = document.getElementById('cocktail-name').value;
+    if (name == ""){
+        alert("이름을 입력하세요");
+        return false;
+    }
     let desc = document.getElementById('cocktail-desc').value;
     let maker = document.getElementById('maker-name').value;
     showFinishScreen(name, desc,maker);

@@ -1005,6 +1005,7 @@
                     <%= f.hidden_field :image, :id => 'listing_image' %>
                     <%= f.text_field :body , placeholder:"나만의 칵테일에 대한 설명을 적어주세요", :id=> "cocktail-desc"%>
                     <%= f.text_field :maker, placeholder:"만든이의 이름을 적어주세요!",:id => "maker-name" %>
+                    <%#= f.hidden_field :recipe , :id=> "cocktail-recipe"%>
 
             <% end %>
             <div class ="button" onclick=" getName(); toGallery();">
@@ -1018,6 +1019,7 @@
             <div id="name-output"></div>
             <div id="desc-output"></div>
             <div id="maker-output"></div>
+          <div id="recipe-output"></div>
         </div>
 
         <div id="finished">         
@@ -1039,6 +1041,7 @@
                 <%= f.hidden_field :maker, :id => "hidden-maker" %>
                 <%= f.hidden_field :image, :id => 'hidden_image' %>
                 <%= f.hidden_field :body , :id=> "hidden-desc"%>
+                <%= f.hidden_field :recipe , :id=> "hidden-recipe"%>
                 <%= f.submit :id => "create-drawing", :style => "display:none;" %>
         <% end %>
     </div>

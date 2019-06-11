@@ -8,6 +8,7 @@ class Gallery < ActiveRecord::Base
     #     "select * from Gallery
     #     LIKE '%params%'"
     # end
+
     def self.search(search)
       if search
         find(:all, :conditions => ['title LIKE ?', "%#{search}%"])

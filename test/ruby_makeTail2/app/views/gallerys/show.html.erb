@@ -42,16 +42,18 @@
           </div>
       </div>
   </nav>
-
+  <%= @gallery.recipe %>
   <div class="show-container">
     <%if @gallery %>
       <div class="image">
         <%= image_tag @gallery.image.url %>
       </div>
+
       <div class="recipe">
         <div class="gallery-desc">
           <div class="title"><%= @gallery.title %><span class="maker"> - BY <%= @gallery.maker %></span></div>
           <div class="description"><%= @gallery.body %></div>
+          <div class="title"></div>
         </div>
       </div>
       <%= button_to "갤러리로 돌아가기" ,gallerys_path, :method => "get" , :class=>'button'%>

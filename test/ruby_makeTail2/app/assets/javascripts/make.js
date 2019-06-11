@@ -124,9 +124,10 @@ function getName() {
     }
     let desc = document.getElementById('cocktail-desc').value;
     let maker = document.getElementById('maker-name').value;
-    showFinishScreen(name, desc,maker);
+    let recipe = finalrecipe.innerHTML;
+    showFinishScreen(name, desc,maker, recipe);
 }
-function showFinishScreen(name, desc,maker) {
+function showFinishScreen(name, desc,maker, recipe) {
     let finished = document.querySelector('#final-result');
     let enter = document.getElementById('enter-name');
 
@@ -175,11 +176,13 @@ function toGallery() {
     var finalDesc = document.getElementById("hidden-desc");
     var finalMaker = document.getElementById("hidden-maker");
     var finalimage = document.getElementById("hidden_image");
+    var finalRecipe =  document.getElementById("hidden-recipe");
 
     finalimage.value = image;
     finalName.value = document.getElementById("cocktail-name").value;
     finalDesc.value = document.getElementById("cocktail-desc").value;
     finalMaker.value = document.getElementById("maker-name").value;
+    finalRecipe.value = finalrecipe.innerHTML;
       
 }
 
@@ -278,6 +281,7 @@ for (let j = 0; j < choiceItems.length; j++) {
         currentGlass.addIngredient(ingredients[j]);
     })
 }
+var finalrecipe = recipe;
 
 function createRecipe(ingredient) {
     if (currentGlass.currentSlot < currentGlass.units) {
@@ -288,6 +292,9 @@ function createRecipe(ingredient) {
         recipeElement.append(recipeColor);
         recipeElement.append(ingredient.name);
         recipe.appendChild(recipeElement);
+        console.log("recipe", recipe);
+
+
     }
 }
 

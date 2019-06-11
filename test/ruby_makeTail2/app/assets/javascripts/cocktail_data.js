@@ -20,7 +20,7 @@ var cocktail_data = [
         description: "미드 '빅뱅이론'에도 등장한 적 있는 '그래스호퍼'입니다.</br> 메뚜기라는 이름답게 녹색 빛을 띠는 이 칵테일은 크림이 들어가서 부드럽게 즐길 수 있습니다.</br> 민트초코 맛이 난다고 하니, 민초파 여러분들은 꼭 도전해보세요!",
         cocktailColor: "#A6E8AC",
         glass: "martini",
-        garnish: "민트잎"
+        garnish: "mint"
     },
     {
         name: "블랙벨벳",
@@ -78,7 +78,7 @@ var cocktail_data = [
 
         cocktailColor: "#C13010",
         glass: "collins",
-        garnish: "슬라이스 레몬, 샐러리"
+        garnish: "lemon, cellery"
     },
     {
         name: "핫 버터드 럼",
@@ -105,7 +105,7 @@ var cocktail_data = [
         description: "이탈리아에서 오래전부터 즐겨 마시던 칵테일입니다.</br>럼의 진한 맛과 버터의 고소한 맛이 이루는 조화가 일품으로, 특히 추운 겨울이나 감기 기운이 있을 때 마시기 좋습니다.</br>레시피에서 물 대신 우유를 넣으면 Hot buttered rum cow가 됩니다.",
         cocktailColor: "#DBA86A",
         glass: "high-ball",
-        garnish: "슬라이스 레몬, 시나몬 스틱"
+        garnish: "lemon, cinnamon"
     },
     {
         name: "쿠바 리브레",
@@ -128,7 +128,7 @@ var cocktail_data = [
         description: "쿠바리브레라는 이름은 스페인의 식민지였던 쿠바가 독립운동 당시 사용하던 \"Viva Cuba Libre(자유 쿠바 만세)\"라는 구호에서 유래되었습니다.</br> 쿠바의 독립전쟁을 지원하기 위해 하바나에 주둔하던 미군이 승리를 축하하며 쿠바산 럼에 미국산 콜라를 넣어 마신 것에서 탄생했습니다.</br> 럼 특유의 달콤한 향기에 콜라의 단맛과 레몬의 신맛이 가미되어 상큼함을 더해진 맛입니다.",
         cocktailColor: "#843118",
         glass: "high-ball",
-        garnish: "라임 웨지"
+        garnish: "lime"
     },
     {
         name: "러스티네일",
@@ -148,7 +148,7 @@ var cocktail_data = [
 
         cocktailColor: "#FFA621",
         glass: "whiskey",
-        garnish: "레몬 트위스트"
+        garnish: "lemon zest"
     },
     {
         name: "프렌치75",
@@ -177,7 +177,7 @@ var cocktail_data = [
         ,
         cocktailColor: "#FAE79A",
         glass: "liqueur",
-        garnish: "레몬 트위스트"
+        garnish: "lemon zest"
     },
     {
         name: "에그노그",
@@ -212,7 +212,7 @@ var cocktail_data = [
         description: "우유, 계란, 설탕 등을 이용해 만드는 부드러운 음료로, 밀크쉐이크와 비슷한 에그노그 칵테일입니다.</br>술을 넣지 않고 무알콜 음료로 즐기기도 합니다.</br>영양가가 높고 따뜻해서 피로회복에 좋고 추운 날 마시기에 안성맞춤입니다.</br>많은 미국인들이 크리스마스 시즌에 즐겨마시는 음료로, 크리스마스가 다가오면 집집마다 풍기는 달달한 냄새의 정체가 바로 이 에그노그의 냄새라고 합니다."
         , cocktailColor: "#EFE4CD",
         glass: "high-ball",
-        garnish: "시나몬 스틱"
+        garnish: "cinnamon"
     },
     {
         name: "스키 리프트",
@@ -239,7 +239,7 @@ var cocktail_data = [
         description: "스키리프트는 특이하게도 핫초코와 럼을 섞어 만드는 칵테일입니다.</br>보통 핫초코하면 초콜릿의 깊은 단 맛부터 떠올리기 쉽지만, 이 칵테일에는 피치 슈냅스와 코코넛 리큐르가 들어가 열대과일의 싱그러운 맛 또한 느낄 수 있습니다."
         , cocktailColor: "#703712, #D7A168",
         glass: "high-ball",
-        garnish: "휘핑한 크림"
+        garnish: "cream"
     },
     {
         name: "오후의 죽음",
@@ -342,7 +342,7 @@ var cocktail_data = [
         ,
         cocktailColor: "#CC2B10, #F56626",
         glass: "high-ball",
-        garnish: "체리, 슬라이스 오렌지"
+        garnish: "cherry, orange"
     },
     {
         name: "다이키리",
@@ -365,7 +365,7 @@ var cocktail_data = [
         description: "다이키리의 시초는 쿠바 광산에 근무했던 제닝스 콕스라는 사람이 그를 찾아오는 친구들을 대접하려고 만든 칵테일이며 그 명칭은 쿠바의 광산 이름에서 이름지어졌습니다.</br>신맛과 단맛의 조화가 뛰어나며 럼을 사용한 대표적인 칵테일 중 하나입니다.</br>다이키리를 말할 때 빠지지 않는 것이 바로 다이키리 마니아인 미국의 문학가 어니스트 헤밍웨이입니다.</br>크러시드 아이스와 함께 믹서로 혼합하여 셔벗형태로 만들면 프로즌 다이키리로 즐길 수 있습니다.</br>이 프로즌 다이키리는 10년의 슬럼프에서 헤밍웨이를 구해 그 유명한 〈노인과 바다〉를 쓰게 했다고 전해집니다."
         , cocktailColor: "#F0FFBD",
         glass: "martini",
-        garnish: "슬라이스 라임"
+        garnish: "lime"
     },
     {
         name: "데킬라 선라이즈",
@@ -388,7 +388,7 @@ var cocktail_data = [
         description: "데킬라의 고향인 멕시코의 일출을 형상화한 칵테일입니다.</br>상대적으로 무거운 그레나딘 시럽이 가라앉으면서 멋진 그라데이션을 만들어내죠.</br>동명 영화와 이글스의 수록곡 이름으로도 유명합니다."
         , cocktailColor: "#FF5726, #FFE04F",
         glass: "collins",
-        garnish: "체리, 웨지 오렌지"
+        garnish: "cherry, orange"
     },
     {
         name: "톰 콜린스",
@@ -416,7 +416,7 @@ var cocktail_data = [
         ,
         cocktailColor: "#FFED46, #F8F8F3",
         glass: "high-ball",
-        garnish: "체리, 레몬 웨지"
+        garnish: "cherry, lemon"
     },
     {
         name: "로시니",
@@ -436,7 +436,7 @@ var cocktail_data = [
         ,
         cocktailColor: "#E9240C",
         glass: "liqueur",
-        garnish: "딸기"
+        garnish: "strawberry"
     },
     {
         name: "미도리 사워",
@@ -459,7 +459,7 @@ var cocktail_data = [
         description: "미도리 사워는 증류주에 산미와 단맛을 더해 만든 칵테일입니다. '미도리'라는 명칭은 일본말로 '초록'이라는 뜻으로, 멜론을 넣어 만든 술이기에 그 색깔을 본따 지어졌습니다.</br>신맛과 달콤한 맛이 조화로운 맛이며 다양한 과즙과 혼합되면 그 과즙의 맛을 더욱 풍부하게 즐길 수 있으며 나라에 따라 소다수의 용량에 차이가 있습니다.</br>산토리 본사의 허니듀 멜론 술을 이용해 만들어졌습니다. 이 술은 일본에서 자란 최상급 품질의 멜론을 사용해 만들어지는데, 유바리 멜론과 머스크 멜론 두 가지만 사용됩니다.</br>특히 유바리 멜론은 일본에서만 자라는 독특한 품종으로, 풍부한 맛과 과즙을 가진 멜론입니다."
         , cocktailColor: "#84F26B",
         glass: "martini",
-        garnish: "레몬 웨지"
+        garnish: "lemon"
     },
     {
         name: "블랙 러시안",
@@ -478,7 +478,7 @@ var cocktail_data = [
         description: "블랙러시안은 달콤한 커피의 풍미를 가진 칵테일로써 식후에 즐겨도 알맞은 특징을 가지고 있습니다.</br>러시아를 대표하는 보드카가 사용되며 검정색을 띄고 있어 블랙러시안이라는 이름이 붙여지게 되었습니다.</br>커피 리큐어의 단맛이 독한 보드카를 부드럽게 하여, 알코올 함량이 높은데도 불구하고 감칠맛이 좋은 칵테일입니다.</br>블랙러시안에 우유를 넣으면 화이트 러시안으로 즐길 수 있습니다."
         , cocktailColor: "#5C1F0D",
         glass: "whiskey",
-        garnish: "체리"
+        garnish: "cherry"
     },
     {
         name: "B-52",
@@ -527,7 +527,7 @@ var cocktail_data = [
         description: "아이리쉬 커피는 커피에 위스키를 넣어만든 칵테일입니다.</br>제2차 세계대전이 끝난 직후, 아일랜드의 국제공항에 위치한 한 술집 주인이 처음 만들어 유명해진 칵테일이라고 합니다.</br>알코올 도수가 높은 위스키가 들어가 차가운 몸을 데워주고 피로를 풀어줍니다.</br>고운 우유 형태의 크림을 올려 부드럽게 마시는 것이 일반적입니다."
         , cocktailColor: "#521E19, #FEFEFD",
         glass: "high-ball",
-        garnish: "아이리쉬 크림"
+        garnish: "cream"
     },
     {
         name: "로시니",
@@ -547,7 +547,7 @@ var cocktail_data = [
         ,
         cocktailColor: "#E9240C",
         glass: "liqueur",
-        garnish: "딸기"
+        garnish: "strawberry"
     },
     {
         name: "톰 콜린스",
@@ -575,7 +575,7 @@ var cocktail_data = [
         ,
         cocktailColor: "#FFED46, #F8F8F3",
         glass: "high-ball",
-        garnish: "체리, 레몬 웨지"
+        garnish: "cherry, lemon"
     },
     {
         name: "스크리밍 오르가즘",
@@ -647,7 +647,7 @@ var cocktail_data = [
         description: "아이리쉬 커피는 커피에 위스키를 넣어만든 칵테일입니다.</br>제2차 세계대전이 끝난 직후, 아일랜드의 국제공항에 위치한 한 술집 주인이 처음 만들어 유명해진 칵테일이라고 합니다.</br>알코올 도수가 높은 위스키가 들어가 차가운 몸을 데워주고 피로를 풀어줍니다.</br>고운 우유 형태의 크림을 올려 부드럽게 마시는 것이 일반적입니다."
         , cocktailColor: "#521E19, #FEFEFD",
         glass: "high-ball",
-        garnish: "아이리쉬 크림"
+        garnish: "cream"
     },
     {
         name: "핫 버터드 럼",
@@ -674,7 +674,7 @@ var cocktail_data = [
         description: "이탈리아에서 오래전부터 즐겨 마시던 칵테일입니다.</br>럼의 진한 맛과 버터의 고소한 맛이 이루는 조화가 일품으로, 특히 추운 겨울이나 감기 기운이 있을 때 마시기 좋습니다.</br>레시피에서 물 대신 우유를 넣으면 Hot buttered rum cow가 됩니다.",
         cocktailColor: "#DBA86A",
         glass: "high-ball",
-        garnish: "슬라이스 레몬, 시나몬 스틱"     
+        garnish: "lemon, cinnamon"     
     },
     {
         name: "스키 리프트",
@@ -701,7 +701,7 @@ var cocktail_data = [
         description: "스키리프트는 특이하게도 핫초코와 럼을 섞어 만드는 칵테일입니다.</br>보통 핫초코하면 초콜릿의 깊은 단 맛부터 떠올리기 쉽지만, 이 칵테일에는 피치 슈냅스와 코코넛 리큐르가 들어가 열대과일의 싱그러운 맛 또한 느낄 수 있습니다."
         , cocktailColor: "#703712, #D7A168",
         glass: "high-ball",
-        garnish: "휘핑한 크림"
+        garnish: "cream"
     },
     {
         name: "블랙벨벳",
@@ -742,7 +742,7 @@ var cocktail_data = [
         description: "쿠바리브레라는 이름은 스페인의 식민지였던 쿠바가 독립운동 당시 사용하던 \"Viva Cuba Libre(자유 쿠바 만세)\"라는 구호에서 유래되었습니다.</br> 쿠바의 독립전쟁을 지원하기 위해 하바나에 주둔하던 미군이 승리를 축하하며 쿠바산 럼에 미국산 콜라를 넣어 마신 것에서 탄생했습니다.</br> 럼 특유의 달콤한 향기에 콜라의 단맛과 레몬의 신맛이 가미되어 상큼함을 더해진 맛입니다.",
         cocktailColor: "#843118",
         glass: "high-ball",
-        garnish: "라임 웨지"
+        garnish: "lime"
     },
     {
         name: "프렌치75",
@@ -771,7 +771,7 @@ var cocktail_data = [
         ,
         cocktailColor: "#FAE79A",
         glass: "liqueur",
-        garnish: "레몬 트위스트"
+        garnish: "lemon zest"
     },
     {
         name: "오후의 죽음",

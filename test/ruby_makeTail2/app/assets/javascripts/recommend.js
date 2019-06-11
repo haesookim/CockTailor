@@ -47,11 +47,6 @@ function findMatch(string){
             //get appropriate glass
             selectGlass(cocktail_data[i].glass);
 
-            //show the appropriate garnishes
-            if (cocktail_data[i].garnish){
-                showGarnish(cocktail_data[i].garnish.split(", "));
-            }
-
             //add code here for coloring
             addColor(cocktail_data[i].cocktailColor.split(", "));
 
@@ -66,6 +61,11 @@ function findMatch(string){
                 recipeElement.append(recipeColor);
                 recipeElement.append(ingredient.ingredName);
                 recipe.appendChild(recipeElement);
+            }
+
+            //show the appropriate garnishes
+            if (cocktail_data[i].garnish){
+                showGarnish(cocktail_data[i].garnish.split(", "));
             }
             break;
         }

@@ -68,7 +68,7 @@ nav{
     flex-direction: row-reverse;
 }
 
-.choice-item.selected, .glass.selected{
+.choice-item.selected, .glass.selected, .extra-item.selected{
     background-color: rgba(139, 139, 139, 0.43);
 }
 
@@ -83,7 +83,7 @@ nav{
 }
 
 .active-glass{
-    #ice, #lemon, #lime, #strawberry, #cinnamon, #orange, #lemon_zest, #cherry, #irishcream , #celery{
+    #ice, #lemon, #lime, #strawberry, #cinnamon, #orange, #lemonzest, #cherry, #irishcream , #celery{
         visibility: hidden;
         &.selected{
             visibility: visible;
@@ -124,21 +124,20 @@ nav{
     }
 }
 
-.choice-name{
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-
 .choice{
     border-radius: 5px;
     padding-bottom: 15px;
     margin: 0 2px 15px 2px;
     transition: all 0.3s ease-in-out;
-}
-
-.choice.active{
-    background-color: rgba(255, 255, 255, 0.11);
-    transition: all 0.3s ease-in-out;
+    .choice-name{
+        cursor: pointer;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+    &.active{
+        background-color: rgba(255, 255, 255, 0.11);
+        transition: all 0.3s ease-in-out;
+    }
 }
 
 .choice-items{
@@ -149,9 +148,24 @@ nav{
     display: none;
     overflow-x: hidden;
     transition: all 0.3s ease-in-out;
+    .choice-item, .extra-item{
+        height: 40px;
+        width: 70px;
+        padding: 5px;
+        text-align: center;
+        border-radius: 5px;
+        margin: 5px;
+        font-size: 12px;
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
-.choice-item, .glass, .extra-item{
+.glass{
     height: fit-content;
     width: 70px;
     padding: 5px;
@@ -159,22 +173,27 @@ nav{
     border-radius: 5px;
     margin: 5px;
     font-size: 12px;
-}
-
-.glass img{
-    height: 70px;
-    width: 70px;
+    cursor: pointer;
+    img{
+        height: 70px;
+        width: 70px;
+    }
 }
 
 .button{
     height: 45px;
-    width: 70px;
+    width: fit-content;
     padding: 0px 20px 0px;
     border-radius: 25px;
     background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
     color: white;
     margin: 5px;
     cursor: pointer;
+    .button-text{
+        margin-top: 10px;
+        font-weight: 700;
+        cursor: pointer;
+    }
 }
 
 #enter-name{
@@ -193,11 +212,6 @@ input{
     width: 80%;
     height: 30px;
     font-size: 17px;
-}
-
-.button-text{
-    margin-top: 10px;
-    font-weight: 700;
 }
 
 #finish-button{
@@ -266,6 +280,7 @@ input{
             height: 20px;
             border-radius: 100%;
             margin-right: 20px;
+            border: 0.2px black solid;
         }
     }
 }

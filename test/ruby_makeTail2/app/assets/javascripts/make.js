@@ -43,7 +43,7 @@ for (var j = 0; j < choiceItems.length; j++) {
 var extraItems = document.getElementsByClassName('extra-item');
 for (let k = 0; k<extraItems.length; k++){
     extraItems[k].addEventListener("click", function(){
-       let itemName = extraItems[k].innerHTML.toLowerCase().trim();
+       let itemName = extraItems[k].innerHTML.toLowerCase().replace(/\s/g,'');
        let extraItem =  document.querySelector('.active-glass').querySelector("#"+itemName);
        extraItem.classList.toggle("selected");
        extraItems[k].classList.toggle("selected");
@@ -64,19 +64,19 @@ for (j = 0; j < glassItems.length; j++) {
             let k;
             for (k = 0; k < glassItems.length; k++) {
                 if (glassItems[k].classList.contains('selected')) {
-                    if (confirm("If you change your glass, you will lose all progress. continue?")) {
+                    if (confirm("잔을 바꿀 경우 만든 내용이 리셋됩니다.")) {
                         if (glassItems[k] === this) {
                             glassChosen = false;
                         } else {
                             glassItems[k].classList.toggle('selected');
                             toggleActive(glassItems[k].innerHTML.toLowerCase().split(">")[1].trim())
                         }
+                        this.classList.toggle('selected')
+                        showGlassOOP(this.innerHTML.toLowerCase().split(">")[1].trim());
                     }
-                    //adjust for cancel condition : we get both cups if we say cancel
+                    break;
                 }
             }
-            this.classList.toggle('selected')
-            showGlassOOP(this.innerHTML.toLowerCase().split(">")[1].trim());
         }
     })
 }
@@ -92,16 +92,12 @@ function showNameInput() {
     enter.style.display = "block";
     button.style.display = "none";
     maker.style.gridTemplateColumns = "[pane]45% [finished]45% 10%";
-    maker.style.gridTemplateRows = "[start]15% [recipe]50% [pane]35% "
+    maker.style.gridTemplateRows = "[start]10% [recipe]50% [pane]45% "
     preview.style.gridRowStart = "start";
     preview.style.gridRowEnd = "pane-end";
     preview.style.marginTop = "5%";
     recipe.style.gridColumn = "finished";
     recipe.style.gridRow = "recipe";
-    
-    for (element in recipe.querySelectorAll("li")){
-        element.style.marginLeft="200px"; 
-    }
 }
 
 function showFinishScreen(name, desc) {
@@ -121,7 +117,6 @@ function showFinishScreen(name, desc) {
 
 function getName() {
     let name = document.getElementById('cocktail-name').value;
-    console.log(name);
     let desc = document.getElementById('cocktail-desc').value;
     let maker = document.getElementById('maker-name').value;
     showFinishScreen(name, desc,maker);
@@ -158,53 +153,28 @@ function fakeButton(){
     // when click "to Gallery this function is gonna activate f.submit"
     var submitButton = document.getElementById("create-drawing");
     var realsubmit = document.getElementById("gallery-button");
-    console.log(submitButton);
-    console.log("working?");
     submitButton.click();
-
 }
 // delete as soon as some shit happened
 
 
 function toGallery() {
-    //is this necessary if the results are automatically uploaded to gallery
-    //delete if error happened. using ruby code, we can submit image with title and explanation(I hope so...)
-        console.log("check if working")
-        var canvas = document.getElementById("previewcanvas");
-        
-        var dataUrl = canvas.toDataURL("image/png");
-        
-        var cocktailname = document.querySelector('#final-result').querySelector('#name-output').innerHTML;
-        image = canvas.toDataURL("image/png", 1.0).replace("image/png", "image/octet-stream");
-        
-        // var dataImg = document.createElement('img');    
-        // dataImg.src = dataUrl;
-        var finalName = document.getElementById("hidden-name");
-        var finalDesc = document.getElementById("hidden-desc");
-        var finalMaker = document.getElementById("hidden-maker");
-        var finalimage = document.getElementById("hidden_image");
+    var canvas = document.getElementById("previewcanvas");
+    
+    var dataUrl = canvas.toDataURL("image/png");
+    
+    var cocktailname = document.querySelector('#final-result').querySelector('#name-output').innerHTML;
+    image = canvas.toDataURL("image/png", 1.0).replace("image/png", "image/octet-stream");
+    
+    var finalName = document.getElementById("hidden-name");
+    var finalDesc = document.getElementById("hidden-desc");
+    var finalMaker = document.getElementById("hidden-maker");
+    var finalimage = document.getElementById("hidden_image");
 
-        finalimage.value = image;
-        finalName.value = document.getElementById("cocktail-name").value;
-        finalDesc.value = document.getElementById("cocktail-desc").value;
-        finalMaker.value = document.getElementById("maker-name").value;
-        // var entername = document.getElementById("cocktail-name").value;
-        // var enterdesc = document.getElementById("cocktail-desc").value;
-        // finalName.value = entername;
-        // finalDesc.value = enterdesc;
-        
-        
-        // dataImg.src = dataUrl;
-        // console.log(dataUrl);
-        // // var drawingField = document.createElement('div');
-        // // drawingField.innerHTML = "<input type='hidden' name='listing[image]' id='image' value='" + dataImg.src + "'>"
-
-        // document.getElementById('hidden_image').value = dataUrl;
-        // if (document.getElementById('hidden_image').value != null ) {
-        //     console.log(dataUrl, 'this is url');
-        // } else {
-        //     console.log("No, it is null")
-        // }
+    finalimage.value = image;
+    finalName.value = document.getElementById("cocktail-name").value;
+    finalDesc.value = document.getElementById("cocktail-desc").value;
+    finalMaker.value = document.getElementById("maker-name").value;
       
 }
 
@@ -219,7 +189,6 @@ class Glass {
         this.name = name;
         this.units = units;
         this.slots_color = Array(units).fill(""); //everything starts as transparent
-        this.slots_text = Array(units).fill("");
         this.currentSlot = 0;
     }
 
@@ -235,13 +204,6 @@ class Glass {
     addIngredient(ingredient) {
         if (this.currentSlot < this.units) {
             this.slots_color[this.currentSlot] = ingredient.color;
-            this.slots_text[this.currentSlot] = ingredient.name;
-
-            if (ingredient.name === this.slots_text[this.currentSlot - 1]) {
-                this.slots_text[this.currentSlot - 1] = "";
-                //show only 1 name of ingredient if two or more of same are stacked
-                //actually add this to the recipe
-            }
             this.currentSlot++;
         }
         this.color();
@@ -304,6 +266,7 @@ var recipe = document.querySelector("#recipe");
 
 for (let j = 0; j < choiceItems.length; j++) {
     ingredients[j] = new ingredient(choiceItems[j].innerHTML, "#" + colors[j]);
+    choiceItems[j].style.backgroundColor = "#"+colors[j];
     choiceItems[j].addEventListener("click", function () {
         this.classList.toggle("selected");
         createRecipe(ingredients[j]);

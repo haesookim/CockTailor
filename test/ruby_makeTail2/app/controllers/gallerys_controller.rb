@@ -15,7 +15,7 @@ class GallerysController < ApplicationController
     def index
         if params[:search]
 
-            @galleries = Gallery.where('title LIKE ?','%'+params[:search]+'%').order('created_at DESC')
+            @galleries = Gallery.where('title or maker LIKE ?','%'+params[:search]+'%').order('created_at DESC')
         else @galleries = Gallery.all.order('created_at DESC')
         end
 

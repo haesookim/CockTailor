@@ -68,7 +68,7 @@ nav{
     margin: 0; }
 .swipe-wrap > div b {
     display: block;
-    margin: 2em 1.5em;
+    margin: 4em 1.5em 2em;
     padding: 0 1em ;
     font-size: 2em;
     text-align: center; 
@@ -94,51 +94,61 @@ nav{
     display: grid;
     grid-template-columns: 12.5% 12.5% [choice-1]25% [choice-2]25% 12.5% 12.5%;
     grid-template-rows: [question]50% [choices]50%;
-}
-
-.question{
-    grid-row: question;
-    grid-column-start: 2;
-    grid-column-end: 6;
-}
-
-.L, .R, .CL, .PL, .PR{
-    width: 320px;
-    height: 500px;
-    background-color: white;
-    text-align: center;
-    color: black;
-    font-size: 17px;
-    text-decoration: none;
-    display: block;
-    margin-top: 10px;
-    transition: all 0.3s ease-out;
-    grid-row: choices;
-    &:hover{
-        background-color: rgb(231, 231, 231);
-        margin-top:0px;
+    .question{
+        grid-row: question;
+        grid-column-start: 2;
+        grid-column-end: 6;
+    }
+    #start{
+        width: 150px;
+        height: 60px;
+        font-size: 30px;
+        line-height: 60px;
+        grid-row: choices;
+        grid-column-start: choice-1;
+        grid-column-end: 5;
+        place-self: center;
+        margin-top: -20%;
+        border-radius: 30px;
+    }
+    .L, .R, .CL, .PL, .PR{
+        width: 320px;
+        height: 500px;
+        background-color: white;
+        text-align: center;
+        color: black;
+        font-size: 17px;
+        text-decoration: none;
+        display: block;
+        margin-top: 10px;
         transition: all 0.3s ease-out;
+        grid-row: choices;
+        &:hover{
+            background-color: rgb(231, 231, 231);
+            margin-top:0px;
+            transition: all 0.3s ease-out;
+        }
+        img{
+            width: 50%;
+            height: auto;
+            margin: 30px auto 20px;
+        }
     }
-    img{
-        width: 50%;
-        height: auto;
-        margin: 30px auto 20px;
+    .L, .CL, .PL{
+        border-right: solid 1px black;
+        grid-column: choice-1;
+    }
+    
+    .R, .PR{
+        border-left: solid 1px black;
+        grid-column: choice-2;
+    }
+    
+    .choice-text{
+        margin: 0px 12px;
     }
 }
 
-.L, .CL, .PL{
-    border-right: solid 1px black;
-    grid-column: choice-1;
-}
-
-.R, .PR{
-    border-left: solid 1px black;
-    grid-column: choice-2;
-}
-
-.choice-text{
-    margin: 0px 12px;
-}
 /*       */
 /*.answercontainer .btn{*/
 /*position : absolute;*/
